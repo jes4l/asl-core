@@ -16,11 +16,15 @@ while True:
         # Crop image for classification
         x, y, w, h = hand['bbox']
 
-        imgWhite = np.ones((imgSize, imgSize,3),np.uint8)*255
-        #put image crop matrix inside image white matrix
+        imgWhite = np.ones((imgSize, imgSize, 3),np.uint8)*255
+        imgCrop = img[y - offset:y + h + offset, x - offset:x + w + offset]
+
+        imgCropShape = imgCrop.shape
+
+        # put image crop matrix inside image white matrix
+        imgWhite[0:imgCropShape[0],0:imgCropShape[1]] = imgCrop
 
 
-        imgCrop = img[y-offset:y + h+offset, x-offset:x + w+offset]
         cv2.imshow("imageCrop", imgCrop)
         cv2.imshow("imageWhite", imgWhite)
 
