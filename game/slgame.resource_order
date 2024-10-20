@@ -21,6 +21,7 @@
   "ResourceOrderSettings":[
     {"name":"libfilesystem","order":1,"path":"extensions/libfilesystem/libfilesystem.yy",},
     {"name":"libxprocess","order":2,"path":"extensions/libxprocess/libxprocess.yy",},
+    {"name":"oClient","order":3,"path":"objects/oClient/oClient.yy",},
     {"name":"oSetup","order":2,"path":"objects/oSetup/oSetup.yy",},
   ],
 }
