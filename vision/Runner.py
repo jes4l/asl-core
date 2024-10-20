@@ -1,4 +1,4 @@
-from JesalPython.controller import MessageController
+from Python.controller import MessageController
 
 
 if __name__ == "__main__": 

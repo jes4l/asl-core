@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b54e3f45-b23e-49b4-9bfb-6f2f95384c0d" name="Changes" comment="documentation: updated data with a,b,c,d,e and trained imgWhite to identify these gestures, customised UI with letters to show which hand sign it is">
-      <change beforePath="$PROJECT_DIR$/../../../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/diss.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../builder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../data_collection.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../run_computer_vision.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../run_computer_vision.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../run_computer_vision.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../run_computer_vision.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../objects/oSetup/Create_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../../objects/oSetup/Create_0.gml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../vision/JesalPython/computer_vision_here.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../vision/JesalPython/controller.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../vision/JesalPython/cv_client.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../vision/JesalRunner.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +42,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/jesal/Desktop/Project/diss/game/datafiles/ComputerVision",
+    "last_opened_file_path": "C:/Users/jesal/Desktop/Project/diss/vision",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,7 +57,7 @@
       <recent name="C:\Users\jesal\Desktop\diss" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python">
       <module name="diss" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,6 +73,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="diss" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -99,6 +119,8 @@
       <workItem from="1728546078151" duration="2105000" />
       <workItem from="1729261636747" duration="114000" />
       <workItem from="1729446159207" duration="1781000" />
+      <workItem from="1729454774353" duration="35000" />
+      <workItem from="1729454810060" duration="86000" />
     </task>
     <task id="LOCAL-00001" summary="code: mediapipe initial setup with left,right hand tracking and detection">
       <created>1728379369989</created>
@@ -148,6 +170,17 @@
     <MESSAGE value="documentation: updated Readme with game ideas" />
     <MESSAGE value="documentation: updated data with a,b,c,d,e and trained imgWhite to identify these gestures, customised UI with letters to show which hand sign it is" />
     <option name="LAST_COMMIT_MESSAGE" value="documentation: updated data with a,b,c,d,e and trained imgWhite to identify these gestures, customised UI with letters to show which hand sign it is" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/diss$detection_pb2.coverage" NAME="detection_pb2 Coverage Results" MODIFIED="1728422345506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/mediapipe/framework/formats" />

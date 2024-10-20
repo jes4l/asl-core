@@ -3,6 +3,7 @@ import socket
 import threading
 from queue import Queue
 import json
+import time
 
 
 class GMS2Client():
@@ -77,6 +78,7 @@ class GMS2Client():
                 data: str = self.client_queue.get()
                 print(f"sending: {data}")
                 conn.send(bytes(data, encoding="UTF-8"))
+            time.sleep(1)
             
         return None
     

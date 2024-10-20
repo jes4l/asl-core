@@ -1,5 +1,5 @@
-from JesalPython.cv_client import GMS2Client
-from JesalPython.computer_vision_here import CVHandler
+from Python.cv_client import GMS2Client
+from Python.computer_vision_here import CVHandler
 from queue import Queue
 
 class MessageController():
@@ -28,8 +28,9 @@ class MessageController():
         """
 
         self.gesture_recognizer = CVHandler()
-        self.message_queue: Queue = self.gesture_recognizer.message_queue
-        self.gesture_recognizer.start_thread()
+        #self.message_queue: Queue = self.gesture_recognizer.message_queue
+        #self.gesture_recognizer.start_thread()
+        self.gesture_recognizer.send_messages(self.client_queue)
 
     def mainloop(self) -> None:
         """
