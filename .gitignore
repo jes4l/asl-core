@@ -151,6 +151,11 @@ dmypy.json
 # pytype static type analyzer
 .pytype/
 
+# Ignore any raw image files.
+data
+/data/
+data/
+
 # Cython debug symbols
 cython_debug/
 
