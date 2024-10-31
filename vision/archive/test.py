@@ -60,7 +60,6 @@ while True:
             aspectRatio = height / width
             centeredHand = resizeAndCenterImage(croppedHand, imageSize, aspectRatio)
             prediction, index = signClassifier.getPrediction(centeredHand, draw=False)
-
             # Display bounding box and label
             cv2.rectangle(
                 outputFrame,

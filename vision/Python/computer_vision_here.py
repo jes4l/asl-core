@@ -1,3 +1,4 @@
+import tensorflow as tf
 import time
 from queue import Queue
 import threading
@@ -7,9 +8,6 @@ from cvzone.HandTrackingModule import HandDetector
 from cvzone.ClassificationModule import Classifier
 import numpy as np
 import math
-import time
-
-# OSError: No file or directory found at Model/keras_model.h5
 
 
 class CVHandler:
@@ -19,111 +17,193 @@ class CVHandler:
     )
     thread: (
         threading.Thread
-    )  # Thread to continously retrieve gestures from webcam input.
+    )  # Thread to continuously retrieve gestures from webcam input.
 
     def __init__(self):
         """
-        Initialise the stop event and gesture queue.
+        Initialise the CVHandler class.
+        - Initialises the gesture message queue and the webcam input capture.
+        - Sets up the hand detector and classifier for recognising hand gestures.
+        - Defines necessary parameters such as image margins, size, and labels for classification.
         """
         self.message_queue = Queue()
         self.message = {}
-
         self.cap = cv2.VideoCapture(0)
+        self.cap.set(cv2.CAP_PROP_FPS, 30)  # Set to 30 frames per second
         self.detector = HandDetector(maxHands=1)
-        self.classifier = Classifier("./Model/keras_model.h5", "./Model/labels.txt")
-        self.offset = 20
+        self.classifier = Classifier("Model/keras_model.h5", "Model/labels.txt")
+        self.margin = 20
         self.imgSize = 300
-
-        self.folder = "../data/left/el"
-        self.counter = 0
-
         self.labels = ["al", "bl", "cl", "dl", "el"]
+        self.stable_sign = None
+        self.stable_count = 0
+        self.stable_threshold = 2  # Lowered to 2
+        self.recent_signs = []
+        self.sign_window_size = 2  # Lowered to 2
+        self.last_sign_time = time.time()
+        self.debounce_interval = 0.5  # 500ms debounce interval
 
     def send_messages(self, queue) -> None:
+        """
+        Continuously retrieves and processes hand gestures from the webcam.
+        - Implements a stabilisation period to ensure consistent gesture recognition.
+        - Uses a smoothing algorithm to average detected signs over a short period.
+        - Debounce mechanism to prevent rapid changes between different signs.
+        - Puts recognised gestures in a queue for communication with other parts of the application.
+
+        Parameters:
+        queue (Queue): The queue to transfer processed gesture data.
+        """
         previous_sign = None
         while True:
             sign = self.get_sign()
-            if sign is None or sign == previous_sign:
+            if sign is None:
                 continue
-            self.message["data"] = self.labels[sign]
-            message_json = json.dumps(self.message)
-            queue.put(message_json)
+
+            # Stabilisation period
+            if sign == self.stable_sign:
+                self.stable_count += 1
+            else:
+                self.stable_sign = sign
+                self.stable_count = 1
+
+            if self.stable_count >= self.stable_threshold:
+                self.stable_count = 0  # Reset after stabilisation
+
+                # Smoothing algorithm
+                self.recent_signs.append(sign)
+                if len(self.recent_signs) > self.sign_window_size:
+                    self.recent_signs.pop(0)
+                most_common_sign = max(
+                    set(self.recent_signs), key=self.recent_signs.count
+                )
+
+                current_time = time.time()
+                if (
+                    most_common_sign != previous_sign
+                    and (current_time - self.last_sign_time) > self.debounce_interval
+                ):
+                    self.message["data"] = self.labels[most_common_sign]
+                    message_json = json.dumps(self.message)
+                    queue.put(message_json)
+                    previous_sign = most_common_sign
+                    self.last_sign_time = current_time
+
             time.sleep(0.01)
 
+    def cropImageWithBounds(self, img, x, y, width, height, margin):
+        """
+        Crop the region around the hand within the image boundaries.
+
+        Parameters:
+        img (numpy.ndarray): The input image from which the hand region is to be cropped.
+        x (int): The x-coordinate of the hand bounding box.
+        y (int): The y-coordinate of the hand bounding box.
+        width (int): The width of the hand bounding box.
+        height (int): The height of the hand bounding box.
+        margin (int): The margin to be added around the bounding box.
+
+        Returns:
+        numpy.ndarray: The cropped hand image.
+        """
+        yStart, yEnd = max(0, y - margin), min(img.shape[0], y + height + margin)
+        xStart, xEnd = max(0, x - margin), min(img.shape[1], x + width + margin)
+        croppedImg = img[yStart:yEnd, xStart:xEnd]
+        return croppedImg if croppedImg.size != 0 else None
+
+    def resizeAndCenterImage(self, cropImg, targetSize, aspectRatio):
+        """
+        Resize and center the cropped image within a white background.
+
+        Parameters:
+        cropImg (numpy.ndarray): The cropped hand image.
+        targetSize (int): The target size for the resized image.
+        aspectRatio (float): The aspect ratio of the cropped image.
+
+        Returns:
+        numpy.ndarray: The resized and centered hand image.
+        """
+        centeredImg = np.ones((targetSize, targetSize, 3), np.uint8) * 255
+        if aspectRatio > 1:
+            # Resize based on height
+            scale = targetSize / cropImg.shape[0]
+            newWidth = min(math.ceil(scale * cropImg.shape[1]), targetSize)
+            resizedImg = cv2.resize(cropImg, (newWidth, targetSize))
+            widthGap = (targetSize - newWidth) // 2
+            centeredImg[:, widthGap : widthGap + newWidth] = resizedImg
+        else:
+            # Resize based on width
+            scale = targetSize / cropImg.shape[1]
+            newHeight = min(math.ceil(scale * cropImg.shape[0]), targetSize)
+            resizedImg = cv2.resize(cropImg, (targetSize, newHeight))
+            heightGap = (targetSize - newHeight) // 2
+            centeredImg[heightGap : heightGap + newHeight, :] = resizedImg
+        return centeredImg
+
     def get_sign(self) -> int:
+        """
+        Capture an image from the webcam, detect the hand, and classify the gesture.
+        - Captures an image frame from the webcam.
+        - Uses a hand detector to identify the hand and its bounding box.
+        - Crops, resizes, and centers the hand image.
+        - Uses a pre-trained classifier to predict the hand gesture.
+        - Displays the processed images for visualisation.
 
+        Returns:
+        int: The index of the recognised gesture.
+        """
         success, img = self.cap.read()
+        if not success:
+            print("Failed to capture image")
+            return None
+
         imgOutput = img.copy()
-        hands, img = self.detector.findHands(img)  # creates dots on hands
+        hands, img = self.detector.findHands(img)
+
         if hands:
-
-            hand = hands[0]  # Having one hand
-            # Crop image for classification
+            hand = hands[0]
             x, y, w, h = hand["bbox"]
+            croppedHand = self.cropImageWithBounds(img, x, y, w, h, self.margin)
 
-            imgWhite = np.ones((self.imgSize, self.imgSize, 3), np.uint8) * 255
-            imgCrop = img[
-                y - self.offset : y + h + self.offset,
-                x - self.offset : x + w + self.offset,
-            ]
+            if croppedHand is not None:
+                aspectRatio = h / w
+                centeredHand = self.resizeAndCenterImage(
+                    croppedHand, self.imgSize, aspectRatio
+                )
+                prediction, index = self.classifier.getPrediction(
+                    centeredHand, draw=False
+                )
 
-            imgCropShape = imgCrop.shape
-
-            aspectRatio = h / w
-
-            if aspectRatio > 1:
-                k = self.imgSize / h
-                wCal = math.ceil(k * w)
-                imgResize = cv2.resize(imgCrop, (wCal, self.imgSize))
-                imgResizeShape = imgResize.shape
-                wGap = math.ceil((self.imgSize - wCal) / 2)
-                # put image crop matrix inside image white matrix
-                imgWhite[:, wGap : wCal + wGap] = imgResize
-                prediction, index = self.classifier.getPrediction(imgWhite, draw=False)
-                # print(prediction, index)
-
-            else:
-                k = self.imgSize / w
-                hCal = math.ceil(k * h)
-                imgResize = cv2.resize(imgCrop, (self.imgSize, hCal))
-                imgResizeShape = imgResize.shape
-                hGap = math.ceil((self.imgSize - hCal) / 2)
-                # put image crop matrix inside image white matrix
-                imgWhite[hGap : hCal + hGap] = imgResize
-                prediction, index = self.classifier.getPrediction(imgWhite, draw=False)
-
-            cv2.rectangle(
-                imgOutput,
-                (x - self.offset, y - self.offset - 50),
-                (x - self.offset + 90, y - self.offset - 50 + 50),
-                (255, 0, 255),
-                cv2.FILLED,
-            )
-            cv2.putText(
-                imgOutput,
-                self.labels[index],
-                (x, y - 26),
-                cv2.FONT_HERSHEY_COMPLEX,
-                1.7,
-                (255, 255, 255),
-                2,
-            )
-            cv2.rectangle(
-                imgOutput,
-                (x - self.offset, y - self.offset),
-                (x + w + self.offset, y + h + self.offset),
-                (255, 0, 255),
-                4,
-            )
-
-            cv2.imshow("imageCrop", imgCrop)
-            cv2.imshow("imageWhite", imgWhite)
-
-            cv2.waitKey(1)
-
-            # print(f"prediction : {prediction} index :{index} imgoutput: {imgOutput}")
-
-            return index
+                # Display bounding box and label
+                cv2.rectangle(
+                    imgOutput,
+                    (x - self.margin, y - self.margin - 50),
+                    (x - self.margin + 90, y - self.margin - 50 + 50),
+                    (255, 0, 255),
+                    cv2.FILLED,
+                )
+                cv2.putText(
+                    imgOutput,
+                    self.labels[index],
+                    (x, y - 26),
+                    cv2.FONT_HERSHEY_COMPLEX,
+                    1.7,
+                    (255, 255, 255),
+                    2,
+                )
+                cv2.rectangle(
+                    imgOutput,
+                    (x - self.margin, y - self.margin),
+                    (x + w + self.margin, y + h + self.margin),
+                    (255, 0, 255),
+                    4,
+                )
+                cv2.imshow("Cropped Hand", croppedHand)
+                cv2.imshow("Centered Hand", centeredHand)
+                cv2.imshow("Image", imgOutput)
+                cv2.waitKey(1)
+                return index
 
         cv2.imshow("Image", imgOutput)
         cv2.waitKey(1)
+        return None

@@ -6,9 +6,9 @@ import json
 import time
 
 
-class GMS2Client():
-    client_queue: Queue             # Queue to transfer data from the subthread to the main thread.
-    thread: threading.Thread        # Client thread to maintain client-server connection.
+class GMS2Client:
+    client_queue: Queue  # Queue to transfer data from the subthread to the main thread.
+    thread: threading.Thread  # Client thread to maintain client-server connection.
 
     def __init__(self):
         """
@@ -18,7 +18,6 @@ class GMS2Client():
 
         self.host = "127.0.0.1"
         self.port = 36042
-
 
     def start_thread(self) -> None:
         """
@@ -36,11 +35,8 @@ class GMS2Client():
 
         # ',' used in thread args to convert the single argument to a tuple.
         server_thread: threading.Thread
-        server_thread = threading.Thread(
-            target=self.handle_connection_tcp
-        )
+        server_thread = threading.Thread(target=self.handle_connection_tcp)
         return server_thread
-    
 
     def handle_connection_tcp(self) -> bool:
         """
@@ -51,7 +47,7 @@ class GMS2Client():
         # Initialise the socket and bind it to the specified host, at the specified port.
         sock: socket.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-        sock.bind(( self.host, self.port ))
+        sock.bind((self.host, self.port))
         print("listening")
         sock.listen()
 
@@ -63,9 +59,8 @@ class GMS2Client():
         except Exception as e:
             raise e
 
-        with conn:  
+        with conn:
             self.mainloop(conn)
-
 
     def mainloop(self, conn: socket.socket) -> None:
         """
@@ -79,6 +74,5 @@ class GMS2Client():
                 print(f"sending: {data}")
                 conn.send(bytes(data, encoding="UTF-8"))
             time.sleep(1)
-            
+
         return None
-    
