@@ -12,41 +12,46 @@ class GMS2Client:
 
     def __init__(self):
         """
-        Initializes client queue
+        Initialises the GMS2Client class.
+        - Sets up the client queue for message transmission.
+        - Defines the host and port for the server connection.
         """
         self.client_queue = Queue()
-
         self.host = "127.0.0.1"
         self.port = 36042
 
     def start_thread(self) -> None:
         """
-        Initialise & Start the Client thread.
+        Initialises and starts the client thread.
+        - Creates the client thread and starts it.
         """
-
         self.thread = self.create_thread()
         self.thread.start()
 
     def create_thread(self) -> threading.Thread:
         """
-        Create the Client thread.
-        Returns: the client thread instance.
-        """
+        Creates the client thread.
+        - Initialises the thread with the target method `handle_connection_tcp`.
 
-        # ',' used in thread args to convert the single argument to a tuple.
+        Returns:
+        threading.Thread: The client thread instance.
+        """
         server_thread: threading.Thread
         server_thread = threading.Thread(target=self.handle_connection_tcp)
         return server_thread
 
     def handle_connection_tcp(self) -> bool:
         """
-        Initialise the connection to the server.
-        Handle message transmission between the client and server.
-        """
+        Initialises the connection to the server and handles message transmission.
+        - Sets up a socket and binds it to the specified host and port.
+        - Listens for a connection from the server.
+        - Manages the connection lifecycle and starts the main loop for communication.
 
+        Returns:
+        bool: True if the connection is established successfully.
+        """
         # Initialise the socket and bind it to the specified host, at the specified port.
         sock: socket.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
         sock.bind((self.host, self.port))
         print("listening")
         sock.listen()
@@ -55,7 +60,6 @@ class GMS2Client:
         try:
             conn: socket.socket
             conn, _ = sock.accept()
-
         except Exception as e:
             raise e
 
@@ -64,7 +68,13 @@ class GMS2Client:
 
     def mainloop(self, conn: socket.socket) -> None:
         """
-        Send messages to the GMS2 server if any are queued, and receive messages from the server.
+        Manages the main loop for client-server communication.
+        - Sends messages to the GameMaker server if any are queued.
+        - Receives messages from the server.
+        - Uses a timeout to avoid blocking on receive operations.
+
+        Parameters:
+        conn (socket.socket): The connection socket used for communication.
         """
         conn.settimeout(0.1)  # Set a small timeout to avoid blocking on recv
         while True:
@@ -74,5 +84,4 @@ class GMS2Client:
                 print(f"sending: {data}")
                 conn.send(bytes(data, encoding="UTF-8"))
             time.sleep(1)
-
         return None
