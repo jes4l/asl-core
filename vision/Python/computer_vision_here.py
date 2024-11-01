@@ -37,9 +37,9 @@ class CVHandler:
         self.labels = ["al", "bl", "cl", "dl", "el"]
         self.stable_sign = None
         self.stable_count = 0
-        self.stable_threshold = 2  # Lowered to 2
+        self.stable_threshold = 3
         self.recent_signs = []
-        self.sign_window_size = 2  # Lowered to 2
+        self.sign_window_size = 3
         self.last_sign_time = time.time()
         self.debounce_interval = 0.5  # 500ms debounce interval
 

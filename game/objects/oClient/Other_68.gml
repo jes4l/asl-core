@@ -28,8 +28,8 @@ if(n_id == server_socket)
 
         if variable_struct_exists(jsonData, "data")
         {
-            msg = jsonData.data;
-			show_debug_message("received from python:" + msg);
+            global.msg = jsonData.data;
+			show_debug_message("received from python:" + global.msg);
         }
 		}
 		catch(e)

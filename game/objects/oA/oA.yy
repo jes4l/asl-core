@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oSetup",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oA",
+  "eventList":[],
   "managed":true,
-  "name":"oSetup",
+  "name":"oA",
   "overriddenProperties":[],
   "parent":{
-    "name":"Server",
-    "path":"folders/Objects/Server.yy",
+    "name":"Letters",
+    "path":"folders/Objects/Letters.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,9 +28,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprSetup",
-    "path":"sprites/sprSetup/sprSetup.yy",
+    "name":"sA",
+    "path":"sprites/sA/sA.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

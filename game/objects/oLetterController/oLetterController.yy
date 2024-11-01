@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"oClient",
+  "%Name":"oLetterController",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":68,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oClient",
+  "name":"oLetterController",
   "overriddenProperties":[],
   "parent":{
-    "name":"Server",
-    "path":"folders/Objects/Server.yy",
+    "name":"Letters",
+    "path":"folders/Objects/Letters.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sDefault",
+    "path":"sprites/sDefault/sDefault.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
