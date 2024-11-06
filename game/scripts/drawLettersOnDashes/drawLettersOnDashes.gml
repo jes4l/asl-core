@@ -1,54 +1,58 @@
 function drawLettersOnDashes() {
     var dashPositions = global.customDashPositions;
-
-    // Exit if no dash positions are set
     if (array_length_1d(dashPositions) == 0) {
         return;
     }
 
-    // Ensure dashWidth and dashHeight are defined
     if (global.dashWidth == 0 || global.dashHeight == 0) {
         show_debug_message("Error: dashWidth or dashHeight is undefined.");
         return;
     }
 
-    // Set the font for drawing letters
+    // Ensure correctLetters is updated to match the current letterList
+    global.correctLetters = compareLetters(global.targetWord, global.letterList);
+
     var original_font = draw_get_font();
     draw_set_font(fnt_letter);
 
-    // Get dash count and letter count
     var dashCount = array_length_1d(dashPositions);
-    var letterCount = array_length_1d(global.letterList);
-    var targetWordLength = string_length(global.targetWord);
+    var i = 0;
 
-    // Get correct letters array
-    global.correctLetters = compareLetters(global.targetWord, global.letterList);
-    show_debug_message("Correct Letters: " + string(global.correctLetters)); // Debug message
-
-    // Output the current input
-    show_debug_message("Current Input: " + string(global.letterList)); // Debug message
-
-    // Draw each letter centered on top of the corresponding dash
-    for (var i = 0; i < letterCount; i++) {
-        var char = global.letterList[i]; // Get the character from list
+    // Use a while loop to handle dynamic list resizing when removing letters
+    while (i < array_length_1d(global.letterList)) {
+        var char = global.letterList[i];
         if (i < dashCount) {
             var pos = dashPositions[i];
             var posX = pos[0] + (global.dashWidth / 2) - (string_width(char) / 2);
             var posY = pos[1] - global.dashHeight - string_height(char);
 
-            // Check if the character is correct
-            if (global.correctLetters[i]) {
-                draw_set_color(c_green); // Correct letter
+            // Handle color and alpha for correct/incorrect letters
+            if (!global.correctLetters[i]) {
+                draw_set_color(c_red); // Incorrect letter color
+                global.letterAlphas[i] -= 0.02; // Reduce alpha for fade effect
+
+                if (global.letterAlphas[i] <= 0) {
+                    // Remove the letter and its alpha value
+                    array_delete(global.letterList, i, 1);
+                    array_delete(global.letterAlphas, i, 1);
+                    array_delete(global.correctLetters, i, 1);
+                    continue; // Skip incrementing i to handle the next element correctly
+                }
             } else {
-                draw_set_color(c_red); // Incorrect letter
+                draw_set_color(c_green); // Correct letter color
+                global.letterAlphas[i] = 1; // Ensure full opacity for correct letters
             }
 
-            // Draw the letter on top of the dash
+            // Set alpha and draw the letter
+            draw_set_alpha(global.letterAlphas[i]);
             draw_text(posX, posY, char);
         }
+
+        i++; // Increment index only if no letter is removed
     }
 
-    // Restore the original font and color
+    // Reset font and color settings after drawing
     draw_set_font(original_font);
     draw_set_color(c_white);
+    draw_set_alpha(1);
 }
