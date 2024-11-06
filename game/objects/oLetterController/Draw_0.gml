@@ -1,23 +1,14 @@
-draw_self();
+// Append new letters to global.msg and store each in letterList
+global.msg += global.previousLetters;
+global.previousLetters = "";
 
-var char = string_char_at(global.msg, 1);
+for (var i = 1; i <= string_length(global.msg); i++) {
+    var letter = string_char_at(global.msg, i);
+    array_push(global.letterList, letter);
+}
 
-// Get the room width and height
-var room_w = room_width;
-var room_h = room_height;
+// Clear global.msg to prevent duplicates
+global.msg = "";
 
-// Calculate the center position
-var center_x = room_w / 2;
-var center_y = room_h / 2;
-
-// Store the current font
-var original_font = draw_get_font();
-
-// Set the new font
-draw_set_font(fnt_letter);
-
-// Draw the character at the center of the room
-draw_text(center_x, center_y, char);
-
-// Restore the original font
-draw_set_font(original_font);
+// Draw all letters on dashes
+drawLettersOnDashes();

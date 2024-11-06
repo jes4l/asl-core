@@ -1,1 +1,3 @@
 drawWordDashes("jesal");
+
+drawLettersOnDashes();
