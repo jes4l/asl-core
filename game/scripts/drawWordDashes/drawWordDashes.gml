@@ -1,5 +1,8 @@
 /// @param {string} phrase - The phrase to create dashes for
 function drawWordDashes(phrase) {
+    global.targetWord = phrase; // Set the target word
+    show_debug_message("Target Word: " + global.targetWord); // Debug message
+
     var wordArray = string_split(phrase, " ");
     var wordCount = array_length(wordArray);
 

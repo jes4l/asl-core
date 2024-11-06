@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0160e8db-9569-427c-8738-c92d339b6eac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../game/scripts/drawLettersOnDashes/drawLettersOnDashes.gml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../game/scripts/drawLettersOnDashes/drawLettersOnDashes.yy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/objects/oLetterController/Create_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oLetterController/Create_0.gml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/objects/oLetterController/Draw_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oLetterController/Draw_0.gml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/objects/testword/Draw_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/testword/Draw_0.gml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/scripts/drawWordDashes/drawWordDashes.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/scripts/drawWordDashes/drawWordDashes.gml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/slgame.resource_order" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.resource_order" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/slgame.yyp" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.yyp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0160e8db-9569-427c-8738-c92d339b6eac" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730889583369</updated>
       <workItem from="1730889584646" duration="1713000" />
-      <workItem from="1730900005805" duration="2816000" />
+      <workItem from="1730900005805" duration="3456000" />
     </task>
     <servers />
   </component>

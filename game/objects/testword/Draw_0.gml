@@ -1,3 +1,1 @@
-drawWordDashes("jesal vad");
-
-//drawLettersOnDashes();
+drawWordDashes("abababa");

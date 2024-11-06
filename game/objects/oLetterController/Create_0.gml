@@ -4,3 +4,5 @@ global.customDashPositions = []; // Dash positions
 global.letterList = [];        // New array to store letters sequentially
 global.dashWidth = 0;          // Initialize dash width
 global.dashHeight = 0;         // Initialize dash height
+global.targetWord = "";        // Initialize target word
+global.correctLetters = [];    // Array to store correct letters

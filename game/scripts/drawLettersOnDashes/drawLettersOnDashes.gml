@@ -19,6 +19,14 @@ function drawLettersOnDashes() {
     // Get dash count and letter count
     var dashCount = array_length_1d(dashPositions);
     var letterCount = array_length_1d(global.letterList);
+    var targetWordLength = string_length(global.targetWord);
+
+    // Get correct letters array
+    global.correctLetters = compareLetters(global.targetWord, global.letterList);
+    show_debug_message("Correct Letters: " + string(global.correctLetters)); // Debug message
+
+    // Output the current input
+    show_debug_message("Current Input: " + string(global.letterList)); // Debug message
 
     // Draw each letter centered on top of the corresponding dash
     for (var i = 0; i < letterCount; i++) {
@@ -28,11 +36,19 @@ function drawLettersOnDashes() {
             var posX = pos[0] + (global.dashWidth / 2) - (string_width(char) / 2);
             var posY = pos[1] - global.dashHeight - string_height(char);
 
+            // Check if the character is correct
+            if (global.correctLetters[i]) {
+                draw_set_color(c_green); // Correct letter
+            } else {
+                draw_set_color(c_red); // Incorrect letter
+            }
+
             // Draw the letter on top of the dash
             draw_text(posX, posY, char);
         }
     }
 
-    // Restore the original font
+    // Restore the original font and color
     draw_set_font(original_font);
+    draw_set_color(c_white);
 }

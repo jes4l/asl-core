@@ -26,6 +26,7 @@
     {"name":"fnt_letter","order":2,"path":"fonts/fnt_letter/fnt_letter.yy",},
     {"name":"oSetup","order":1,"path":"objects/oSetup/oSetup.yy",},
     {"name":"testword","order":6,"path":"objects/testword/testword.yy",},
+    {"name":"compareLetters","order":2,"path":"scripts/compareLetters/compareLetters.yy",},
     {"name":"drawLettersOnDashes","order":1,"path":"scripts/drawLettersOnDashes/drawLettersOnDashes.yy",},
   ],
 }

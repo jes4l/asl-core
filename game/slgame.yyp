@@ -220,6 +220,7 @@
     {"id":{"name":"oSetup","path":"objects/oSetup/oSetup.yy",},},
     {"id":{"name":"testword","path":"objects/testword/testword.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"compareLetters","path":"scripts/compareLetters/compareLetters.yy",},},
     {"id":{"name":"drawLettersOnDashes","path":"scripts/drawLettersOnDashes/drawLettersOnDashes.yy",},},
     {"id":{"name":"drawWordDashes","path":"scripts/drawWordDashes/drawWordDashes.yy",},},
     {"id":{"name":"sprSetup","path":"sprites/sprSetup/sprSetup.yy",},},
