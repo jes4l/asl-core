@@ -19,8 +19,8 @@ function drawLettersOnDashes() {
         var char = global.letterList[i]; // Get the character from list
         if (i < dashCount) {
             var pos = dashPositions[i];
-            var posX = pos[0];
-            var posY = pos[1] - 5; // Adjust for centering vertically on dash
+            var posX = pos[0] + 10;
+            var posY = pos[1] - 100;
 
             // Draw the letter on top of the dash
             draw_text(posX, posY, char);
