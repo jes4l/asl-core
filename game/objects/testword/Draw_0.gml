@@ -1,3 +1,3 @@
-drawWordDashes("jesal");
+drawWordDashes("jesal vad");
 
-drawLettersOnDashes();
+//drawLettersOnDashes();

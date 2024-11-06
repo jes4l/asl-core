@@ -8,17 +8,17 @@ function drawWordDashes(phrase) {
 
     // Calculate initial dash dimensions and spacings
     var totalCharacters = string_length(phrase) - wordCount + 1;
-    var dashWidth = roomWidth / (4 * totalCharacters);
-    var intraSpacing = dashWidth / 2;
-    var interSpacing = dashWidth;
+    global.dashWidth = roomWidth / (4 * totalCharacters);
+    var intraSpacing = global.dashWidth / 2;
+    var interSpacing = global.dashWidth;
 
     // Recalculate if total dash width exceeds room width
-    var totalDashLineWidth = calculateTotalDashLineWidth(phrase, dashWidth, intraSpacing, interSpacing);
+    var totalDashLineWidth = calculateTotalDashLineWidth(phrase, global.dashWidth, intraSpacing, interSpacing);
     while (totalDashLineWidth > roomWidth) {
-        dashWidth *= 0.9;
+        global.dashWidth *= 0.9;
         intraSpacing *= 0.9;
         interSpacing *= 0.9;
-        totalDashLineWidth = calculateTotalDashLineWidth(phrase, dashWidth, intraSpacing, interSpacing);
+        totalDashLineWidth = calculateTotalDashLineWidth(phrase, global.dashWidth, intraSpacing, interSpacing);
     }
 
     var lineStartX = (roomWidth - totalDashLineWidth) / 2;
@@ -33,13 +33,16 @@ function drawWordDashes(phrase) {
 
         for (var j = 0; j < wordLength; j++) {
             draw_rectangle(currentDrawPositionX, linePositionY,
-                           currentDrawPositionX + dashWidth, linePositionY + 5, false);
+                           currentDrawPositionX + global.dashWidth, linePositionY + 5, false);
             array_push(global.customDashPositions, [currentDrawPositionX, linePositionY]);  // Store position
-            currentDrawPositionX += dashWidth + intraSpacing;
+            currentDrawPositionX += global.dashWidth + intraSpacing;
         }
 
         currentDrawPositionX += interSpacing;
     }
+
+    // Set global dash height
+    global.dashHeight = 5;
 }
 
 function calculateTotalDashLineWidth(phrase, dashWidth, intraSpacing, interSpacing) {

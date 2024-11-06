@@ -6,6 +6,12 @@ function drawLettersOnDashes() {
         return;
     }
 
+    // Ensure dashWidth and dashHeight are defined
+    if (global.dashWidth == 0 || global.dashHeight == 0) {
+        show_debug_message("Error: dashWidth or dashHeight is undefined.");
+        return;
+    }
+
     // Set the font for drawing letters
     var original_font = draw_get_font();
     draw_set_font(fnt_letter);
@@ -19,8 +25,8 @@ function drawLettersOnDashes() {
         var char = global.letterList[i]; // Get the character from list
         if (i < dashCount) {
             var pos = dashPositions[i];
-            var posX = pos[0] + 10;
-            var posY = pos[1] - 100;
+            var posX = pos[0] + (global.dashWidth / 2) - (string_width(char) / 2);
+            var posY = pos[1] - global.dashHeight - string_height(char);
 
             // Draw the letter on top of the dash
             draw_text(posX, posY, char);
