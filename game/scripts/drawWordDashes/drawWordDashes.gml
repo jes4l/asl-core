@@ -13,7 +13,7 @@ function drawWordDashes(phrase) {
     var totalCharacters = string_length(phrase) - wordCount + 1;
 
     // Estimate initial values for dash width and spacings
-    var dashWidth = roomWidth / (2 * totalCharacters);
+    var dashWidth = roomWidth / (4 * totalCharacters); // Smaller dash width
     var intraSpacing = dashWidth / 2;
     var interSpacing = dashWidth;
 

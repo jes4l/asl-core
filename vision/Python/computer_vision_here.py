@@ -34,7 +34,7 @@ class CVHandler:
         self.classifier = Classifier("Model/keras_model.h5", "Model/labels.txt")
         self.margin = 20
         self.imgSize = 300
-        self.labels = ["al", "bl", "cl", "dl", "el"]
+        self.labels = ["a", "b", "c", "d", "e"]
         self.stable_sign = None
         self.stable_count = 0
         self.stable_threshold = 3
