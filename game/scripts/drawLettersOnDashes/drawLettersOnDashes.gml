@@ -9,7 +9,9 @@ function drawLettersOnDashes() {
         return;
     }
 
-    global.correctLetters = compareLetters(global.targetWord, global.letterList);
+    var comparisonResult = compareLetters(global.targetWord, global.letterList);
+    global.correctLetters = comparisonResult.correctLetters;
+    var wordComplete = comparisonResult.wordComplete;
 
     var original_font = draw_get_font();
     draw_set_font(fnt_letter);
@@ -49,4 +51,11 @@ function drawLettersOnDashes() {
     draw_set_font(original_font);
     draw_set_color(c_white);
     draw_set_alpha(1);
+
+    if (wordComplete) {
+        global.wordComplete = true;
+        show_debug_message("Word is complete!");
+    } else {
+        global.wordComplete = false;
+    }
 }

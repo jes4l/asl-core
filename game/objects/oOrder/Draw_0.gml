@@ -15,6 +15,14 @@ var lineHeight = string_height("A") + 5;
 
 for (var i = 0; i < array_length_1d(global.wordList); i++) {
     var word = global.wordList[i];
+
+    // Check if the word is complete
+    if (i < global.currentWordIndex) {
+        draw_set_color(c_green); // Completed words are green
+    } else {
+        draw_set_color(c_black); // Incomplete words are black
+    }
+
     draw_text(startX, startY + titleHeight + padding + (i * lineHeight), word);
 }
 
