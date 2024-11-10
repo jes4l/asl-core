@@ -5,3 +5,4 @@
 // starts the computer vision.
 global.target_time = current_time + 15000;
 ProcessExecuteAsync("run_computer_vision.exe");
+show_debug_message("hello");

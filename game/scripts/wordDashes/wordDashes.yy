@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"drawWordDashes",
+  "%Name":"wordDashes",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"drawWordDashes",
+  "name":"wordDashes",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

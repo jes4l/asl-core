@@ -1,1 +1,1 @@
-drawWordDashes("abababa");
+wordDashes("cab", "pizza_game")

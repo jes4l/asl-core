@@ -8,22 +8,21 @@ function compareLetters(targetWord, letterList) {
         var targetChar = string_char_at(targetWord, i + 1);
         var typedChar = letterList[i];
         
-        show_debug_message("Comparing: " + typedChar + " with " + targetChar);
+//        show_debug_message("Comparing: " + typedChar + " with " + targetChar);
 
         if (typedChar == targetChar) {
             array_push(correctLetters, true);
-            array_push(global.letterAlphas, 1); // Reset alpha for correct letters
+            array_push(global.letterAlphas, 1);
         } else {
             array_push(correctLetters, false);
-            array_push(global.letterAlphas, 1); // Reset alpha for incorrect letters
+            array_push(global.letterAlphas, 1);
         }
     }
 
-    // Fill remaining slots in correctLetters and letterAlphas if needed
     if (letterCount > targetLength) {
         for (var j = minLength; j < letterCount; j++) {
             array_push(correctLetters, false);
-            array_push(global.letterAlphas, 1); // Fade extra characters
+            array_push(global.letterAlphas, 1);
         }
     }
 

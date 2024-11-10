@@ -9,7 +9,6 @@ function drawLettersOnDashes() {
         return;
     }
 
-    // Ensure correctLetters is updated to match the current letterList
     global.correctLetters = compareLetters(global.targetWord, global.letterList);
 
     var original_font = draw_get_font();
@@ -18,7 +17,6 @@ function drawLettersOnDashes() {
     var dashCount = array_length_1d(dashPositions);
     var i = 0;
 
-    // Use a while loop to handle dynamic list resizing when removing letters
     while (i < array_length_1d(global.letterList)) {
         var char = global.letterList[i];
         if (i < dashCount) {
@@ -26,32 +24,28 @@ function drawLettersOnDashes() {
             var posX = pos[0] + (global.dashWidth / 2) - (string_width(char) / 2);
             var posY = pos[1] - global.dashHeight - string_height(char);
 
-            // Handle color and alpha for correct/incorrect letters
             if (!global.correctLetters[i]) {
-                draw_set_color(c_red); // Incorrect letter color
-                global.letterAlphas[i] -= 0.02; // Reduce alpha for fade effect
+                draw_set_color(c_red);
+                global.letterAlphas[i] -= 0.02;
 
                 if (global.letterAlphas[i] <= 0) {
-                    // Remove the letter and its alpha value
                     array_delete(global.letterList, i, 1);
                     array_delete(global.letterAlphas, i, 1);
                     array_delete(global.correctLetters, i, 1);
-                    continue; // Skip incrementing i to handle the next element correctly
+                    continue;
                 }
             } else {
-                draw_set_color(c_green); // Correct letter color
-                global.letterAlphas[i] = 1; // Ensure full opacity for correct letters
+                draw_set_color(c_green);
+                global.letterAlphas[i] = 1;
             }
 
-            // Set alpha and draw the letter
             draw_set_alpha(global.letterAlphas[i]);
             draw_text(posX, posY, char);
         }
 
-        i++; // Increment index only if no letter is removed
+        i++;
     }
 
-    // Reset font and color settings after drawing
     draw_set_font(original_font);
     draw_set_color(c_white);
     draw_set_alpha(1);
