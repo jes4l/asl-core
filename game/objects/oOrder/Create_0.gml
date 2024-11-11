@@ -1,1 +1,1 @@
-global.wordList = ["cab", "bac", "abc"];
+global.wordList = ["caa", "aac", "abc"];
