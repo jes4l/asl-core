@@ -1,0 +1,11 @@
+pizzaButtonText = "Pizza Game";
+buttonPadding = 10;
+draw_set_font(fnt_letter_smallest);
+pizzaTextWidth = string_width(pizzaButtonText);
+pizzaTextHeight = string_height(pizzaButtonText);
+pizzaButtonWidth = pizzaTextWidth + buttonPadding * 2;
+pizzaButtonHeight = pizzaTextHeight + buttonPadding * 2;
+pizzaX1 = (room_width - pizzaButtonWidth) / 2;
+pizzaY1 = (room_height - pizzaButtonHeight) / 2 + 50;
+pizzaX2 = pizzaX1 + pizzaButtonWidth;
+pizzaY2 = pizzaY1 + pizzaButtonHeight;
