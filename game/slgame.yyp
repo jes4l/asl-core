@@ -229,6 +229,7 @@
     {"id":{"name":"oSignLetter","path":"objects/oSignLetter/oSignLetter.yy",},},
     {"id":{"name":"testword","path":"objects/testword/testword.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"autoFillLetters","path":"scripts/autoFillLetters/autoFillLetters.yy",},},
     {"id":{"name":"compareLetters","path":"scripts/compareLetters/compareLetters.yy",},},
     {"id":{"name":"drawLettersOnDashes","path":"scripts/drawLettersOnDashes/drawLettersOnDashes.yy",},},
     {"id":{"name":"getNextLetter","path":"scripts/getNextLetter/getNextLetter.yy",},},

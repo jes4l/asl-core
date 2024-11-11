@@ -8,9 +8,8 @@ if (!variable_global_exists("positions")) {
 /// @param {string} phrase - The phrase to create dashes for
 /// @param {string} keyword - The keyword to determine the starting position
 function wordDashes(phrase, keyword) {
-    global.targetWord = phrase; // Set the target word
+    global.targetWord = phrase;
 
-    // Get the starting position based on the keyword
     var startX, startY;
     if (ds_map_exists(global.positions, keyword)) {
         var position = ds_map_find_value(global.positions, keyword);
@@ -56,7 +55,7 @@ function wordDashes(phrase, keyword) {
             array_push(global.customDashPositions, [currentDrawPositionX, startY]);
             currentDrawPositionX += dashWidth + intraSpacing;
         }
-		
+        
         if (i < wordCount - 1) {
             currentDrawPositionX += interSpacing;
         }

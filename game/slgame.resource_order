@@ -34,6 +34,7 @@
     {"name":"oSignBoard","order":2,"path":"objects/oSignBoard/oSignBoard.yy",},
     {"name":"oSignLetter","order":3,"path":"objects/oSignLetter/oSignLetter.yy",},
     {"name":"testword","order":6,"path":"objects/testword/testword.yy",},
+    {"name":"autoFillLetters","order":4,"path":"scripts/autoFillLetters/autoFillLetters.yy",},
     {"name":"compareLetters","order":2,"path":"scripts/compareLetters/compareLetters.yy",},
     {"name":"drawLettersOnDashes","order":1,"path":"scripts/drawLettersOnDashes/drawLettersOnDashes.yy",},
     {"name":"getNextLetter","order":3,"path":"scripts/getNextLetter/getNextLetter.yy",},
