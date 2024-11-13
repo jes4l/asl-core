@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oOrder",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"OEASL",
+  "eventList":[],
   "managed":true,
-  "name":"oOrder",
+  "name":"OEASL",
   "overriddenProperties":[],
   "parent":{
-    "name":"PizzaGame",
-    "path":"folders/Objects/PizzaGame.yy",
+    "name":"LettersASL",
+    "path":"folders/Objects/LettersASL.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sBackBoard",
-    "path":"sprites/sBackBoard/sBackBoard.yy",
+    "name":"sEASL",
+    "path":"sprites/sEASL/sEASL.yy",
   },
   "spriteMaskId":null,
   "visible":true,

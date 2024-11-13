@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0160e8db-9569-427c-8738-c92d339b6eac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../game/datafiles/run_computer_vision.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../game/datafiles/run_computer_vision.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/objects/oClient/Create_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oClient/Create_0.gml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/objects/oSetup/Create_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oSetup/Create_0.gml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/objects/testword/Draw_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/testword/Draw_0.gml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/scripts/compareLetters/compareLetters.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/scripts/compareLetters/compareLetters.gml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/scripts/drawWordDashes/drawWordDashes.gml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/scripts/drawWordDashes/drawWordDashes.yy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/slgame.yyp" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.yyp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/computer_vision_here.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/computer_vision_here.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +54,7 @@
       <workItem from="1730983428025" duration="95000" />
       <workItem from="1730983794599" duration="830000" />
       <workItem from="1731241014072" duration="296000" />
+      <workItem from="1731359220852" duration="1299000" />
     </task>
     <servers />
   </component>
