@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oOrderBoard",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oFirePerson",
+  "eventList":[],
   "managed":true,
-  "name":"oOrderBoard",
+  "name":"oFirePerson",
   "overriddenProperties":[],
   "parent":{
     "name":"PizzaGame",
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sBackBoard",
-    "path":"sprites/sBackBoard/sBackBoard.yy",
+    "name":"sFirePerson",
+    "path":"sprites/sFirePerson/sFirePerson.yy",
   },
   "spriteMaskId":null,
   "visible":true,

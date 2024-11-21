@@ -1,4 +1,4 @@
-loadingDuration = 2 * room_speed;//20
+loadingDuration = 2 * room_speed; //20
 elapsedTime = 0;
 barPadding = 10;
 draw_set_font(fnt_letter_smallest);

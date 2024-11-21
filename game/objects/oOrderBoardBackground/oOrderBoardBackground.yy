@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oOrderBoard",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oOrderBoardBackground",
+  "eventList":[],
   "managed":true,
-  "name":"oOrderBoard",
+  "name":"oOrderBoardBackground",
   "overriddenProperties":[],
   "parent":{
     "name":"PizzaGame",
