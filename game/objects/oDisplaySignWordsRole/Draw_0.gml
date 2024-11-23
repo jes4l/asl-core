@@ -33,7 +33,7 @@ if (global.wordComplete) {
 } else {
     var currentWord = global.wordList[global.currentWordIndex];
     global.targetWord = currentWord;
-    wordDashes(currentWord, "pizza_game");
+    wordDashes(currentWord, "role_game");
     autoFillLetters(global.targetWord, global.letterList);
 
     var comparisonResult = compareLetters(global.targetWord, global.letterList);

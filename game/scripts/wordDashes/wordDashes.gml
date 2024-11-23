@@ -2,7 +2,7 @@
 if (!variable_global_exists("positions")) {
     global.positions = ds_map_create();
     ds_map_add(global.positions, "pizza_game", [543, 735]);
-    // ds_map_add(global.positions, "game", [100, 200]);
+    ds_map_add(global.positions, "role_game", [960, 480]);
 }
 
 /// @param {string} phrase - The phrase to create dashes for
