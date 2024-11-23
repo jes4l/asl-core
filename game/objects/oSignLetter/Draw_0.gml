@@ -1,3 +1,5 @@
+draw_self();
+
 function draw_centered_text(x, y, text, font) {
     var original_font = draw_get_font();
     draw_set_font(font);

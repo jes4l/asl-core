@@ -6,9 +6,9 @@ if (global.wordComplete) {
         global.currentWordIndex += 1;
 
         if (global.currentWordIndex >= array_length_1d(global.wordList)) {
-            show_debug_message("Order complete!");
+            show_debug_message("Role complete!");
             global.currentWordIndex = 0;
-            room_goto(rmPizzaEnd);
+            room_goto(rmRoleEnd);
         } else {
             global.letterList = [];
             global.letterAlphas = [];
