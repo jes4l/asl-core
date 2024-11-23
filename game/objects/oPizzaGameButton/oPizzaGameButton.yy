@@ -10,8 +10,8 @@
   "name":"oPizzaGameButton",
   "overriddenProperties":[],
   "parent":{
-    "name":"PizzaGame",
-    "path":"folders/Objects/PizzaGame.yy",
+    "name":"Buttons",
+    "path":"folders/Objects/PizzaGame/Buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,

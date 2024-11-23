@@ -9,8 +9,8 @@
   "name":"oEndMessage",
   "overriddenProperties":[],
   "parent":{
-    "name":"PizzaGame",
-    "path":"folders/Objects/PizzaGame.yy",
+    "name":"PizzaMessages",
+    "path":"folders/Objects/PizzaGame/PizzaMessages.yy",
   },
   "parentObjectId":null,
   "persistent":false,

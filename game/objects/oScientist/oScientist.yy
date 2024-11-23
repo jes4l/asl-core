@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oBoard",
+  "%Name":"oScientist",
   "eventList":[],
   "managed":true,
-  "name":"oBoard",
+  "name":"oScientist",
   "overriddenProperties":[],
   "parent":{
-    "name":"RoomDesign",
-    "path":"folders/Objects/PizzaGame/RoomDesign.yy",
+    "name":"People",
+    "path":"folders/Objects/People.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sBoard",
-    "path":"sprites/sBoard/sBoard.yy",
+    "name":"sScientist",
+    "path":"sprites/sScientist/sScientist.yy",
   },
   "spriteMaskId":null,
   "visible":true,

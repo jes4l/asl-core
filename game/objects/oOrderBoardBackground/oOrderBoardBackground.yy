@@ -6,8 +6,8 @@
   "name":"oOrderBoardBackground",
   "overriddenProperties":[],
   "parent":{
-    "name":"PizzaGame",
-    "path":"folders/Objects/PizzaGame.yy",
+    "name":"RoomDesign",
+    "path":"folders/Objects/PizzaGame/RoomDesign.yy",
   },
   "parentObjectId":null,
   "persistent":false,

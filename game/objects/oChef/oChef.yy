@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oFirePerson",
+  "%Name":"oChef",
   "eventList":[],
   "managed":true,
-  "name":"oFirePerson",
+  "name":"oChef",
   "overriddenProperties":[],
   "parent":{
-    "name":"PizzaGame",
-    "path":"folders/Objects/PizzaGame.yy",
+    "name":"People",
+    "path":"folders/Objects/People.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sFirePerson",
-    "path":"sprites/sFirePerson/sFirePerson.yy",
+    "name":"sChef",
+    "path":"sprites/sChef/sChef.yy",
   },
   "spriteMaskId":null,
   "visible":true,

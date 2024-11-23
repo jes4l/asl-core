@@ -13,7 +13,6 @@
     {"name":"inst_42D09116","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_432BDB7","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_691FF2F8","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
-    {"name":"inst_60532566","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -24,7 +23,6 @@
         {"$GMRInstance":"v1","%Name":"inst_30215207","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_30215207","objectId":{"name":"oSignLetter","path":"objects/oSignLetter/oSignLetter.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":4.5,"x":32.0,"y":448.0,},
         {"$GMRInstance":"v1","%Name":"inst_432BDB7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_432BDB7","objectId":{"name":"oOrderBoardBackground","path":"objects/oOrderBoardBackground/oOrderBoardBackground.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":6.0,"x":32.0,"y":32.0,},
         {"$GMRInstance":"v1","%Name":"inst_691FF2F8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_691FF2F8","objectId":{"name":"oOrderBoard","path":"objects/oOrderBoard/oOrderBoard.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":6.0,"x":32.0,"y":32.0,},
-        {"$GMRInstance":"v1","%Name":"inst_60532566","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_60532566","objectId":{"name":"oWordList","path":"objects/oWordList/oWordList.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":800.0,"y":576.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances_1","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_F9FED2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_F9FED2","objectId":{"name":"oBoard","path":"objects/oBoard/oBoard.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":11.5,"scaleY":6.5000005,"x":544.0,"y":32.0,},

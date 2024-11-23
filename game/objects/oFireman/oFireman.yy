@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oBoard",
+  "%Name":"oFireman",
   "eventList":[],
   "managed":true,
-  "name":"oBoard",
+  "name":"oFireman",
   "overriddenProperties":[],
   "parent":{
-    "name":"RoomDesign",
-    "path":"folders/Objects/PizzaGame/RoomDesign.yy",
+    "name":"PizzaGame",
+    "path":"folders/Objects/PizzaGame.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sBoard",
-    "path":"sprites/sBoard/sBoard.yy",
+    "name":"sFireman",
+    "path":"sprites/sFireman/sFireman.yy",
   },
   "spriteMaskId":null,
   "visible":true,
