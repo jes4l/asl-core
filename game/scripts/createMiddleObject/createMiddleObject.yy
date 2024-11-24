@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"createMiddleObject",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"createMiddleObject",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

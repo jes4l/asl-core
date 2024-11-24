@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oLetterController",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oApple",
+  "eventList":[],
   "managed":true,
-  "name":"oLetterController",
+  "name":"oApple",
   "overriddenProperties":[],
   "parent":{
-    "name":"Logic",
-    "path":"folders/Objects/Logic.yy",
+    "name":"Items",
+    "path":"folders/Objects/ShoppingGame/Items.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oItem",
+    "path":"objects/oItem/oItem.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sApple",
+    "path":"sprites/sApple/sApple.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
