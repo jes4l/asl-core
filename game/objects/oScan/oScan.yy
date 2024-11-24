@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oScreen",
+  "%Name":"oScan",
   "eventList":[],
   "managed":true,
-  "name":"oScreen",
+  "name":"oScan",
   "overriddenProperties":[],
   "parent":{
-    "name":"Display",
-    "path":"folders/Objects/ShoppingGame/Display.yy",
+    "name":"ShoppingGame",
+    "path":"folders/Objects/ShoppingGame.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sScreen",
-    "path":"sprites/sScreen/sScreen.yy",
+    "name":"sScan",
+    "path":"sprites/sScan/sScan.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -6,8 +6,8 @@
   "name":"oRail",
   "overriddenProperties":[],
   "parent":{
-    "name":"ShoppingGame",
-    "path":"folders/Objects/ShoppingGame.yy",
+    "name":"Display",
+    "path":"folders/Objects/ShoppingGame/Display.yy",
   },
   "parentObjectId":null,
   "persistent":false,

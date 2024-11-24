@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"oScreen",
-  "eventList":[],
+  "%Name":"oDisplaySignWordsShopping",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oScreen",
+  "name":"oDisplaySignWordsShopping",
   "overriddenProperties":[],
   "parent":{
-    "name":"Display",
-    "path":"folders/Objects/ShoppingGame/Display.yy",
+    "name":"ShoppingGame",
+    "path":"folders/Objects/ShoppingGame.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sScreen",
-    "path":"sprites/sScreen/sScreen.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
