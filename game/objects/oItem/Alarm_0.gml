@@ -1,13 +1,26 @@
+var clock = instance_find(oClock, 0);
+if (clock != noone) {
+    alarm[0] = room_speed * clock.timerDuration;
+} else {
+    alarm[0] = room_speed * 10;
+}
+
 if (path_position == 0.5) {
     path_position = 1; 
     path_speed = 0;
-    // show_debug_message("Object moved to end of path: " + string(id));
-    alarm[0] = room_speed * 10;
+    alarm[0] = room_speed * clock.timerDuration;
 } 
 else if (path_position == 1) {
-    // show_debug_message("Object at end destroyed: " + string(id));
+    if (clock != noone) {
+        clock.timerCurrent = clock.timerDuration;
+    }
+
     instance_destroy();
     with (oShoppingItemController) {
         createMiddleObject();
+    }
+
+    if (clock != noone && instance_number(oItem) == 0 && ds_queue_empty(oShoppingItemController.itemQueue)) {
+        clock.timerActive = false;
     }
 }

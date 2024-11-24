@@ -5,8 +5,12 @@ function createInitialObjects() {
         instance.depth = -100;
         instance.path_position = 1;
         instance.path_speed = 0;
-        instance.alarm[0] = room_speed * 10;
-        show_debug_message("Initial object created at end: " + string(instance.id));
+
+        // Sync with clock timing
+        var clock = instance_find(oClock, 0);
+        if (clock != noone) {
+            instance.alarm[0] = room_speed * clock.timerDuration;
+        }
     }
     if (!ds_queue_empty(itemQueue)) {
         var selectedObject = ds_queue_dequeue(itemQueue);
@@ -14,7 +18,11 @@ function createInitialObjects() {
         instance.depth = -100;
         instance.path_position = 0.5;
         instance.path_speed = 0;
-        instance.alarm[0] = room_speed * 10;
-        show_debug_message("Initial object created in middle: " + string(instance.id));
+
+        // Sync with clock timing
+        var clock = instance_find(oClock, 0);
+        if (clock != noone) {
+            instance.alarm[0] = room_speed * clock.timerDuration;
+        }
     }
 }
