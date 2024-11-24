@@ -6,7 +6,7 @@ draw_circle(clockCenterX, clockCenterY, clockRadius, false);
 
 var percentLeft = timerCurrent / timerDuration;
 var startAngle = -270;
-var endAngle = startAngle + percentLeft * 360;
+var endAngle = startAngle - percentLeft * 360;
 
 draw_set_color(make_color_hsv(120 * percentLeft, 1, 1));
 
@@ -35,7 +35,7 @@ for (var i = 0; i < divisions; i++) {
     draw_line(x1, y1, x2, y2);
 }
 
-var handAngle = startAngle + percentLeft * 360;
+var handAngle = startAngle - percentLeft * 360;
 draw_set_color(c_red);
 var handX = clockCenterX + lengthdir_x(handLength, handAngle);
 var handY = clockCenterY + lengthdir_y(handLength, handAngle);

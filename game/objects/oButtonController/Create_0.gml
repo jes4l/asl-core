@@ -48,3 +48,37 @@ roleX1 = room_width * roleHorizontalPosition;
 roleY1 = room_height * roleVerticalPosition;
 roleX2 = roleX1 + roleButtonWidth;
 roleY2 = roleY1 + roleButtonHeight;
+
+
+
+// Shopping Game Button
+shoppingButtonText = "Shopping Game";
+shoppingTextWidth = string_width(shoppingButtonText);
+shoppingTextHeight = string_height(shoppingButtonText);
+shoppingButtonWidth = shoppingTextWidth + buttonPadding * 2;
+shoppingButtonHeight = shoppingTextHeight + buttonPadding * 2;
+
+var shoppingHorizontalPosition = 0.9;
+var shoppingVerticalPosition = 0.2;
+
+shoppingX1 = room_width * shoppingHorizontalPosition - shoppingButtonWidth;
+shoppingY1 = room_height * shoppingVerticalPosition;
+shoppingX2 = shoppingX1 + shoppingButtonWidth;
+shoppingY2 = shoppingY1 + shoppingButtonHeight;
+
+
+
+// Colours Game Button
+coloursButtonText = "Colours Game";
+coloursTextWidth = string_width(coloursButtonText);
+coloursTextHeight = string_height(coloursButtonText);
+coloursButtonWidth = coloursTextWidth + buttonPadding * 2;
+coloursButtonHeight = coloursTextHeight + buttonPadding * 2;
+
+var coloursHorizontalPosition = 0.9;
+var coloursVerticalPosition = 0.4;
+
+coloursX1 = room_width * coloursHorizontalPosition - coloursButtonWidth;
+coloursY1 = room_height * coloursVerticalPosition;
+coloursX2 = coloursX1 + coloursButtonWidth;
+coloursY2 = coloursY1 + coloursButtonHeight;
