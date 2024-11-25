@@ -9,6 +9,15 @@ if (global.currentWordIndex + 1 < array_length_1d(global.wordList)) {
 }
 var nextObject = !is_undefined(nextWord) ? ds_map_find_value(global.wordToObjectMap, nextWord) : undefined;
 
+// Check the countdown timer
+if (instance_exists(oClock)) {
+    with (oClock) {
+        if (timerCurrent <= 0) {
+            room_goto(rmRoleEnd);
+        }
+    }
+}
+
 // Clean up non-target objects
 var key = ds_map_find_first(global.wordToObjectMap);
 while (!is_undefined(key)) {
@@ -22,7 +31,7 @@ while (!is_undefined(key)) {
     key = ds_map_find_next(global.wordToObjectMap, key);
 }
 
-// Handle the current object at the end of the path (normalized position 1)
+// Handle the current object at the end of the path (normalised position 1)
 if (!is_undefined(currentObject)) {
     var endPositionX = path_get_x(ShoppingGamePath, 1);
     var endPositionY = path_get_y(ShoppingGamePath, 1);
@@ -40,7 +49,7 @@ if (!is_undefined(currentObject)) {
     }
 }
 
-// Handle the next object at the middle of the path (normalized position 0.5)
+// Handle the next object at the middle of the path (normalised position 0.5)
 if (!is_undefined(nextObject)) {
     var midPositionX = path_get_x(ShoppingGamePath, 0.5);
     var midPositionY = path_get_y(ShoppingGamePath, 0.5);
@@ -56,4 +65,18 @@ if (!is_undefined(nextObject)) {
             y = midPositionY;
         }
     }
+}
+
+// Reset the countdown when the current word changes
+if (currentWord != previousWord) {
+    if (instance_exists(oClock)) {
+        show_debug_message("oClock exists");
+        with (oClock) {
+            show_debug_message("Resetting timer to " + string(timerDuration));
+            timerCurrent = timerDuration;
+        }
+    } else {
+        show_debug_message("oClock does not exist");
+    }
+    previousWord = currentWord; // Update the previous word
 }

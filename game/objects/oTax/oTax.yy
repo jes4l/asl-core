@@ -8,8 +8,8 @@
   "name":"oTax",
   "overriddenProperties":[],
   "parent":{
-    "name":"Display",
-    "path":"folders/Objects/RoleGame/Display.yy",
+    "name":"RoomDesign",
+    "path":"folders/Objects/RoleGame/RoomDesign.yy",
   },
   "parentObjectId":null,
   "persistent":false,

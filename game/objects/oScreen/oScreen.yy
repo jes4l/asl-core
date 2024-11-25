@@ -6,8 +6,8 @@
   "name":"oScreen",
   "overriddenProperties":[],
   "parent":{
-    "name":"Display",
-    "path":"folders/Objects/ShoppingGame/Display.yy",
+    "name":"RoomDesign",
+    "path":"folders/Objects/ShoppingGame/RoomDesign.yy",
   },
   "parentObjectId":null,
   "persistent":false,

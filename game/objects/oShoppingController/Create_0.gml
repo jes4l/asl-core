@@ -5,3 +5,4 @@ if (!variable_global_exists("wordToObjectMap")) {
     ds_map_add(global.wordToObjectMap, "abc", oCheese);
 }
 
+previousWord = "";

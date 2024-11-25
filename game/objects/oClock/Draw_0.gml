@@ -41,7 +41,7 @@ var handX = clockCenterX + lengthdir_x(handLength, handAngle);
 var handY = clockCenterY + lengthdir_y(handLength, handAngle);
 draw_line_width(clockCenterX, clockCenterY, handX, handY, 3);
 
-draw_set_color(c_black);
+draw_set_color(c_aqua);
 var timeText = string(floor(timerCurrent));
 draw_text(clockCenterX - string_width(timeText) / 2, clockCenterY - string_height("0") / 2, timeText);
 

@@ -6,8 +6,8 @@
   "name":"oCheese",
   "overriddenProperties":[],
   "parent":{
-    "name":"Items",
-    "path":"folders/Objects/ShoppingGame/Items.yy",
+    "name":"ShoppingItems",
+    "path":"folders/Objects/ShoppingGame/ShoppingItems.yy",
   },
   "parentObjectId":null,
   "persistent":false,

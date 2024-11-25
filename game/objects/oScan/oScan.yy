@@ -6,8 +6,8 @@
   "name":"oScan",
   "overriddenProperties":[],
   "parent":{
-    "name":"ShoppingGame",
-    "path":"folders/Objects/ShoppingGame.yy",
+    "name":"RoomDesign",
+    "path":"folders/Objects/ShoppingGame/RoomDesign.yy",
   },
   "parentObjectId":null,
   "persistent":false,

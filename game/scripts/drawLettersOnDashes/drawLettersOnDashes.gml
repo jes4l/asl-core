@@ -54,7 +54,7 @@ function drawLettersOnDashes() {
 
     if (wordComplete) {
         global.wordComplete = true;
-        show_debug_message("Word is complete!");
+        // show_debug_message("Word is complete!");
     } else {
         global.wordComplete = false;
     }
