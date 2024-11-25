@@ -9,10 +9,7 @@
     "name":"Items",
     "path":"folders/Objects/ShoppingGame/Items.yy",
   },
-  "parentObjectId":{
-    "name":"oItem",
-    "path":"objects/oItem/oItem.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
