@@ -7,8 +7,9 @@ if (global.wordComplete) {
 
         if (global.currentWordIndex >= array_length_1d(global.wordList)) {
             show_debug_message("Scan complete!");
+			global.customEndMessage = "Thank You for Shopping";
             global.currentWordIndex = 0;
-            room_goto(rmRoleEnd);
+            room_goto(rmShoppingEnd);
         } else {
             global.letterList = [];
             global.letterAlphas = [];

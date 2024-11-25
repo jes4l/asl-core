@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oFireman",
-  "eventList":[],
+  "%Name":"oTaxStart",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oFireman",
+  "name":"oTaxStart",
   "overriddenProperties":[],
   "parent":{
-    "name":"People",
-    "path":"folders/Objects/People.yy",
+    "name":"RoomDesign",
+    "path":"folders/Objects/RoleGame/RoomDesign.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sFireman",
-    "path":"sprites/sFireman/sFireman.yy",
+    "name":"sTax",
+    "path":"sprites/sTax/sTax.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oFireman",
+  "%Name":"oShoppingCart",
   "eventList":[],
   "managed":true,
-  "name":"oFireman",
+  "name":"oShoppingCart",
   "overriddenProperties":[],
   "parent":{
-    "name":"People",
-    "path":"folders/Objects/People.yy",
+    "name":"RoomDesign",
+    "path":"folders/Objects/ShoppingGame/RoomDesign.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sFireman",
-    "path":"sprites/sFireman/sFireman.yy",
+    "name":"sShoppingCart",
+    "path":"sprites/sShoppingCart/sShoppingCart.yy",
   },
   "spriteMaskId":null,
   "visible":true,

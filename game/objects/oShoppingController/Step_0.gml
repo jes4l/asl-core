@@ -13,7 +13,8 @@ var nextObject = !is_undefined(nextWord) ? ds_map_find_value(global.wordToObject
 if (instance_exists(oClock)) {
     with (oClock) {
         if (timerCurrent <= 0) {
-            room_goto(rmRoleEnd);
+			global.customEndMessage = "I'm Sorry the Till Broke";
+            room_goto(rmShoppingEnd);
         }
     }
 }

@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oFireman",
+  "%Name":"oPolice",
   "eventList":[],
   "managed":true,
-  "name":"oFireman",
+  "name":"oPolice",
   "overriddenProperties":[],
   "parent":{
     "name":"People",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sFireman",
-    "path":"sprites/sFireman/sFireman.yy",
+    "name":"sPolice",
+    "path":"sprites/sPolice/sPolice.yy",
   },
   "spriteMaskId":null,
   "visible":true,
