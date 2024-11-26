@@ -16,6 +16,7 @@ if (mouse_check_button_pressed(mb_left)) {
 	}
 	
 	if (point_in_rectangle(mouse_x, mouse_y, coloursX1, coloursY1, coloursX2, coloursY2)) {
+		updateWordList("colourGame");
 		room_goto(rmColourGame);
 }
 	

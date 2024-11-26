@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"People",
-    "path":"folders/Sprites/People.yy",
+    "path":"folders/Sprites/General/People.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

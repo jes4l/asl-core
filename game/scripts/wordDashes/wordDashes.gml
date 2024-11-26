@@ -3,6 +3,7 @@ if (!variable_global_exists("positions")) {
     ds_map_add(global.positions, "pizza_game", [543, 735]);
     ds_map_add(global.positions, "role_game", [960, 480]);
     ds_map_add(global.positions, "shopping_game", [319, 319]);
+	ds_map_add(global.positions, "colour_game", [670, 670]);
 }
 
 /// @param {string} phrase - The phrase to create dashes for
@@ -23,6 +24,10 @@ function wordDashes(phrase, keyword) {
         else if (keyword == "role_game") {
             endX = 1324;
         } 
+		
+		else if (keyword == "colour_game"){
+			endX = 1215;
+		}
 		
         else {
             endX = room_width;
@@ -63,6 +68,11 @@ function wordDashes(phrase, keyword) {
 
     // Adjust starting position for center alignment if role_game
     if (keyword == "role_game") {
+        startX += (availableWidth - totalDashLineWidth) / 2; // Center align
+    }
+	
+    // Adjust starting position for center alignment if role_game
+    if (keyword == "colour_game") {
         startX += (availableWidth - totalDashLineWidth) / 2; // Center align
     }
 

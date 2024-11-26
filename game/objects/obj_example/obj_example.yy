@@ -21,7 +21,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"libxprocess",
-    "path":"folders/Objects/Server/libxprocess.yy",
+    "path":"folders/Objects/General/Server/libxprocess.yy",
   },
   "parentObjectId":null,
   "persistent":false,

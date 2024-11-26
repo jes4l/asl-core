@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Start",
-    "path":"folders/Objects/Start.yy",
+    "path":"folders/Objects/General/Start.yy",
   },
   "parentObjectId":null,
   "persistent":false,

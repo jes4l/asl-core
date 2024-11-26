@@ -22,7 +22,7 @@
   "name":"rmStartGame",
   "parent":{
     "name":"StartGame",
-    "path":"folders/Rooms/StartGame.yy",
+    "path":"folders/Rooms/General/StartGame.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Letters",
-    "path":"folders/Sprites/Letters.yy",
+    "path":"folders/Sprites/General/Letters.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
