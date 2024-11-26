@@ -1,16 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"oGreenTick",
+  "%Name":"oColourGameButton",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oGreenTick",
+  "name":"oColourGameButton",
   "overriddenProperties":[],
   "parent":{
-    "name":"ColourGame",
-    "path":"folders/Objects/ColourGame.yy",
+    "name":"Button",
+    "path":"folders/Objects/ColourGame/Button.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,10 +31,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"sGreenTick",
-    "path":"sprites/sGreenTick/sGreenTick.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

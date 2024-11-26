@@ -10,7 +10,7 @@ if (global.wordPending) {
         if (global.currentWordIndex >= array_length_1d(global.wordList)) {
             // show_debug_message("All words completed!");
             global.currentWordIndex = 0;
-            room_goto(rmRoleEnd);
+            room_goto(rmColourEnd);
         } else {
             global.targetWord = global.wordList[global.currentWordIndex];
             // show_debug_message("Next target word: " + global.targetWord);

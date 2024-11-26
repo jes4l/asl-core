@@ -9,8 +9,8 @@
   "name":"oRedCross",
   "overriddenProperties":[],
   "parent":{
-    "name":"TestTubes",
-    "path":"folders/Objects/ColourGame/TestTubes.yy",
+    "name":"ColourGame",
+    "path":"folders/Objects/ColourGame.yy",
   },
   "parentObjectId":null,
   "persistent":false,

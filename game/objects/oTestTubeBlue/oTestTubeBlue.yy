@@ -6,8 +6,8 @@
   "name":"oTestTubeBlue",
   "overriddenProperties":[],
   "parent":{
-    "name":"TestTubes",
-    "path":"folders/Objects/ColourGame/TestTubes.yy",
+    "name":"RoomDesign",
+    "path":"folders/Objects/ColourGame/RoomDesign.yy",
   },
   "parentObjectId":null,
   "persistent":false,
