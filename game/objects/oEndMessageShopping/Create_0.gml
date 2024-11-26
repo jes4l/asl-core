@@ -6,6 +6,9 @@ if (!variable_global_exists("wordToObjectMap")) {
     ds_map_add(global.wordToObjectMap, "abc", oCheese);
 }
 
+if (!variable_global_exists("wordList")) {
+    global.wordList = [];
+}
 
 if (!variable_global_exists("customEndMessage")) {
     global.customEndMessage = "Scan Shopping Before Timer Runs Out";
