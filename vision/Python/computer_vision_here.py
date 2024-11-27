@@ -56,7 +56,7 @@ class CVHandler:
         """
         previous_sign = None
         while True:
-            sign = self.get_sign()
+            sign, x, y = self.get_sign()
             if sign is None:
                 continue
 
@@ -71,25 +71,30 @@ class CVHandler:
                 self.stable_count = 0  # Reset after stabilisation
 
                 # Smoothing algorithm
-                self.recent_signs.append(sign)
+                """self.recent_signs.append(sign)
                 if len(self.recent_signs) > self.sign_window_size:
                     self.recent_signs.pop(0)
                 most_common_sign = max(
-                    set(self.recent_signs), key=self.recent_signs.count
-                )
+                    set(self.recent_signs), key = self.recent_signs.count
+                )"""
 
-                current_time = time.time()
-                if (
-                    most_common_sign != previous_sign
-                    and (current_time - self.last_sign_time) > self.debounce_interval
-                ):
-                    self.message["data"] = self.labels[most_common_sign]
-                    message_json = json.dumps(self.message)
-                    queue.put(message_json)
-                    previous_sign = most_common_sign
-                    self.last_sign_time = current_time
+                most_common_sign = sign
+                self.message = {}
 
-            time.sleep(0.01)
+                # only send sign if it has changed
+                #if most_common_sign != previous_sign:
+
+                # always send hand gesture
+                self.message["data"] = self.labels[most_common_sign]
+
+                # always send pos
+                self.message["pos"] = [x, y]
+
+                message_json = json.dumps(self.message)
+                queue.put(message_json)
+                print(f"putting {message_json}")
+
+            time.sleep(0.1)
 
     def cropImageWithBounds(self, img, x, y, width, height, margin):
         """
@@ -155,7 +160,7 @@ class CVHandler:
         success, img = self.cap.read()
         if not success:
             print("Failed to capture image")
-            return None
+            return None, -1, -1
 
         imgOutput = img.copy()
         hands, img = self.detector.findHands(img)
@@ -198,12 +203,12 @@ class CVHandler:
                     (255, 0, 255),
                     4,
                 )
-                #cv2.imshow("Cropped Hand", croppedHand)
-                #cv2.imshow("Centered Hand", centeredHand)
-                #cv2.imshow("Image", imgOutput)
-                #cv2.waitKey(1)
-                return index
+                cv2.imshow("Cropped Hand", croppedHand)
+                cv2.imshow("Centered Hand", centeredHand)
+                cv2.imshow("Image", imgOutput)
+                cv2.waitKey(1)
+                return index, x + (w // 2), y + (h // 2)
 
-        #cv2.imshow("Image", imgOutput)
+        cv2.imshow("Image", imgOutput)
         cv2.waitKey(1)
-        return None
+        return None, -1, -1

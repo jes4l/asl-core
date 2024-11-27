@@ -18,6 +18,8 @@ class MessageController:
         """
         self.create_client()
         self.init_cv()
+        self.most_recent_msg = {}
+        self.last_transmit_time = 0.0  # Timestamp of the last transmission
 
     def create_client(self) -> None:
         """
@@ -49,6 +51,7 @@ class MessageController:
         while True:
             self.update_client()
 
+
     def update_client(self) -> None:
         """
         Attempts to update the client by transmitting the latest gesture data.
@@ -74,3 +77,4 @@ class MessageController:
             return True
         else:
             return False
+

@@ -1,3 +1,4 @@
+draw_self();
 // Timer variable to track elapsed time
 if (!variable_instance_exists(id, "elapsedTime")) {
     elapsedTime = 0;

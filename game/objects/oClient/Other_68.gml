@@ -24,16 +24,35 @@ if(n_id == server_socket)
 
 		try
 		{
-        jsonData = json_parse(originalString)
+			jsonData = json_parse(originalString)
 
-        if variable_struct_exists(jsonData, "data")
-        {
-            global.msg = jsonData.data;
-			show_debug_message("received from python:" + global.msg);
-        }
+	        if variable_struct_exists(jsonData, "data")
+	        {
+	            global.msg = jsonData.data;
+				show_debug_message("received from python:" + global.msg);
+	        }
 		}
 		catch(e)
 		{
+		}
+		
+		try
+		{
+			jsonData = json_parse(originalString);
+			
+			if variable_struct_exists(jsonData, "pos")
+	        {
+			    // Check if the array has at least two elements (x and y)
+			    if (is_array(jsonData.pos) && array_length(jsonData.pos) >= 2)
+			    {
+			        var x_pos = jsonData.pos[0]; // First element is x position
+			        var y_pos = jsonData.pos[1]; // Second element is y position
+
+			        show_debug_message("Received position from Python: x = " + string(x_pos) + ", y = " + string(y_pos));
+					global.hand_x = x_pos;
+					global.hand_y = y_pos;
+			    }
+	        }
 		}
 
     }
