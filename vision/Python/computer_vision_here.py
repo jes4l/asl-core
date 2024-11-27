@@ -203,12 +203,12 @@ class CVHandler:
                     (255, 0, 255),
                     4,
                 )
-                cv2.imshow("Cropped Hand", croppedHand)
-                cv2.imshow("Centered Hand", centeredHand)
-                cv2.imshow("Image", imgOutput)
-                cv2.waitKey(1)
+                #cv2.imshow("Cropped Hand", croppedHand)
+                #cv2.imshow("Centered Hand", centeredHand)
+                #cv2.imshow("Image", imgOutput)
+                #cv2.waitKey(1)
                 return index, x + (w // 2), y + (h // 2)
 
-        cv2.imshow("Image", imgOutput)
+        #cv2.imshow("Image", imgOutput)
         cv2.waitKey(1)
         return None, -1, -1

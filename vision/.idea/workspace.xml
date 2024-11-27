@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0160e8db-9569-427c-8738-c92d339b6eac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../game/objects/oAutoSignASL/Draw_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oAutoSignASL/Draw_0.gml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/paths/Path1/Path1.yy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/rooms/rmPlacesGame/rmPlacesGame.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/rooms/rmPlacesGame/rmPlacesGame.yy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/slgame.resource_order" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.resource_order" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/slgame.yyp" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.yyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/objects/oClient/Other_68.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oClient/Other_68.gml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Python/computer_vision_here.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/computer_vision_here.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/controller.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +66,7 @@
       <workItem from="1731359220852" duration="1299000" />
       <workItem from="1732390626371" duration="881000" />
       <workItem from="1732710252243" duration="11987000" />
-      <workItem from="1732729884722" duration="4403000" />
+      <workItem from="1732729884722" duration="5420000" />
     </task>
     <servers />
   </component>
