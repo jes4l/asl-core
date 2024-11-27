@@ -64,7 +64,7 @@
       <workItem from="1731241014072" duration="296000" />
       <workItem from="1731359220852" duration="1299000" />
       <workItem from="1732390626371" duration="881000" />
-      <workItem from="1732710252243" duration="1172000" />
+      <workItem from="1732710252243" duration="4317000" />
     </task>
     <servers />
   </component>
@@ -72,7 +72,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/vision$carGameControls.coverage" NAME="carGameControls Coverage Results" MODIFIED="1732713447679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/vision$carGameControls.coverage" NAME="carGameControls Coverage Results" MODIFIED="1732716303175" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
     <SUITE FILE_PATH="coverage/vision$Runner.coverage" NAME="Runner Coverage Results" MODIFIED="1730889666203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/vision$computer_vision_here.coverage" NAME="computer_vision_here Coverage Results" MODIFIED="1732391453383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
   </component>

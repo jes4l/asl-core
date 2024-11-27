@@ -3,20 +3,11 @@ import numpy as np
 import mediapipe as mp
 import time
 
-
 def drawRegions(img, width, height):
     regions = [
         {"name": "LEFT", "rect": (0, 0, int(width / 2), int(height / 2))},
         {"name": "RIGHT", "rect": (int(width / 2), 0, width, int(height / 2))},
-        {
-            "name": "ACCELERATE",
-            "rect": (
-                0,
-                int(height / 2),
-                width,
-                int(height * 0.75),
-            ),
-        },
+        {"name": "ACCELERATE", "rect": (0, int(height / 2), width, int(height * 0.75))},
         {"name": "BRAKE", "rect": (0, int(height * 0.75), width, height)},
     ]
     for region in regions:
@@ -35,7 +26,6 @@ def drawRegions(img, width, height):
             img, text, (textX, textY), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 2
         )
 
-
 def detectHandPosition(indexX, indexY, width, height):
     if 0 <= indexX < int(width / 2) and 0 <= indexY < int(height / 2):
         return "LEFT"
@@ -46,7 +36,6 @@ def detectHandPosition(indexX, indexY, width, height):
     elif 0 <= indexX < width and int(height * 0.75) <= indexY < height:
         return "BRAKE"
     return None
-
 
 def processHandActions(handData, lastActionTime, debounceInterval, width, height):
     actions = set()
@@ -76,7 +65,6 @@ def processHandActions(handData, lastActionTime, debounceInterval, width, height
         return currentTime
     return lastActionTime
 
-
 mpHands = mp.solutions.hands
 hands = mpHands.Hands(
     static_image_mode=False,
@@ -86,9 +74,8 @@ hands = mpHands.Hands(
 )
 
 cap = cv2.VideoCapture(0)
-
 lastActionTime = time.time()
-debounceInterval = 0.3
+debounceInterval = 1
 
 while True:
     ret, frame = cap.read()
