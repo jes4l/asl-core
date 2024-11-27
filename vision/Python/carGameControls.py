@@ -11,9 +11,9 @@ def drawRegions(img, width, height):
         {
             "name": "ACCELERATE",
             "rect": (
-                int(width * 0.25),
+                0,
                 int(height / 2),
-                int(width * 0.75),
+                width,
                 int(height * 0.75),
             ),
         },
@@ -41,9 +41,7 @@ def detectHandPosition(indexX, indexY, width, height):
         return "LEFT"
     elif int(width / 2) <= indexX < width and 0 <= indexY < int(height / 2):
         return "RIGHT"
-    elif int(width * 0.25) <= indexX < int(width * 0.75) and int(
-        height / 2
-    ) <= indexY < int(height * 0.75):
+    elif 0 <= indexX < width and int(height / 2) <= indexY < int(height * 0.75):
         return "ACCELERATE"
     elif 0 <= indexX < width and int(height * 0.75) <= indexY < height:
         return "BRAKE"
