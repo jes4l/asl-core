@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"oCinema",
+  "%Name":"oHospital",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oCinema",
+  "name":"oHospital",
   "overriddenProperties":[],
   "parent":{
     "name":"PlacesGame",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sCinema",
-    "path":"sprites/sCinema/sCinema.yy",
+    "name":"sHospital",
+    "path":"sprites/sHospital/sHospital.yy",
   },
   "spriteMaskId":null,
   "visible":true,

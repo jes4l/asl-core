@@ -1,0 +1,1 @@
+global.currentWordIndex = 0;

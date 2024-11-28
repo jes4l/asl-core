@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oBuilding",
-  "eventList":[],
+  "%Name":"oAutoSignASLWithoutSign",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"oBuilding",
+  "name":"oAutoSignASLWithoutSign",
   "overriddenProperties":[],
   "parent":{
-    "name":"PlacesGame",
-    "path":"folders/Objects/PlacesGame.yy",
+    "name":"Logic",
+    "path":"folders/Objects/General/Logic.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sCinema",
-    "path":"sprites/sCinema/sCinema.yy",
+    "name":"sBoard",
+    "path":"sprites/sBoard/sBoard.yy",
   },
   "spriteMaskId":null,
   "visible":true,
