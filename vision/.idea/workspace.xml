@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0160e8db-9569-427c-8738-c92d339b6eac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../game/objects/oClient/Other_68.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oClient/Other_68.gml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/objects/oCar/Create_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oCar/Create_0.gml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/objects/oCar/Step_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oCar/Step_0.gml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/rooms/rmCarGame/rmCarGame.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/rooms/rmCarGame/rmCarGame.yy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/rooms/rmMenu/rmMenu.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/rooms/rmMenu/rmMenu.yy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/slgame.resource_order" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.resource_order" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/slgame.yyp" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.yyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sCar/abaca486-bd0a-4fbe-8680-3896050eb744.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sCar/layers/abaca486-bd0a-4fbe-8680-3896050eb744/87382dc0-af58-4a7b-b067-81ad7096d1a1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sCar/sCar.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sCar/sCar.yy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Python/computer_vision_here.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/computer_vision_here.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +73,8 @@
       <workItem from="1731359220852" duration="1299000" />
       <workItem from="1732390626371" duration="881000" />
       <workItem from="1732710252243" duration="11987000" />
-      <workItem from="1732729884722" duration="5420000" />
+      <workItem from="1732729884722" duration="5426000" />
+      <workItem from="1732808092848" duration="1767000" />
     </task>
     <servers />
   </component>
