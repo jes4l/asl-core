@@ -4,5 +4,5 @@ if (!variable_global_exists("gameWordLists")) {
     ds_map_add(global.gameWordLists, "roleGame", ["baa", "cab", "abc"]);
 	ds_map_add(global.gameWordLists, "shoppingGame", ["bac", "cab", "abc"]);
 	ds_map_add(global.gameWordLists, "colourGame", ["abc", "cba", "aac"]);
-	ds_map_add(global.gameWordLists, "placesGame", ["abc", "cba", "aac"]);
+	ds_map_add(global.gameWordLists, "placesGame", ["acb", "bca", "cab"]);
 }

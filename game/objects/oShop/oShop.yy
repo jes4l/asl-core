@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oBuilding",
+  "%Name":"oShop",
   "eventList":[],
   "managed":true,
-  "name":"oBuilding",
+  "name":"oShop",
   "overriddenProperties":[],
   "parent":{
     "name":"PlacesGame",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sCinema",
-    "path":"sprites/sCinema/sCinema.yy",
+    "name":"sHospital",
+    "path":"sprites/sHospital/sHospital.yy",
   },
   "spriteMaskId":null,
   "visible":true,

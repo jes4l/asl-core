@@ -94,7 +94,7 @@ class CVHandler:
                 queue.put(message_json)
                 print(f"putting {message_json}")
 
-            time.sleep(0.1)
+            time.sleep(0.3)
 
     def cropImageWithBounds(self, img, x, y, width, height, margin):
         """

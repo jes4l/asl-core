@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oPath",
+  "%Name":"oCinema",
   "eventList":[],
   "managed":true,
-  "name":"oPath",
+  "name":"oCinema",
   "overriddenProperties":[],
   "parent":{
     "name":"PlacesGame",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sPath",
-    "path":"sprites/sPath/sPath.yy",
+    "name":"sHospital",
+    "path":"sprites/sHospital/sHospital.yy",
   },
   "spriteMaskId":null,
   "visible":true,
