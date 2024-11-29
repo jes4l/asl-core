@@ -10,11 +10,10 @@ if (spawnTimer <= 0) {
     instance_create_layer(0, -sprite_height, "Instances", oObstacle);
 }
 
-// Handle spawning of the currentWord object
 if (!wordSpawned) {
     wordSpawnTimer -= 1;
     if (wordSpawnTimer <= 0) {
-        wordSpawnTimer = room_speed * 15; // Reset for next word
+        wordSpawnTimer = room_speed * 15;
         var currentWord = global.wordList[global.currentWordIndex];
         var targetObject = ds_map_find_value(global.wordToObjectMap, currentWord);
 
@@ -24,7 +23,7 @@ if (!wordSpawned) {
             var xPos = (sectionWidth div 2) + (selectedLane * sectionWidth);
 
             instance_create_layer(xPos, -sprite_height, "Instances", targetObject);
-            wordSpawned = true; // Prevent further spawns for this word
+            wordSpawned = true;
         }
     }
 }

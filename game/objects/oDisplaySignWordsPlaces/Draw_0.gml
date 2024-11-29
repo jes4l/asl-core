@@ -4,22 +4,17 @@ if (global.wordComplete) {
     if (global.wordClearTimer >= room_speed * 1.5) {
         global.wordClearTimer = 0;
         global.wordComplete = false;
-
-        // Advance the current word index
         global.currentWordIndex += 1;
 
-        // Check if the currentWordIndex exceeds the word list length
         if (global.currentWordIndex >= array_length_1d(global.wordList)) {
             show_debug_message("Order complete!");
-            global.currentWordIndex = 0; // Reset to the beginning of the list
-            room_goto(rmMenu); // Transition to the menu
+            global.currentWordIndex = 0;
+            room_goto(rmMenu);
         } else {
-            // Reset variables for the next word
             global.letterList = [];
             global.letterAlphas = [];
             global.customDashPositions = [];
 
-            // Ensure currentWordIndex is valid before accessing the word list
             if (global.currentWordIndex < array_length_1d(global.wordList)) {
                 var nextWord = global.wordList[global.currentWordIndex];
                 global.targetWord = nextWord;

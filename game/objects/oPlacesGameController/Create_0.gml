@@ -1,14 +1,11 @@
-// Create Event
 spawnTimer = 0;
 
-// Adjust the spawn interval for obstacles
-spawnIntervalMin = room_speed * 6; // 6 seconds
-spawnIntervalMax = room_speed * 8; // 8 seconds
+spawnIntervalMin = room_speed * 9;
+spawnIntervalMax = room_speed * 10;
 spawnInterval = irandom_range(spawnIntervalMin, spawnIntervalMax);
 
-// Timer for spawning the currentWord object
-wordSpawnTimer = room_speed * 15; // 15 seconds
-wordSpawned = false; // Ensure the word object is spawned only once
+wordSpawnTimer = room_speed * 20;
+wordSpawned = false;
 
 if (!variable_global_exists("wordToObjectMap")) {
     global.wordToObjectMap = ds_map_create();
