@@ -9,10 +9,10 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Server",
-    "path":"folders/Objects/General/Server.yy",
+    "path":"folders/Objects/Server.yy",
   },
   "parentObjectId":null,
-  "persistent":true,
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,

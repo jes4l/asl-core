@@ -6,29 +6,25 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_3EABBC7E","path":"rooms/rmRoleGame/rmRoleGame.yy",},
-    {"name":"inst_637975C7","path":"rooms/rmRoleGame/rmRoleGame.yy",},
-    {"name":"inst_752E8BC5","path":"rooms/rmRoleGame/rmRoleGame.yy",},
-    {"name":"inst_23AAE8D","path":"rooms/rmRoleGame/rmRoleGame.yy",},
-    {"name":"inst_5C0A59E3","path":"rooms/rmRoleGame/rmRoleGame.yy",},
-    {"name":"inst_1B71C471","path":"rooms/rmRoleGame/rmRoleGame.yy",},
+    {"name":"inst_7AE6B1F4_2_1_1","path":"rooms/rmRoleGame/rmRoleGame.yy",},
+    {"name":"inst_68E2271F_2_1_1","path":"rooms/rmRoleGame/rmRoleGame.yy",},
+    {"name":"inst_559FF692_2_1_1","path":"rooms/rmRoleGame/rmRoleGame.yy",},
+    {"name":"inst_5A832802","path":"rooms/rmRoleGame/rmRoleGame.yy",},
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_3EABBC7E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3EABBC7E","objectId":{"name":"oTax","path":"objects/oTax/oTax.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.0000005,"scaleY":6.4999995,"x":912.0,"y":128.0,},
-        {"$GMRInstance":"v1","%Name":"inst_637975C7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_637975C7","objectId":{"name":"oLetterController","path":"objects/oLetterController/oLetterController.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":608.0,"y":416.0,},
-        {"$GMRInstance":"v1","%Name":"inst_752E8BC5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_752E8BC5","objectId":{"name":"oDisplaySignWordsRole","path":"objects/oDisplaySignWordsRole/oDisplaySignWordsRole.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":640.0,"y":448.0,},
-        {"$GMRInstance":"v1","%Name":"inst_23AAE8D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_23AAE8D","objectId":{"name":"oPeopleController","path":"objects/oPeopleController/oPeopleController.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":448.0,},
-        {"$GMRInstance":"v1","%Name":"inst_5C0A59E3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5C0A59E3","objectId":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.266667,"scaleY":5.266667,"x":1104.0,"y":96.0,},
-        {"$GMRInstance":"v1","%Name":"inst_1B71C471","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1B71C471","objectId":{"name":"oSignASL","path":"objects/oSignASL/oSignASL.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.5,"scaleY":4.0,"x":32.0,"y":224.0,},
+    {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+        {"$GMRInstance":"v1","%Name":"inst_7AE6B1F4_2_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7AE6B1F4_2_1_1","objectId":{"name":"oLetterController","path":"objects/oLetterController/oLetterController.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":320.0,},
+        {"$GMRInstance":"v1","%Name":"inst_68E2271F_2_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_68E2271F_2_1_1","objectId":{"name":"oGameWordList","path":"objects/oGameWordList/oGameWordList.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1120.0,"y":768.0,},
+        {"$GMRInstance":"v1","%Name":"inst_559FF692_2_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_559FF692_2_1_1","objectId":{"name":"oDrawDashes","path":"objects/oDrawDashes/oDrawDashes.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1024.0,"y":672.0,},
+        {"$GMRInstance":"v1","%Name":"inst_5A832802","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5A832802","objectId":{"name":"oMenuButton","path":"objects/oMenuButton/oMenuButton.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1536.0,"y":864.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"rmRoleGame",
   "parent":{
-    "name":"RoleGame",
-    "path":"folders/Rooms/RoleGame.yy",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
@@ -41,10 +37,10 @@
   "resourceType":"GMRoom",
   "resourceVersion":"2.0",
   "roomSettings":{
-    "Height":768,
+    "Height":1080,
     "inheritRoomSettings":false,
     "persistent":false,
-    "Width":1376,
+    "Width":1920,
   },
   "sequenceId":null,
   "views":[

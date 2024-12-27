@@ -32,8 +32,8 @@ if(n_id == server_socket)
                 if (!variable_global_exists("lastLetter") || currentLetter != global.lastLetter)
                 {
                     global.lastLetter = currentLetter; // Update last letter
-                    global.msg = currentLetter;        // Update global.msg with the new letter
-                    show_debug_message("Letter changed: " + global.msg);
+                    global.letter = currentLetter;        // Update global.letter with the new letter
+                    show_debug_message("Letter changed: " + global.letter);
                 }
 
                 global.letterReceived = currentLetter; // Always update the received letters

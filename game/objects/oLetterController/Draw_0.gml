@@ -1,13 +1,10 @@
-global.msg += global.previousLetters;
-global.previousLetters = "";
-
-for (var i = 1; i <= string_length(global.msg); i++) {
-    var letter = string_char_at(global.msg, i);
-    array_push(global.letterList, letter);
-
-    autoFillLetters(global.targetWord, global.letterList);
-}
-
-global.msg = "";
-
-drawLettersOnDashes();
+draw_self();
+var char = string_char_at(global.letter, 1);
+var room_w = room_width;
+var room_h = room_height;
+var center_x = room_w / 2;
+var center_y = room_h / 2;
+var original_font = draw_get_font();
+draw_set_font(fntLetter);
+draw_text(center_x, center_y, char);
+draw_set_font(original_font);

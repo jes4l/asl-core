@@ -1,4 +1,4 @@
-draw_set_font(fnt_example);
+draw_set_font(fntLetter);
 if (!pause) p = "pause"; else p = "resume";
 if (!ProcIdExists(procId) || exe == "") e = "<undefined>"; else e = exe;
 if (!ProcIdExists(procId) || cwd == "") d = "<undefined>"; else d = cwd;
