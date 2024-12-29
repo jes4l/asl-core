@@ -1,3 +1,5 @@
+// oMenuButton - Create Event
+
 buttonText = "Menu";
 buttonPadding = 15;
 

@@ -1,4 +1,6 @@
-buttonText = "Start";
+// oStartButton - Create Event
+
+buttonText = "Menu";
 buttonPadding = 15;
 
 var margin = 10;

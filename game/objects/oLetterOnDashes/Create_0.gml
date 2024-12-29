@@ -55,7 +55,7 @@ function LoadWord(_index) {
             array_push(letters, c);
         }
     }
-    letterCount = array_length(letters);
+    letterCount = array_length_1d(letters);
 
     // Initialize colors and alphas
     letterColor = [];
@@ -85,11 +85,17 @@ function LoadWord(_index) {
     xPositions = [];
     yPositions = [];
 
+    // Define the vertical offset (in pixels)
+    var letterYOffset = 80;
+
     var cx = dashStart;
     for (var i = 0; i < letterCount; i++) {
         var centerX = cx + (rectWidth * 0.5);
         array_push(xPositions, centerX);
-        array_push(yPositions, dashY);
+        
+        // Apply the vertical offset to move the letter upward
+        array_push(yPositions, dashY - letterYOffset);
+        
         cx += rectWidth + dashGap;
     }
 

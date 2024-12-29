@@ -1,3 +1,5 @@
+// oButtonController - Create Event
+
 var buttonMinWidthRatio  = 0.2;
 var buttonMaxWidthRatio  = 0.5;
 var buttonHeightRatio    = 0.10;
@@ -19,7 +21,7 @@ buttonList = [
 buttonData = [];
 draw_set_font(fntButton);
 
-for (var i = 0; i < array_length(buttonList); i++) {
+for (var i = 0; i < array_length_1d(buttonList); i++) {
     var btnInfo = buttonList[i];
     var textWidth = string_width(btnInfo.text);
     var buttonWidth = textWidth + (2 * buttonPadding);

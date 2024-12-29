@@ -230,6 +230,7 @@
     {"id":{"name":"rmShoppingGame","path":"rooms/rmShoppingGame/rmShoppingGame.yy",},},
     {"id":{"name":"rmStart","path":"rooms/rmStart/rmStart.yy",},},
     {"id":{"name":"macros","path":"scripts/macros/macros.yy",},},
+    {"id":{"name":"scrDrawText","path":"scripts/scrDrawText/scrDrawText.yy",},},
     {"id":{"name":"scrUpdateWordList","path":"scripts/scrUpdateWordList/scrUpdateWordList.yy",},},
     {"id":{"name":"sprSetup","path":"sprites/sprSetup/sprSetup.yy",},},
   ],

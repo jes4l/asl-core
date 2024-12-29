@@ -1,8 +1,7 @@
 /// scrUpdateWordList(_gameName)
 /// @description Sets global.activeWords to 3 random words from the game’s pool
 
-function scrUpdateWordList(_gameName)
-{
+function scrUpdateWordList(_gameName) {
     var pizzaPool    = [ "aab", "abca", "cab", "cbab", "babc" ];
     var placesPool   = [ "paris", "london", "tokyo", "sydney", "berlin", "new york" ];
     var rolePool     = [ "teacher", "doctor", "engineer", "scientist", "pilot", "artist" ];
@@ -10,8 +9,7 @@ function scrUpdateWordList(_gameName)
     var colourPool   = [ "red", "green", "blue", "yellow", "purple", "orange" ];
 
     var wordPool;
-    switch (_gameName)
-    {
+    switch (_gameName) {
         case "Pizza Game":
             wordPool = pizzaPool; 
             break;
@@ -37,28 +35,23 @@ function scrUpdateWordList(_gameName)
             break;
     }
 
-    // Initialize global.activeWords as an empty array
-    global.activeWords = [];
+    var selectedWords = [];
     var usedIndices = ds_list_create();
 
-    while (array_length_1d(global.activeWords) < 3)
-    {
-        if (array_length_1d(wordPool) < 3)
-        {
-            global.activeWords = wordPool;
+    while (array_length_1d(selectedWords) < 3) {
+        if (array_length_1d(wordPool) <= 3) {
+            selectedWords = wordPool;
             break;
         }
         
         var r = irandom_range(0, array_length_1d(wordPool) - 1);
-        if (ds_list_find_index(usedIndices, r) == -1)
-        {
+        if (ds_list_find_index(usedIndices, r) == -1) {
             ds_list_add(usedIndices, r);
-            array_push(global.activeWords, wordPool[r]);
+            array_push(selectedWords, wordPool[r]);
         }
     }
     
     ds_list_destroy(usedIndices);
+    global.activeWords = selectedWords;
 
-    // Debug message to confirm selected words
-    show_debug_message("Chosen Words: " + string(global.activeWords));
 }
