@@ -134,3 +134,4 @@ function LoadWord(_index) {
 
 // Load the first word
 LoadWord(wordIndex);
+drawOLetterOnDashes = false;
