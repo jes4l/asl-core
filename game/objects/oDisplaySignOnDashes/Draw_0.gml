@@ -1,6 +1,6 @@
 // oDisplaySignOnDashes - Draw Event
 
-/// @description Draw ASL signs on top of letters
+/// @description Draw ASL signs on top of letters with room-specific Y-offsets
 
 // Ensure that oLetterOnDashes instance exists
 if (instance_exists(letterOnDashesInstance)) {
@@ -12,6 +12,13 @@ if (instance_exists(letterOnDashesInstance)) {
     var letterAlpha = letterOnDashesInstance.letterAlpha;
     var letterColor = letterOnDashesInstance.letterColor;
     
+    // Define Y-offsets directly within the draw event
+    var yOffsetPizzaGame = -200; // Move up by 200 pixels in Pizza Game
+    var yOffsetDefault    = 0;    // No offset in other rooms
+    
+    // Determine the current Y-offset based on the active room
+    var yOffset = (room == rmPizzaGame) ? yOffsetPizzaGame : yOffsetDefault;
+    
     // Iterate through all letters in the current word
     for (var i = 0; i < letterCount; i++) {
         var currentLetter = letters[i];
@@ -21,9 +28,9 @@ if (instance_exists(letterOnDashesInstance)) {
         var aslSprite = scrGetASLSprite(currentLetter);
         
         if (aslSprite != -1) {
-            // Get the position for the letter
+            // Get the original position for the letter
             var x_pos = xPositions[i];
-            var y_pos = yPositions[i];
+            var y_pos = yPositions[i] + yOffset; // Apply Y-offset
             
             // Set the alpha based on letterAlpha[i]
             draw_set_alpha(alphaValue);
@@ -45,11 +52,14 @@ if (instance_exists(letterOnDashesInstance)) {
         var aslWrongSprite = scrGetASLSprite(wrongLetter);
         
         if (aslWrongSprite != -1) {
+            // Apply Y-offset to wrong letter
+            var adjustedWrongY = wrongLetterY + yOffset;
+            
             // Set alpha for wrong letter sign
             draw_set_alpha(wrongLetterAlpha);
             
             // Draw the ASL sprite for the wrong letter
-            draw_sprite(aslWrongSprite, 0, wrongLetterX, wrongLetterY);
+            draw_sprite(aslWrongSprite, 0, wrongLetterX, adjustedWrongY);
         } else {
             show_debug_message("ASL sprite for wrong letter '" + string(wrongLetter) + "' not found.");
         }
@@ -57,4 +67,6 @@ if (instance_exists(letterOnDashesInstance)) {
     
     // Reset alpha to default to avoid affecting other drawings
     draw_set_alpha(1);
+} else {
+    show_debug_message("oLetterOnDashes instance does not exist.");
 }

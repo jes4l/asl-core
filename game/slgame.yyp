@@ -215,6 +215,7 @@
     {"id":{"name":"libxprocess","path":"extensions/libxprocess/libxprocess.yy",},},
     {"id":{"name":"fntButton","path":"fonts/fntButton/fntButton.yy",},},
     {"id":{"name":"fntLetter","path":"fonts/fntLetter/fntLetter.yy",},},
+    {"id":{"name":"fntWord","path":"fonts/fntWord/fntWord.yy",},},
     {"id":{"name":"obj_example","path":"objects/obj_example/obj_example.yy",},},
     {"id":{"name":"oButtonController","path":"objects/oButtonController/oButtonController.yy",},},
     {"id":{"name":"oClient","path":"objects/oClient/oClient.yy",},},
