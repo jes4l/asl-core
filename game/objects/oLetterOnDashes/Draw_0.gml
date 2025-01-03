@@ -3,7 +3,7 @@
 // Reset alpha
 draw_set_alpha(1);
 
-// Draw correct letters green or orange
+// Draw correct letters (green or orange)
 for (var i = 0; i < letterCount; i++) {
     if (letterAlpha[i] > 0) {
         scrDrawText(
@@ -29,7 +29,7 @@ if (wrongLetter != "" && wrongLetterAlpha > 0) {
     );
 }
 
-// Optionally display a status message (e.g., "Word Complete!")
+// Optionally display a status message (e.g., "Word Complete!" or "Time's Up!")
 if (statusMessage != "") {
     scrDrawText(
         room_width / 2,

@@ -1,65 +1,62 @@
 /// @description Handles Server Connection & Parses Hand Data
 
 var n_id = ds_map_find_value(async_load, "id");
-if(n_id == server_socket)
-{
-    var t = ds_map_find_value(async_load, "type");
-    var socketlist = ds_list_create();
 
-    if(t == network_type_connect)
-    {
+// Ensure the event is for the correct socket
+if (n_id == server_socket) {
+    var t = ds_map_find_value(async_load, "type");
+
+    // Handle new connection
+    if (t == network_type_connect) {
         var sock = ds_map_find_value(async_load, "socket");
+        var socketlist = ds_list_create();
         ds_list_add(socketlist, sock);
     }
 
-    if(t == network_type_data)
-    {
+    // Handle incoming data
+    if (t == network_type_data) {
         var t_buffer = ds_map_find_value(async_load, "buffer"); 
-        var cmd_type = buffer_read(t_buffer, buffer_string);
+        var originalString = buffer_read(t_buffer, buffer_string);
 
-        // Original string
-        originalString = string(cmd_type);
+        try {
+            var jsonData = json_parse(originalString);
 
-        try
-        {
-            jsonData = json_parse(originalString);
-
-            if variable_struct_exists(jsonData, "data")
-            {
+            // Handle letter data
+            if (variable_struct_exists(jsonData, "data")) {
                 var currentLetter = jsonData.data;
 
-                // Check if the letter has changed
-                if (!variable_global_exists("lastLetter") || currentLetter != global.lastLetter)
-                {
-                    global.lastLetter = currentLetter; // Update last letter
-                    global.letter = currentLetter;        // Update global.letter with the new letter
-                    show_debug_message("Letter changed: " + global.letter);
+                var currentTime = current_time;
+
+                // If the letter has changed
+                if (!variable_global_exists("lastLetter") || currentLetter != global.lastLetter) {
+                    global.lastLetter = currentLetter;
+                    global.letter = currentLetter;
+                    global.letterTimeStamp = currentTime; // Record the timestamp
+                    show_debug_message("Letter: " + global.letter);
+                } 
+                // If the same letter persists beyond the debounce threshold
+                else if (currentTime - global.letterTimeStamp >= 2000) { // 2000 ms = 2 seconds
+                    global.lastLetter = ""; // Clear letter
+                    global.letter = "";     // Allow re-registration
+                    global.letterTimeStamp = currentTime; // Reset the timestamp
+                    //show_debug_message("Letter reset after timeout.");
                 }
 
-                global.letterReceived = currentLetter; // Always update the received letters
+                // Always update the received letters
+                global.letterReceived = currentLetter;
             }
-        }
-        catch(e)
-        {
-        }
 
-        try
-        {
-            jsonData = json_parse(originalString);
-
-            if variable_struct_exists(jsonData, "pos")
-            {
-                // Check if the array has at least two elements (x and y)
-                if (is_array(jsonData.pos) && array_length(jsonData.pos) >= 2)
-                {
-                    var x_pos = jsonData.pos[0]; // First element is x position
-                    var y_pos = jsonData.pos[1]; // Second element is y position
-
-                    show_debug_message("Received position from Python: x = " + string(x_pos) + ", y = " + string(y_pos));
-                    global.hand_x = x_pos;
-                    global.hand_y = y_pos;
+            // Handle position data
+            if (variable_struct_exists(jsonData, "pos")) {
+                if (is_array(jsonData.pos) && array_length(jsonData.pos) >= 2) {
+                    global.hand_x = jsonData.pos[0];
+                    global.hand_y = jsonData.pos[1];
+                    show_debug_message("Received position: x = " + string(global.hand_x) + ", y = " + string(global.hand_y));
                 }
             }
+        } catch (e) {
+            // Log parsing errors
+            show_debug_message("Error parsing JSON: " + string(e));
         }
     }
 }

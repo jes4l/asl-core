@@ -2,7 +2,7 @@
 /// @description Sets global.activeWords to 3 random words from the game’s pool
 
 function scrUpdateWordList(_gameName) {
-    var pizzaPool    = [ "bab", "abca", "cab", "cba", "acb" ];
+    var pizzaPool    = [ "aab", "abca", "cab", "cbab", "babc" ];
     var placesPool   = [ "paris", "london", "tokyo", "sydney", "berlin", "new york" ];
     var rolePool     = [ "teacher", "doctor", "engineer", "scientist", "pilot", "artist" ];
     var shoppingPool = [ "milk", "bread", "apples", "eggs", "juice", "cereal" ];

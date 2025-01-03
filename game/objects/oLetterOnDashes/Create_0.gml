@@ -37,11 +37,15 @@ wrongLetter      = "";
 wrongLetterAlpha = 0;
 wrongLetterX     = 0;
 wrongLetterY     = 0;
-letterWasWrong = [];
+letterWasWrong   = [];
+
+// Store leftover letters if time runs out
+incompleteLetters = [];
 
 // Status message
 statusMessage = "";
 statusTimer   = 0;
+nextWordDelay = 0; // Timer for delaying the transition to the next word
 
 // Helper function to load a word
 function LoadWord(_index)
@@ -61,13 +65,13 @@ function LoadWord(_index)
     letterCount = array_length_1d(letters);
 
     // Initialize letter colors and alphas
-    letterColor = [];
-    letterAlpha = [];
-	letterWasWrong  = [];
+    letterColor   = [];
+    letterAlpha   = [];
+    letterWasWrong= [];
     for (var j = 0; j < letterCount; j++) {
-        letterColor[j] = c_white; 
-        letterAlpha[j] = 0;
-		letterWasWrong[i] = false;
+        letterColor[j]   = c_white; 
+        letterAlpha[j]   = 0;
+        letterWasWrong[j] = false;
     }
 
     // Reset current index
@@ -98,35 +102,6 @@ function LoadWord(_index)
         array_push(xPositions, centerX);
         array_push(yPositions, dashY - letterYOffset);
         cx += rectWidth + dashGap;
-    }
-
-    // Auto-fill logic (compare last letter of the previous word with first letter of current word)
-    if (_index > 0 && letterCount > 0) {
-        var prevWord       = ds_list_find_value(wordsDS, _index - 1);
-        var lastLetterPrev = "";
-        var pLen           = string_length(prevWord);
-
-        for (var m = pLen; m >= 1; m--) {
-            var ch = string_char_at(prevWord, m);
-            if (ch != " ") {
-                lastLetterPrev = ch;
-                break;
-            }
-        }
-
-        var firstLetterNext = letters[0];
-
-        if (lastLetterPrev != "" && firstLetterNext == lastLetterPrev) {
-            var n = 1;
-            while (n < letterCount && letters[n] == firstLetterNext) {
-                n++;
-            }
-            for (var ii = 0; ii < n; ii++) {
-                letterColor[ii] = c_green;
-                letterAlpha[ii] = 1.0;
-            }
-            currentIndex = n;
-        }
     }
 
     // Update global variables for the current word
