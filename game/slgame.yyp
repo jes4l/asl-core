@@ -219,6 +219,7 @@
     {"id":{"name":"obj_example","path":"objects/obj_example/obj_example.yy",},},
     {"id":{"name":"oButtonController","path":"objects/oButtonController/oButtonController.yy",},},
     {"id":{"name":"oClient","path":"objects/oClient/oClient.yy",},},
+    {"id":{"name":"oCurrentActiveWordsDisplay","path":"objects/oCurrentActiveWordsDisplay/oCurrentActiveWordsDisplay.yy",},},
     {"id":{"name":"oCurrentLetterDisplay","path":"objects/oCurrentLetterDisplay/oCurrentLetterDisplay.yy",},},
     {"id":{"name":"oCurrentSignDisplay","path":"objects/oCurrentSignDisplay/oCurrentSignDisplay.yy",},},
     {"id":{"name":"oDisplaySignOnDashes","path":"objects/oDisplaySignOnDashes/oDisplaySignOnDashes.yy",},},

@@ -68,19 +68,7 @@ if (global.letter != "") {
         // Place it at the dash of the letter we still need
         wrongLetterX     = xPositions[currentIndex];
         wrongLetterY     = yPositions[currentIndex];
-
-        // *** Begin: Increment Letter Error Count ***
-        var guessedLetter = string_lower(wrongLetter); // Convert to lowercase
-
-        if (ds_map_exists(global.letterErrorCounts, guessedLetter)) {
-            var currentCount = ds_map_find_value(global.letterErrorCounts, guessedLetter);
-            ds_map_replace(global.letterErrorCounts, guessedLetter, currentCount + 1);
-            show_debug_message(guessedLetter + ": " + string(currentCount + 1));
-        } else {
-            // Optional: Handle unexpected letters
-            show_debug_message("Guessed letter '" + guessedLetter + "' is not in the error count map.");
-        }
-        // *** End: Increment Letter Error Count ***
+        // We do NOT increment currentIndex, user must guess again
     }
 
     // Clear the guess

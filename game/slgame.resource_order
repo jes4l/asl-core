@@ -25,6 +25,7 @@
     {"name":"fntButton","order":1,"path":"fonts/fntButton/fntButton.yy",},
     {"name":"fntLetter","order":2,"path":"fonts/fntLetter/fntLetter.yy",},
     {"name":"fntWord","order":3,"path":"fonts/fntWord/fntWord.yy",},
+    {"name":"oCurrentActiveWordsDisplay","order":3,"path":"objects/oCurrentActiveWordsDisplay/oCurrentActiveWordsDisplay.yy",},
     {"name":"oCurrentSignDisplay","order":1,"path":"objects/oCurrentSignDisplay/oCurrentSignDisplay.yy",},
     {"name":"oDisplaySignOnDashes","order":2,"path":"objects/oDisplaySignOnDashes/oDisplaySignOnDashes.yy",},
     {"name":"oDrawDashes","order":2,"path":"objects/oDrawDashes/oDrawDashes.yy",},
