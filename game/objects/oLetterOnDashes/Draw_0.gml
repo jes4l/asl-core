@@ -1,33 +1,35 @@
+/// oLetterOnDashes - Draw Event
+
 // Reset alpha
 draw_set_alpha(1);
 
-// Draw revealed letters (green or orange, etc.)
+// Draw correct letters green or orange
 for (var i = 0; i < letterCount; i++) {
     if (letterAlpha[i] > 0) {
         scrDrawText(
-            xPositions[i],        // x
-            yPositions[i],        // y
-            letters[i],           // the letter
-            letterColor[i],       // color
-            letterAlpha[i],       // alpha
-            fntLetter             // font
+            xPositions[i],
+            yPositions[i],
+            letters[i],
+            letterColor[i],
+            letterAlpha[i],
+            fntLetter
         );
     }
 }
 
-// Draw the WRONG letter overlay (fades out)
+// Draw wrong letter guess in red
 if (wrongLetter != "" && wrongLetterAlpha > 0) {
     scrDrawText(
-        wrongLetterX, 
+        wrongLetterX,
         wrongLetterY,
         wrongLetter,
-        c_red, 
+        c_red,
         wrongLetterAlpha,
         fntLetter
     );
 }
 
-// Optionally display a status message (like “Word Complete!” or “List Complete!”)
+// Optionally display a status message (e.g., "Word Complete!")
 if (statusMessage != "") {
     scrDrawText(
         room_width / 2,

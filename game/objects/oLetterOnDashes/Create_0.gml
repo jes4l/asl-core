@@ -1,9 +1,9 @@
-/// oLetterOnDashes Object
+/// oLetterOnDashes - Create Event
 
-// Depth ensures we draw letters above certain objects (like the dashes)
+// Set depth to draw on top of other objects
 depth = -10;
 
-// 1. Find oGameWordList
+// Reference to the words list
 var listObj = instance_find(oGameWordList, 0);
 if (!instance_exists(listObj)) {
     show_debug_message("No game word list found. Destroying oLetterOnDashes.");
@@ -11,8 +11,7 @@ if (!instance_exists(listObj)) {
     return;
 }
 
-// 2. Check if we actually have words
-wordsDS = listObj.wordsList;
+wordsDS    = listObj.wordsList;
 wordsTotal = ds_list_size(wordsDS);
 if (wordsTotal <= 0) {
     show_debug_message("No words in the list!");
@@ -20,116 +19,128 @@ if (wordsTotal <= 0) {
     return;
 }
 
-// 3. Track which word and how many are done
-wordIndex      = 0;
-wordsCompleted = 0;
+// Tracking variables
+wordIndex      = 0;         
+wordsCompleted = 0;    
 
-// 4. Current word data
-letters      = [];
+// Current word data
+letters      = [];     
 letterCount  = 0;
 xPositions   = [];
 yPositions   = [];
 letterColor  = [];
 letterAlpha  = [];
-letterWasWrong = [];   // <-- NEW array for tracking incorrect guesses
-currentIndex = 0;
+currentIndex = 0;      
 
-// 5. Wrong guess overlay
+// Wrong guesses
 wrongLetter      = "";
 wrongLetterAlpha = 0;
 wrongLetterX     = 0;
 wrongLetterY     = 0;
+letterWasWrong = [];
 
-// 6. Status message + timer
+// Status message
 statusMessage = "";
 statusTimer   = 0;
 
-// 7. Function to load a new word from wordsDS
-function LoadWord(_index) {
+// Helper function to load a word
+function LoadWord(_index)
+{
     var theWord = ds_list_find_value(wordsDS, _index);
-    
-    // --- Extract letters (ignoring spaces) ---
+
+    // Extract letters, ignoring spaces
     letters = [];
     var rawLen = string_length(theWord);
-    for (var i = 1; i <= rawLen; i++) {
+    for (var i = 1; i <= rawLen; i++)
+    {
         var c = string_char_at(theWord, i);
         if (c != " ") {
             array_push(letters, c);
         }
     }
     letterCount = array_length_1d(letters);
-    
-    // --- Initialize arrays for color, alpha, and "was wrong?" ---
-    letterColor     = [];
-    letterAlpha     = [];
-    letterWasWrong  = []; // <-----------------------------
-    
-    for (var i = 0; i < letterCount; i++) {
-        letterColor[i]    = c_white; 
-        letterAlpha[i]    = 0;       
-        letterWasWrong[i] = false;   
+
+    // Initialize letter colors and alphas
+    letterColor = [];
+    letterAlpha = [];
+	letterWasWrong  = [];
+    for (var j = 0; j < letterCount; j++) {
+        letterColor[j] = c_white; 
+        letterAlpha[j] = 0;
+		letterWasWrong[i] = false;
     }
 
-    // Reset currentIndex
+    // Reset current index
     currentIndex = 0;
-    
-    // --- Dash positioning parameters ---
-    var margin   = 50;
+
+    // Dash positioning parameters
+    var margin    = 50;
     var dashStart = global.dashStartX + margin;
     var dashEnd   = global.dashEndX   - margin;
     var dashY     = global.dashY;
     var dashGap   = 50;
+
     var totalWidth     = dashEnd - dashStart;
     var totalGaps      = max(0, (letterCount - 1) * dashGap);
     var effectiveWidth = totalWidth - totalGaps;
     var rectWidth      = (letterCount > 0) ? (effectiveWidth / letterCount) : 0;
     var rectHeight     = 40;
-    
-    // --- Calculate letter positions above the dashes ---
+
     xPositions = [];
     yPositions = [];
-    var letterYOffset = 80; // vertical offset so letters appear above the dash
-    
+
+    // Define the vertical offset (in pixels)
+    var letterYOffset = 80;
+
     var cx = dashStart;
-    for (var i = 0; i < letterCount; i++) {
+    for (var k = 0; k < letterCount; k++) {
         var centerX = cx + (rectWidth * 0.5);
         array_push(xPositions, centerX);
         array_push(yPositions, dashY - letterYOffset);
         cx += rectWidth + dashGap;
     }
-    
-    // --- Auto-fill logic (Optional) ---
-    // Compare last letter of previous word with first letter of current word
+
+    // Auto-fill logic (compare last letter of the previous word with first letter of current word)
     if (_index > 0 && letterCount > 0) {
-        var prevWord = ds_list_find_value(wordsDS, _index - 1);
+        var prevWord       = ds_list_find_value(wordsDS, _index - 1);
         var lastLetterPrev = "";
-        var pLen = string_length(prevWord);
-        for (var j = pLen; j >= 1; j--) {
-            var ch = string_char_at(prevWord, j);
+        var pLen           = string_length(prevWord);
+
+        for (var m = pLen; m >= 1; m--) {
+            var ch = string_char_at(prevWord, m);
             if (ch != " ") {
                 lastLetterPrev = ch;
                 break;
             }
         }
+
         var firstLetterNext = letters[0];
+
         if (lastLetterPrev != "" && firstLetterNext == lastLetterPrev) {
-            var k = 1;
-            while (k < letterCount && letters[k] == firstLetterNext) {
-                k++;
+            var n = 1;
+            while (n < letterCount && letters[n] == firstLetterNext) {
+                n++;
             }
-            for (var i = 0; i < k; i++) {
-                letterColor[i] = c_green;
-                letterAlpha[i] = 1.0;
+            for (var ii = 0; ii < n; ii++) {
+                letterColor[ii] = c_green;
+                letterAlpha[ii] = 1.0;
             }
-            currentIndex = k;
+            currentIndex = n;
         }
     }
-    
-    // Set globals so other objects can reference the current word
+
+    // Update global variables for the current word
     global.currentWordLetters = letters;
     global.currentWordCount   = letterCount;
+
+    // Tell oClock to refresh its timer using THIS word's length
+    if instance_exists(oClock) {
+        with (oClock) {
+            ResetClock();
+        }
+    }
 }
 
-// 8. Load the first word
+// Load the first word
 LoadWord(wordIndex);
 drawOLetterOnDashes = false;
