@@ -89,7 +89,7 @@ if (currentIndex >= letterCount) {
 if (global.letter != "") {
     var neededChar = (letterCount > 0) ? letters[currentIndex] : "";
 
-    if (global.letter == neededChar) {
+    if (string_lower(global.letter) == string_lower(neededChar)) {
         if (letterWasWrong[currentIndex]) {
             letterColor[currentIndex] = c_orange;
         } else {
