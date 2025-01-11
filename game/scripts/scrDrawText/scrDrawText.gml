@@ -1,50 +1,46 @@
-/// scr_draw_centered_text_ex(_x, _y, _text, _color, _alpha = 1, _font = undefined)
 /// @description Draws centered text with optional alpha and font without affecting global drawing settings.
-/// @param _x       The x-coordinate where the text should be drawn.
-/// @param _y       The y-coordinate where the text should be drawn.
-/// @param _text    The string of text to draw.
-/// @param _color   The color of the text.
-/// @param _alpha   The alpha value of the text (default is 1).
-/// @param _font    The font to use for the text (default is current font).
+/// @param xText       The x-coordinate where the text should be drawn.
+/// @param yText       The y-coordinate where the text should be drawn.
+/// @param stringText  The string of text to draw.
+/// @param colourText  The color of the text.
+/// @param alphaText   The alpha value of the text (default is 1).
+/// @param fontText    The font to use for the text (default is current font).
 
-function scrDrawText(_x, _y, _text, _color, _alpha, _font) {
-    if (_alpha == undefined) {
-        _alpha = 1;
+function scrDrawText(xText, yText, stringText, colourText, alphaText, fontText) {
+    if (alphaText == undefined) {
+        alphaText = 1;
     }
     
-    // Debug message (optional)
-    // show_debug_message("Drawing text '" + _text + "' at (" + string(_x) + ", " + string(_y) + ") with color " + string(_color) + " and alpha " + string(_alpha));
+    // show_debug_message("Drawing text '" + stringText + "' at (" + string(xText) + ", " + string(yText) + ") with color " + string(colourText) + " and alpha " + string(alphaText));
     
     // Save current drawing settings
-    var prev_halign = draw_get_halign();
-    var prev_valign = draw_get_valign();
-    var prev_color  = draw_get_color();
-    var prev_font   = draw_get_font();
-    var prev_alpha  = draw_get_alpha();
+    var prevHalign = draw_get_halign();
+    var prevValign = draw_get_valign();
+    var prevColour  = draw_get_color();
+    var prevFont   = draw_get_font();
+    var prevAlpha  = draw_get_alpha();
     
     // Set new drawing settings for centered text
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
-    draw_set_color(_color);
+    draw_set_color(colourText);
     
     // Set font if provided
-    if (_font != undefined) {
-        draw_set_font(_font);
+    if (fontText != undefined) {
+        draw_set_font(fontText);
     }
     
     // Set alpha
-    draw_set_alpha(_alpha);
+    draw_set_alpha(alphaText);
     
     // Draw the text
-    draw_text(_x, _y, _text);
+    draw_text(xText, yText, stringText);
     
     // Restore previous drawing settings
-    draw_set_halign(prev_halign);
-    draw_set_valign(prev_valign);
-    draw_set_color(prev_color);
-    draw_set_font(prev_font);
-    draw_set_alpha(prev_alpha);
+    draw_set_halign(prevHalign);
+    draw_set_valign(prevValign);
+    draw_set_color(prevColour);
+    draw_set_font(prevFont);
+    draw_set_alpha(prevAlpha);
     
-    // Debug message (optional)
-    // show_debug_message("Restored previous drawing settings.");
 }

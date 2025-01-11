@@ -30,14 +30,14 @@ if (wordIndex >= wordsTotal) {
 }
 
 // 4. If the clock is 0, end the current word
-if (instance_exists(oClock) && oClock.timeLeft <= 0) 
-{
+if (instance_exists(oClock) && oClock.timeLeft <= 0) {
     if (currentIndex < letterCount) {
-        incompleteLetters = [];
         for (var z = currentIndex; z < letterCount; z++) {
             letterColor[z] = c_orange;
             letterAlpha[z] = 1.0;
-            array_push(incompleteLetters, letters[z]);
+
+            var incompleteChar = string_lower(letters[z]);
+            ds_list_add(global.incompleteLetters, incompleteChar); // Add to incompleteLetters
         }
 
         if (wordIndex < wordsTotal) {
@@ -97,8 +97,18 @@ if (global.letter != "") {
         }
         letterAlpha[currentIndex] = 1.0;
         currentIndex++;
+
+        // **If the letter was previously wrong and now correct, move it to wasWrongLetters**
+        if (letterWasWrong[currentIndex - 1]) {
+            var correctedLetter = string_lower(global.letter);
+            ds_list_add(global.wasWrongLetters, correctedLetter);
+            letterWasWrong[currentIndex - 1] = false; // Reset the wrong flag
+        }
     } else {
-        wrongLetter      = global.letter;
+        var wrongChar = string_lower(global.letter);
+        ds_list_add(global.wrongLetters, wrongChar); // Add to wrongLetters
+
+        wrongLetter      = wrongChar;
         wrongLetterAlpha = 0.8;
         letterWasWrong[currentIndex] = true;
         wrongLetterX     = xPositions[currentIndex];
@@ -124,3 +134,36 @@ if (statusTimer > 0) {
         statusMessage = "";
     }
 }
+
+// 8. Debug Message for Tracking Lists
+var wrongLettersDebug = "Wrong Letters: ";
+if (ds_exists(global.wrongLetters, ds_type_list)) {
+    for (var i = 0; i < ds_list_size(global.wrongLetters); i++) {
+        wrongLettersDebug += ds_list_find_value(global.wrongLetters, i) + " ";
+    }
+} else {
+    wrongLettersDebug += "None";
+}
+
+var wasWrongLettersDebug = "Was Wrong Letters: ";
+if (ds_exists(global.wasWrongLetters, ds_type_list)) {
+    for (var i = 0; i < ds_list_size(global.wasWrongLetters); i++) {
+        wasWrongLettersDebug += ds_list_find_value(global.wasWrongLetters, i) + " ";
+    }
+} else {
+    wasWrongLettersDebug += "None";
+}
+
+var incompleteLettersDebug = "Incomplete Letters: ";
+if (ds_exists(global.incompleteLetters, ds_type_list)) {
+    for (var i = 0; i < ds_list_size(global.incompleteLetters); i++) {
+        incompleteLettersDebug += ds_list_find_value(global.incompleteLetters, i) + " ";
+    }
+} else {
+    incompleteLettersDebug += "None";
+}
+
+show_debug_message("Debugging Tracking Lists:\n" + 
+    wrongLettersDebug + "\n" + 
+    wasWrongLettersDebug + "\n" + 
+    incompleteLettersDebug);

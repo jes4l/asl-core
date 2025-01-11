@@ -49,9 +49,9 @@ if (n_id == server_socket) {
             // Handle position data
             if (variable_struct_exists(jsonData, "pos")) {
                 if (is_array(jsonData.pos) && array_length(jsonData.pos) >= 2) {
-                    global.hand_x = jsonData.pos[0];
-                    global.hand_y = jsonData.pos[1];
-                    show_debug_message("Received position: x = " + string(global.hand_x) + ", y = " + string(global.hand_y));
+                    global.xHand = jsonData.pos[0];
+                    global.yHand = jsonData.pos[1];
+                    show_debug_message("Received position: x = " + string(global.xHand) + ", y = " + string(global.yHand));
                 }
             }
         } catch (e) {

@@ -2,7 +2,7 @@
 
 
 if current_time < global.target_time {return;}
-if running == false {
+if global.running == false {
 
 originalString = ""
 global.client_socket = network_create_socket(network_socket_tcp);
@@ -21,4 +21,4 @@ else
     buffer_delete(t_buffer);
 }
 }
-running = true;
+global.running = true;

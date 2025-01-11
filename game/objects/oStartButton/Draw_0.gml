@@ -1,4 +1,4 @@
-// oMenuButton - Draw Event
+// oStartButton - Draw Event
 
 // Reset alpha to 1 to prevent residual transparency
 draw_set_alpha(1);
