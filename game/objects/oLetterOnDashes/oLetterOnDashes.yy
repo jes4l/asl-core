@@ -10,8 +10,8 @@
   "name":"oLetterOnDashes",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"GameLogic",
+    "path":"folders/Objects/GameLogic.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -14,7 +14,7 @@ if (instance_exists(letterOnDashesInstance)) {
     
     // Define Y-offsets directly within the draw event
     var yOffsetPizzaGame = -200; // Move up by 200 pixels in Pizza Game
-    var yOffsetDefault    = 0;    // No offset in other rooms
+    var yOffsetDefault    = -50;    // No offset in other rooms
     
     // Determine the current Y-offset based on the active room
     var yOffset = (room == rmPizzaGame) ? yOffsetPizzaGame : yOffsetDefault;

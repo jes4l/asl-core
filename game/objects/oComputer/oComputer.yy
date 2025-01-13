@@ -1,15 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oDrawDashes",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oComputer",
+  "eventList":[],
   "managed":true,
-  "name":"oDrawDashes",
+  "name":"oComputer",
   "overriddenProperties":[],
   "parent":{
-    "name":"GameLogic",
-    "path":"folders/Objects/GameLogic.yy",
+    "name":"RoleGame",
+    "path":"folders/Objects/RoleGame.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -29,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sComputer",
+    "path":"sprites/sComputer/sComputer.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
