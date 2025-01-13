@@ -4,7 +4,7 @@ if (mouse_check_button_pressed(mb_left)) {
     for (var i = 0; i < array_length_1d(buttonData); i++) {
         var btn = buttonData[i];
         if (point_in_rectangle(mouse_x, mouse_y, btn.x1, btn.y1, btn.x2, btn.y2)) {
-            scrUpdateWordList(btn.text);
+            scrUpdateWordList(btn.text, btn.numOfActiveWords);
             global.dashStartX = btn.dashStartX;
             global.dashEndX   = btn.dashEndX;
             global.dashY      = btn.dashY;
@@ -13,4 +13,3 @@ if (mouse_check_button_pressed(mb_left)) {
         }
     }
 }
-	

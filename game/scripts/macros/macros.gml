@@ -23,4 +23,4 @@ global.dashY      = 0;
 // Initialize ds_lists for tracking wrong letters, corrected wrong letters, and incomplete letters
 global.wrongLetters       = ds_list_create();
 global.wasWrongLetters    = ds_list_create();
-global.incompleteLetters  = ds_list_create();
+

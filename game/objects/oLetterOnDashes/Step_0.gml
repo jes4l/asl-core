@@ -35,9 +35,6 @@ if (instance_exists(oClock) && oClock.timeLeft <= 0) {
         for (var z = currentIndex; z < letterCount; z++) {
             letterColor[z] = c_orange;
             letterAlpha[z] = 1.0;
-
-            var incompleteChar = string_lower(letters[z]);
-            ds_list_add(global.incompleteLetters, incompleteChar); // Add to incompleteLetters
         }
 
         if (wordIndex < wordsTotal) {
@@ -154,16 +151,7 @@ if (ds_exists(global.wasWrongLetters, ds_type_list)) {
     wasWrongLettersDebug += "None";
 }
 
-var incompleteLettersDebug = "Incomplete Letters: ";
-if (ds_exists(global.incompleteLetters, ds_type_list)) {
-    for (var i = 0; i < ds_list_size(global.incompleteLetters); i++) {
-        incompleteLettersDebug += ds_list_find_value(global.incompleteLetters, i) + " ";
-    }
-} else {
-    incompleteLettersDebug += "None";
-}
 
 show_debug_message("Debugging Tracking Lists:\n" + 
     wrongLettersDebug + "\n" + 
-    wasWrongLettersDebug + "\n" + 
-    incompleteLettersDebug);
+    wasWrongLettersDebug);

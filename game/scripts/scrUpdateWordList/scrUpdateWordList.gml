@@ -1,7 +1,9 @@
-/// scrUpdateWordList(_gameName)
-/// @description Sets global.activeWords to 3 random words from the game’s pool
+/// scrUpdateWordList(_gameName, _numOfActiveWords)
+/// @description Sets global.activeWords to a specified number of random words from the game’s pool
+/// @param _gameName The name of the game to determine the word pool
+/// @param _numOfActiveWords The number of active words to select
 
-function scrUpdateWordList(_gameName) {
+function scrUpdateWordList(_gameName, _numOfActiveWords) {
     var pizzaPool    = [ "Aab", "ABCA", "CaB", "CbAb", "Babc" ];
     var placesPool   = [ "paris", "london", "tokyo", "sydney", "berlin", "new york" ];
     var rolePool     = [ "teacher", "doctor", "engineer", "scientist", "pilot", "artist" ];
@@ -38,8 +40,10 @@ function scrUpdateWordList(_gameName) {
     var selectedWords = [];
     var usedIndices = ds_list_create();
 
-    while (array_length_1d(selectedWords) < 3) {
-        if (array_length_1d(wordPool) <= 3) {
+    var maxWords = min(_numOfActiveWords, array_length_1d(wordPool));
+
+    while (array_length_1d(selectedWords) < maxWords) {
+        if (array_length_1d(wordPool) <= maxWords) {
             selectedWords = wordPool;
             break;
         }
@@ -53,5 +57,4 @@ function scrUpdateWordList(_gameName) {
     
     ds_list_destroy(usedIndices);
     global.activeWords = selectedWords;
-
 }
