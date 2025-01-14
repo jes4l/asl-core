@@ -1,6 +1,6 @@
 /// @description Draw the active words in either a row or a column, 
 /// ensuring left alignment and consistent spacing among words of various lengths.
-
+draw_self();
 // 1) Basic drawing setup
 draw_set_alpha(1);
 draw_set_font(fntWord);

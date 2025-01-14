@@ -1,16 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"oCurrentActiveWordsDisplay",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oPizzaBase",
+  "eventList":[],
   "managed":true,
-  "name":"oCurrentActiveWordsDisplay",
+  "name":"oPizzaBase",
   "overriddenProperties":[],
   "parent":{
-    "name":"Display",
-    "path":"folders/Objects/Display.yy",
+    "name":"PizzaGame",
+    "path":"folders/Sprites/PizzaGame.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -31,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sOrderBoard",
-    "path":"sprites/sOrderBoard/sOrderBoard.yy",
+    "name":"sPizzaBase",
+    "path":"sprites/sPizzaBase/sPizzaBase.yy",
   },
   "spriteMaskId":null,
   "visible":true,

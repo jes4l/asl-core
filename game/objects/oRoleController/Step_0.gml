@@ -18,7 +18,7 @@ if (letterController != noone) {
         // Check if the current word has changed
         if (currentWord != previousWord && currentWord != "") {
             // Update the sprite based on the new word
-            scrGetPeopleSprite(currentWord);
+            scrGetWordPoolSprite(currentWord);
             
             // Update previousWord
             previousWord = currentWord;

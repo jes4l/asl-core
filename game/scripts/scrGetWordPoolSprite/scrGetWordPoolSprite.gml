@@ -1,8 +1,8 @@
-/// scrGetRoleSprite(_word)
+/// scrGetWordPoolSprite(_word)
 /// @description Updates the sprite based on the current word.
 /// @param _word The current word to map to a sprite.
 
-function scrGetPeopleSprite(_word) {
+function scrGetWordPoolSprite(_word) {
     // Capitalize the first letter to match sprite naming conventions
     var capitalizedWord = string_upper(string_char_at(_word, 1)) + string_delete(_word, 1, 1);
     

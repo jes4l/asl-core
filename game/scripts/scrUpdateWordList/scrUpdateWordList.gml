@@ -4,7 +4,7 @@
 /// @param _numOfActiveWords The number of active words to select
 
 function scrUpdateWordList(_gameName, _numOfActiveWords) {
-    var pizzaPool    = [ "Aab", "ABCA", "CaB", "CbAb", "Babc" ];
+    var pizzaPool    = [ "Police", "Doctor", "Fireman", "Scientist", "Cowboy", "Chef" ];
     var placesPool   = [ "paris", "london", "tokyo", "sydney", "berlin", "new york" ];
     var rolePool     = [ "Police", "Doctor", "Fireman", "Scientist", "Cowboy", "Chef" ];
     var shoppingPool = [ "milk", "bread", "apples", "eggs", "juice", "cereal" ];

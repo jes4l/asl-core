@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scrGetPeopleSprite",
+  "%Name":"scrGetWordPoolSprite",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scrGetPeopleSprite",
+  "name":"scrGetWordPoolSprite",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

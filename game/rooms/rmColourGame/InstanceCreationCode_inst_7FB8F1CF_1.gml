@@ -1,0 +1,2 @@
+activeWordsRow    = true;
+activeWordsColumn = false;
