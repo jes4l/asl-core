@@ -114,6 +114,14 @@ function LoadWord(_index)
             ResetClock();
         }
     }
+	
+	if (instance_exists(oShoppingController)) {
+	   with (oShoppingController) {
+	       fraction = 0; // start new next word at path start
+	       initialTime = clockObj.timeLeft; 
+	   }
+	}
+
 }
 
 // Load the first word

@@ -152,6 +152,6 @@ if (ds_exists(global.wasWrongLetters, ds_type_list)) {
 }
 
 
-show_debug_message("Debugging Tracking Lists:\n" + 
-    wrongLettersDebug + "\n" + 
-    wasWrongLettersDebug);
+//show_debug_message("Debugging Tracking Lists:\n" + 
+  //  wrongLettersDebug + "\n" + 
+    //wasWrongLettersDebug);

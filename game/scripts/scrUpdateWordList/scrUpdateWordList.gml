@@ -7,7 +7,7 @@ function scrUpdateWordList(_gameName, _numOfActiveWords) {
     var pizzaPool    = [ "Police", "Doctor", "Fireman", "Scientist", "Cowboy", "Chef" ];
     var placesPool   = [ "Police", "Doctor", "Fireman", "Scientist", "Cowboy", "Chef" ];
     var rolePool     = [ "Police", "Doctor", "Fireman", "Scientist", "Cowboy", "Chef" ];
-    var shoppingPool = [ "milk", "bread", "apples", "eggs", "juice", "cereal" ];
+    var shoppingPool = [ "Police", "Doctor", "Fireman", "Scientist", "Cowboy", "Chef" ];
     var colourPool   = [ "red", "green", "blue", "yellow", "purple", "orange" ];
 
     var wordPool;
