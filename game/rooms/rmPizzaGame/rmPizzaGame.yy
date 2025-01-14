@@ -35,8 +35,8 @@
   ],
   "name":"rmPizzaGame",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"PizzaGame",
+    "path":"folders/Rooms/PizzaGame.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

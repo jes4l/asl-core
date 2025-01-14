@@ -6,8 +6,9 @@ function ResetClock() {
     if (instance_exists(oLetterOnDashes)) {
         timeLeft = oLetterOnDashes.letterCount * 5; 
     } else {
-        // Fallback if oLetterOnDashes doesn't exist yet
-        timeLeft = 60;
+        // Fallback if oLetterOnDashes doesn't exist yet will get first word time
+        timeLeft = string_length(global.activeWords[0]) * 5;
+;
     }
 
     // Start the once-per-second countdown alarm

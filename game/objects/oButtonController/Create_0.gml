@@ -12,7 +12,7 @@ buttonPadding      = room_width  * buttonPaddingRatio;
 
 buttonList = [
     { text: "Pizza Game",    room: rmPizzaGame,    x: 0.1, y: 0.2, dashStartX: 670, dashEndX: 1885, dashY: 1021, numOfActiveWords: 3 },
-    { text: "Places Game",   room: rmPlacesGame,   x: 0.1, y: 0.4, dashStartX: 264, dashEndX: 1700, dashY: 500, numOfActiveWords: 3 },
+    { text: "Places Game",   room: rmPlacesGame,   x: 0.1, y: 0.4, dashStartX: 264, dashEndX: 1700, dashY: 500, numOfActiveWords: 1 },
     { text: "Role Game",     room: rmRoleGame,     x: 0.1, y: 0.6, dashStartX: 1125, dashEndX: 1850, dashY: 703, numOfActiveWords: 3 },
     { text: "Shopping Game", room: rmShoppingGame, x: 0.6, y: 0.2, dashStartX: 264, dashEndX: 1700, dashY: 700, numOfActiveWords: 3 },
     { text: "Colours Game",  room: rmColourGame,   x: 0.6, y: 0.4, dashStartX: 264, dashEndX: 1700, dashY: 800, numOfActiveWords: 3 }

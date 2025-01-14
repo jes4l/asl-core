@@ -26,7 +26,7 @@
         {"$GMRInstance":"v1","%Name":"inst_70006740","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_70006740","objectId":{"name":"oLetterOnDashes","path":"objects/oLetterOnDashes/oLetterOnDashes.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":768.0,"y":768.0,},
         {"$GMRInstance":"v1","%Name":"inst_4E3899C4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4E3899C4","objectId":{"name":"oClock","path":"objects/oClock/oClock.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1728.0,"y":480.0,},
         {"$GMRInstance":"v1","%Name":"inst_6DC85467","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6DC85467","objectId":{"name":"oCurrentSignDisplay","path":"objects/oCurrentSignDisplay/oCurrentSignDisplay.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.375,"scaleY":1.375,"x":240.0,"y":496.0,},
-        {"$GMRInstance":"v1","%Name":"inst_61E3FCAE","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_61E3FCAE","objectId":{"name":"oDisplaySignOnDashes","path":"objects/oDisplaySignOnDashes/oDisplaySignOnDashes.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":864.0,"y":672.0,},
+        {"$GMRInstance":"v1","%Name":"inst_61E3FCAE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_61E3FCAE","objectId":{"name":"oDisplaySignOnDashes","path":"objects/oDisplaySignOnDashes/oDisplaySignOnDashes.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":864.0,"y":672.0,},
         {"$GMRInstance":"v1","%Name":"inst_89EA636","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_89EA636","objectId":{"name":"oRoleController","path":"objects/oRoleController/oRoleController.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":544.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
@@ -36,8 +36,8 @@
   ],
   "name":"rmRoleGame",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"RoleGame",
+    "path":"folders/Rooms/RoleGame.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

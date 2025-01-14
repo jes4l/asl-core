@@ -35,8 +35,8 @@
   ],
   "name":"rmColourGame",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"ColourGame",
+    "path":"folders/Rooms/ColourGame.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
