@@ -1,1 +1,0 @@
-oLetterOnDashes.drawOLetterOnDashes = true;

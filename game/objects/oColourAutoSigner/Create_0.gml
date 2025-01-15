@@ -1,9 +1,9 @@
 // oAutoSigner - Create Event
-global.currentSignSprite = "";
-/// @description Initialize Auto Signer
 
+/// @description Initialize Auto Signer
+global.currentSignSprite = "";
 if (is_array(global.activeWords) && array_length_1d(global.activeWords) > 0) {
-    word = global.activeWords[0];
+    word = global.activeWords[oColourController.wordIndex];
     
     // Break word into individual letters
     letters = [];

@@ -8,6 +8,7 @@ if (mouse_check_button_pressed(mb_left)) {
         global.dashStartX = 0;
         global.dashEndX   = 0;
         global.dashY      = 0;
+		global.currentSignSprite = "";
         room_goto(rmMenu);
     }
 }
