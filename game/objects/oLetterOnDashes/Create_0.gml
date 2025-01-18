@@ -3,6 +3,8 @@
 // Set depth to draw on top of other objects
 depth = -10;
 
+
+
 // Reference to the words list
 var listObj = instance_find(oGameWordList, 0);
 if (!instance_exists(listObj)) {
@@ -78,11 +80,11 @@ function LoadWord(_index)
     currentIndex = 0;
 
     // Dash positioning parameters
-    var margin    = 50;
+    var margin    = room_width * 0.05;
     var dashStart = global.dashStartX + margin;
     var dashEnd   = global.dashEndX   - margin;
     var dashY     = global.dashY;
-    var dashGap   = 50;
+    var dashGap   = room_width * 0.05;
 
     var totalWidth     = dashEnd - dashStart;
     var totalGaps      = max(0, (letterCount - 1) * dashGap);

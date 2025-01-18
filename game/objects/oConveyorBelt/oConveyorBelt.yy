@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oRail",
+  "%Name":"oConveyorBelt",
   "eventList":[],
   "managed":true,
-  "name":"oRail",
+  "name":"oConveyorBelt",
   "overriddenProperties":[],
   "parent":{
     "name":"ShoppingGame",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sRail",
-    "path":"sprites/sRail/sRail.yy",
+    "name":"sConveyorBelt",
+    "path":"sprites/sConveyorBelt/sConveyorBelt.yy",
   },
   "spriteMaskId":null,
   "visible":true,

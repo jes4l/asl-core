@@ -42,7 +42,7 @@ if (instance_exists(oClock) && oClock.timeLeft <= 0) {
             show_debug_message("Time ran out for word: " + finishedWord);
         }
 
-        statusMessage = "Time's Up!";
+        statusMessage = "Time Is Up!";
         statusTimer   = 180;
 
         wordsCompleted++;

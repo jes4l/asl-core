@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"ShoppingGame",
-    "path":"folders/Sprites/ShoppingGame.yy",
+    "name":"ShoppingItems",
+    "path":"folders/Sprites/ShoppingGame/ShoppingItems.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
