@@ -15,7 +15,7 @@ if (drawOLetterOnDashes) {
             letterFont = fntSevenSegmentLetter;
             statusFont = fntSevenSegment;
             statusX    = 463;
-            statusY    = 469;
+            statusY    = 459;
             break;
         case rmPizzaGame:
             letterFont = fntLetter;
