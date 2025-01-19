@@ -3,8 +3,8 @@
 draw_self();
 // 1) Basic drawing setup
 draw_set_alpha(1);
-draw_set_font(fntWord);
-draw_set_color(c_white);
+draw_set_font(fntPizzaOrder);
+draw_set_color(c_black);
 
 // Force the text to draw from the top-left corner
 draw_set_halign(fa_left);
@@ -12,7 +12,7 @@ draw_set_valign(fa_top);
 
 // 2) Check if we actually have any active words
 if (!is_array(global.activeWords) || array_length_1d(global.activeWords) == 0) {
-    scrDrawText(x, y, "No active words to display!", c_white, 1, fntWord);
+    scrDrawText(x, y, "No active words to display!", c_black, 1, fntWord);
     return;
 }
 
@@ -47,7 +47,7 @@ if (activeWordsRow)
         var word = global.activeWords[i];
 
         // Draw left-aligned at xPos, yPos
-        scrDrawText(xPos, yPos, word, c_white, 1, fntWord);
+        scrDrawText(xPos, yPos, word, c_black, 1, fntPizzaOrder);
 
         // Move down by maxHeight + rowSpacing for consistent spacing
         yPos += maxHeight + rowSpacing;
@@ -60,7 +60,7 @@ else if (activeWordsColumn)
         var word = global.activeWords[i];
 
         // Draw left-aligned at xPos, yPos
-        scrDrawText(xPos, yPos, word, c_white, 1, fntWord);
+        scrDrawText(xPos, yPos, word, c_black, 1, fntPizzaOrder);
 
         // Move right by maxWidth + colSpacing
         xPos += maxWidth + colSpacing;
@@ -69,5 +69,5 @@ else if (activeWordsColumn)
 else 
 {
     // Fallback if neither orientation is specified
-    scrDrawText(x, y, "Orientation not set (row/column).", c_white, 1, fntWord);
+    scrDrawText(x, y, "Orientation not set (row/column).", c_black, 1, fntWord);
 }
