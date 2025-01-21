@@ -25,8 +25,9 @@ if (letterController != noone) {
             // Generate 10 random positions and rotations
             var instances = [];
             for (var j = 0; j < 10; j++) {
-                var posX = irandom_range(816, 1775);
-                var posY = irandom_range(0, 575);
+				var posX = irandom_range(977, 1340);
+				var posY = irandom_range(700, 900);
+	
                 var rotation = irandom_range(0, 360);
                 array_push(instances, { x: posX, y: posY, rotation: rotation });
             }
@@ -56,8 +57,9 @@ if (letterController != noone) {
                 // Generate 10 random positions and rotations
                 var instances = [];
                 for (var j = 0; j < 10; j++) {
-                    var posX = irandom_range(816, 1775);
-                    var posY = irandom_range(0, 575);
+					var posX = irandom_range(977, 1340);
+					var posY = irandom_range(700, 900);
+
                     var rotation = irandom_range(0, 360);
                     array_push(instances, { x: posX, y: posY, rotation: rotation });
                 }

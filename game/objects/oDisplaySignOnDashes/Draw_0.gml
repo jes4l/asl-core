@@ -13,7 +13,7 @@ if (instance_exists(letterOnDashesInstance)) {
     var letterColor = letterOnDashesInstance.letterColor;
     
     // Define Y-offsets directly within the draw event
-    var yOffsetPizzaGame = -200; // Move up by 200 pixels in Pizza Game
+    var yOffsetPizzaGame = -125; // Move up by 200 pixels in Pizza Game
     var yOffsetDefault    = -50;    // No offset in other rooms
     
     // Determine the current Y-offset based on the active room
