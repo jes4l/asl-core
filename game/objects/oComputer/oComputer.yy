@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"RoleGame",
-    "path":"folders/Objects/RoleGame.yy",
+    "path":"folders/Sprites/RoleGame.yy",
   },
   "parentObjectId":null,
   "persistent":false,

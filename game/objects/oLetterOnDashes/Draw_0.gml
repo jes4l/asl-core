@@ -1,6 +1,4 @@
 // oLetterOnDashes - Draw Event
-
-if (drawOLetterOnDashes) { 
     // Reset alpha
     draw_set_alpha(1);
 	
@@ -38,8 +36,8 @@ if (drawOLetterOnDashes) {
         case rmRoleGame:
             letterFont = fntLetter;
             statusFont = fntLetter;
-            statusX    = room_width / 2;
-            statusY    = 50;
+            statusX    = 1510;
+            statusY    = 950;
             break;
         default:
             // Fallback settings for undefined rooms
@@ -48,6 +46,22 @@ if (drawOLetterOnDashes) {
             statusX    = room_width / 2;
             statusY    = 50;
     }
+
+
+// **Draw Status Message with Dynamic Font and Position**
+if (statusMessage != "") {
+    scrDrawText(
+	statusX,
+    statusY,
+    statusMessage,
+    c_white,
+    1,
+    statusFont
+        );
+    }
+
+
+if (drawOLetterOnDashes) { 
 
 
     // **Draw Correct Letters (Green or Orange)**
@@ -76,16 +90,6 @@ if (drawOLetterOnDashes) {
         );
     }
 
-    // **Draw Status Message with Dynamic Font and Position**
-    if (statusMessage != "") {
-        scrDrawText(
-            statusX,
-            statusY,
-            statusMessage,
-            c_white,
-            1,
-            statusFont
-        );
-    }
+
 	
 }

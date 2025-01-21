@@ -53,6 +53,7 @@
     {"name":"fntWord","order":2,"path":"fonts/fntWord/fntWord.yy",},
     {"name":"oAutoSigner","order":1,"path":"objects/oAutoSigner/oAutoSigner.yy",},
     {"name":"oColourAutoSigner","order":1,"path":"objects/oColourAutoSigner/oColourAutoSigner.yy",},
+    {"name":"oComputer","order":4,"path":"objects/oComputer/oComputer.yy",},
     {"name":"oConveyorBelt","order":2,"path":"objects/oConveyorBelt/oConveyorBelt.yy",},
     {"name":"oCurrentActiveWordsDisplay","order":3,"path":"objects/oCurrentActiveWordsDisplay/oCurrentActiveWordsDisplay.yy",},
     {"name":"oCurrentSignDisplay","order":1,"path":"objects/oCurrentSignDisplay/oCurrentSignDisplay.yy",},
