@@ -4,7 +4,7 @@
 
 /// Example color pool with the relevant sprites 
 /// (must match your naming and loaded resources)
-colourPool = [ sPolice, sCowboy, sChef, sDoctor, sFireman ];
+colourPool   = [ sBlue, sBrown, sGreen, sOranges, sPink, sPurple, sRed, sWhite, sYellow];
 
 /// The 4 fixed positions
 positions = [
