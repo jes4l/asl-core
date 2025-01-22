@@ -13,35 +13,36 @@ if (!instance_exists(letterController) || !instance_exists(clockObj)) {
     return;
 }
 
-// 2) Retrieve path start/end from pathShappingGame (assumes exactly 2 points)
+// 2) Retrieve path start/end from pathShoppingGame (assumes exactly 2 points)
 startX = path_get_x(pathShoppingGame, 0);
 startY = path_get_y(pathShoppingGame, 0);
 endX   = path_get_x(pathShoppingGame, 1);
 endY   = path_get_y(pathShoppingGame, 1);
 
-// 3) Initialize sprite placeholders to -1 ("no sprite")
+// 3) Initialize
 currentSprite = -1;
-nextSprite    = -1;
 
-// 4) Read initialTime from oClock; store oldWordIndex
-initialTime = clockObj.timeLeft; 
+// Keep track of the old wordIndex to detect changes
 oldWordIndex = letterController.wordIndex;
 
-// 5) For the next word’s interpolation
-fraction  = 0;
-nextWordX = startX;
-nextWordY = startY;
+// fraction 0 → sprite at start, fraction 1 → sprite at end
+fraction = 0;
 
-// 6) Calculate full path distance for offset logic
+// The current word's position
+currentWordX = startX;
+currentWordY = startY;
+
+// 4) Calculate path distance & direction
 dx = endX - startX;
 dy = endY - startY;
 pathDist = point_distance(startX, startY, endX, endY);
 
-// 7) Offset distance from the end (stop short)
-offsetDist = 250;
+// 5) Read the initial time from oClock once
+initialTime = clockObj.timeLeft;
 
-//show_debug_message("oShoppingController created. Path Start=("
-//    + string(startX) + "," + string(startY) + ") End=("
-//    + string(endX)   + "," + string(endY)   + "). initialTime="
-//    + string(initialTime)
-//);
+// Optional debug
+// show_debug_message("oShoppingController created. Path Start=(" 
+//     + string(startX) + "," + string(startY) + ") End=("
+//     + string(endX)   + "," + string(endY)   + "). initialTime="
+//     + string(initialTime)
+// );
