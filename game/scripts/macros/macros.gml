@@ -26,3 +26,20 @@ global.wasWrongLetters    = ds_list_create();
 
 //Car Game
 global.lives = 3;
+
+
+
+function AddPartialSegment(_colorSprite)
+{
+    // If we've already filled 4 segments, do nothing
+    if (segmentCount >= 4) {
+        show_debug_message("oColourController: All 4 segments already filled!");
+        return;
+    }
+
+    // Store the correct color in the next available segment
+    testTubeSegments[segmentCount] = _colorSprite;
+    segmentCount++;
+
+    show_debug_message("oColourController: Segment " + string(segmentCount-1) + " filled with sprite " + string(_colorSprite));
+}

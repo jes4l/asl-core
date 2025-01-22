@@ -247,6 +247,7 @@
     {"id":{"name":"fntSevenSegmentMessage","path":"fonts/fntSevenSegmentMessage/fntSevenSegmentMessage.yy",},},
     {"id":{"name":"fntWord","path":"fonts/fntWord/fntWord.yy",},},
     {"id":{"name":"oAutoSigner","path":"objects/oAutoSigner/oAutoSigner.yy",},},
+    {"id":{"name":"oBlankTube","path":"objects/oBlankTube/oBlankTube.yy",},},
     {"id":{"name":"oButtonController","path":"objects/oButtonController/oButtonController.yy",},},
     {"id":{"name":"oCar","path":"objects/oCar/oCar.yy",},},
     {"id":{"name":"oClient","path":"objects/oClient/oClient.yy",},},
