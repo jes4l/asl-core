@@ -34,10 +34,10 @@
             statusY    = 50;
             break;
         case rmRoleGame:
-            letterFont = fntLetter;
-            statusFont = fntLetter;
-            statusX    = 1510;
-            statusY    = 950;
+            letterFont = fntSevenSegmentLetter;
+            statusFont = fntSevenSegmentLetter;
+            statusX    = 1416;
+            statusY    = 883;
             break;
         default:
             // Fallback settings for undefined rooms

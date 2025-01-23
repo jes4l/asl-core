@@ -15,7 +15,7 @@ else if (room == rmColourGame) {
     draw_set_font(fntClock);
 }
 else if (room == rmRoleGame) {
-    draw_set_font(fntClock);
+    draw_set_font(fntSevenSegment);
 }
 else {
     draw_set_font(fntClock);
