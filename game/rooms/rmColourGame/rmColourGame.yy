@@ -7,7 +7,6 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_68E2271F_1","path":"rooms/rmColourGame/rmColourGame.yy",},
-    {"name":"inst_63BA07AB_1","path":"rooms/rmColourGame/rmColourGame.yy",},
     {"name":"inst_3303834A","path":"rooms/rmColourGame/rmColourGame.yy",},
     {"name":"inst_BBEF4A9","path":"rooms/rmColourGame/rmColourGame.yy",},
     {"name":"inst_493B575F","path":"rooms/rmColourGame/rmColourGame.yy",},
@@ -17,7 +16,6 @@
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_68E2271F_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_68E2271F_1","objectId":{"name":"oGameWordList","path":"objects/oGameWordList/oGameWordList.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":96.0,"y":64.0,},
-        {"$GMRInstance":"v1","%Name":"inst_63BA07AB_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_63BA07AB_1","objectId":{"name":"oMenuButton","path":"objects/oMenuButton/oMenuButton.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":64.0,},
         {"$GMRInstance":"v1","%Name":"inst_3303834A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3303834A","objectId":{"name":"oColourController","path":"objects/oColourController/oColourController.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1600.0,"y":224.0,},
         {"$GMRInstance":"v1","%Name":"inst_BBEF4A9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_BBEF4A9","objectId":{"name":"oColourAutoSigner","path":"objects/oColourAutoSigner/oColourAutoSigner.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":512.0,"y":640.0,},
         {"$GMRInstance":"v1","%Name":"inst_4DC1ABEF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4DC1ABEF","objectId":{"name":"oBlankTube","path":"objects/oBlankTube/oBlankTube.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1008.0,"y":528.0,},

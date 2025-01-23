@@ -6,7 +6,6 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_31837114_1","path":"rooms/rmCarGame/rmCarGame.yy",},
     {"name":"inst_3BD1B000_1","path":"rooms/rmCarGame/rmCarGame.yy",},
     {"name":"inst_170ADC4E","path":"rooms/rmCarGame/rmCarGame.yy",},
     {"name":"inst_36F3141C","path":"rooms/rmCarGame/rmCarGame.yy",},
@@ -14,7 +13,6 @@
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_31837114_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_31837114_1","objectId":{"name":"oMenuButton","path":"objects/oMenuButton/oMenuButton.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1472.0,"y":928.0,},
         {"$GMRInstance":"v1","%Name":"inst_3BD1B000_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3BD1B000_1","objectId":{"name":"oCar","path":"objects/oCar/oCar.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1088.0,"y":672.0,},
         {"$GMRInstance":"v1","%Name":"inst_170ADC4E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_170ADC4E","objectId":{"name":"oObstacleSpawner","path":"objects/oObstacleSpawner/oObstacleSpawner.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1472.0,"y":864.0,},
         {"$GMRInstance":"v1","%Name":"inst_36F3141C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_36F3141C","objectId":{"name":"oPlacesSpawner","path":"objects/oPlacesSpawner/oPlacesSpawner.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1280.0,"y":576.0,},
