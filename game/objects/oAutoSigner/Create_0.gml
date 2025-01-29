@@ -34,7 +34,7 @@ if (is_array(global.activeWords) && array_length_1d(global.activeWords) > 0) {
     
     // Next alarm in 5 seconds to handle letter 1
     index = 1; 
-    alarm[0] = room_speed * 5;
+    alarm[0] = room_speed * 1;
     
 } else {
     show_debug_message("No active words. Destroying self.");

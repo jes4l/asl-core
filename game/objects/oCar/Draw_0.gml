@@ -4,17 +4,17 @@
 var sectionWidth = room_width div 3;
 var lineThickness = 5;
 
-for (var i = 1; i <= 2; i++) {
-    var xLine = sectionWidth * i;
-    draw_set_color(c_white);
-    draw_rectangle(
-        xLine - (lineThickness div 2), 
-        0, 
-        xLine + (lineThickness div 2), 
-        room_height, 
-        false
-    );
-}
+//for (var i = 1; i <= 2; i++) {
+//    var xLine = sectionWidth * i;
+//    draw_set_color(c_white);
+//    draw_rectangle(
+//        xLine - (lineThickness div 2), 
+//        0, 
+//        xLine + (lineThickness div 2), 
+//        room_height, 
+//        false
+//    );
+//}
 
 // 2. Draw the car
 draw_sprite_ext(sCar, 0, x, y, 1, 1, 0, c_white, 1);
