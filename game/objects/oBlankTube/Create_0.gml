@@ -3,8 +3,8 @@
 /// @description Sets up a blank test tube overlay system at (1600, 350).
 
 // 1) Position for the blank test tube
-x = 1600;
-y = 350;
+x = 1665;
+y = 500;
 
 // 2) Blank test tube sprite (assumed 512×512)
 blankSpr = sBlankTestTube;

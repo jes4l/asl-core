@@ -12,12 +12,12 @@ for (var i = 0; i < 4; i++) {
 
 // 2) If there's a feedback message, draw it top-center
 if (feedbackMessage != "") {
-    draw_set_font(fntWord);
+    draw_set_font(fntSevenSegment);
     draw_set_color(c_white);
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
 
-    var displayX = room_width / 2;
-    var displayY = 100;
+    var displayX = 1340;
+    var displayY = 150;
     draw_text(displayX, displayY, feedbackMessage);
 }

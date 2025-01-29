@@ -5,8 +5,8 @@ draw_sprite_ext(blankSpr, 0, x, y, 1, 1, 0, c_white, 1);
 
 // 2) Draw each filled segment from bottom to top
 var sliceCount   = 4;
-var tubeWidth    = 151;
-var tubeHeight   = 455;
+var tubeWidth    = 121;
+var tubeHeight   = 364;
 var sliceHeight  = tubeHeight / sliceCount; // 455 / 4 = 113.75 (float)
 var leftX        = x - (tubeWidth  / 2);
 var topY         = y - (tubeHeight / 2);

@@ -7,10 +7,10 @@ colourPool = [ sBlue, sBrown, sGreen, sOranges, sPink, sPurple, sRed, sWhite, sY
 
 // The 4 positions (no blank tube here)
 positions = [
-    { x: 800,  y: 350 },
-    { x: 1000, y: 350 },
-    { x: 1200, y: 350 },
-    { x: 1400, y: 350 }
+    { x: 920, y: 500 },
+    { x: 1075, y: 500 },
+    { x: 1230, y: 500 },
+    { x: 1385, y: 500 }
 ];
 
 // Start with the first word in global.activeWords
