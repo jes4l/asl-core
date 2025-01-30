@@ -1,18 +1,15 @@
-// oLineSpawner - Create Event
+numColumns = 5;
+columnIndex1 = 2;
+columnIndex2 = 3;
+thresholdFraction = 0.25;
 
-/// @description Initializes two columns for line spawning.
+xPos1 = (room_width / numColumns) * columnIndex1;
+xPos2 = (room_width / numColumns) * columnIndex2;
+spawnThresholdY = room_height * thresholdFraction;
 
-// 1) Columns at 1/3 and 2/3 of the room width
-var sectionWidth = room_width div 3;
-xPos1 = sectionWidth;
-xPos2 = sectionWidth * 2;
-
-// 2) Store references to the currently active line in each column
 line1 = noone;
 line2 = noone;
 
-// 3) The threshold to spawn a new line when the bottom of the existing line crosses it
-spawnThresholdY = (room_height * 2) / 3; // 2/3 down the room
+lineHeight = sprite_get_height(sLine);
 
-// 4) The spawn position for new lines: above the top of the room
-spawnY = -sprite_get_height(sLine); // e.g. -360 if sLine is 33x360
+spawnY = -lineHeight;
