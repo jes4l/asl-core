@@ -1,24 +1,23 @@
-// oCar - Step Event
-
-// 1. Calculate scaled x position
 var xLinear = (cameraWidth - global.xHand) * xScale;
+var sectionWidth = room_width div 5;
 
-// 2. Three-lane logic
-var sectionWidth = room_width div 3;
-
-if (xLinear < sectionWidth) {
-    x = sectionWidth div 2;
-} else if (xLinear < sectionWidth * 2) {
-    x = sectionWidth + (sectionWidth div 2);
-} else {
-    x = room_width - (sectionWidth div 2);
+if (xLinear < (sectionWidth * 2)) {
+    x = (1 * sectionWidth) + (sectionWidth div 2);
+}
+else if (xLinear < (sectionWidth * 3)) {
+    x = (2 * sectionWidth) + (sectionWidth div 2);
+}
+else {
+    x = (3 * sectionWidth) + (sectionWidth div 2);
 }
 
-// 3. Fix vertical position
 y = room_height - carVerticalOffset;
-
-// 4. Check lives
 if (global.lives <= 0) {
-    show_debug_message("oCar: Lives are 0. Returning to rmMenu...");
+	global.activeWords = [];
+	global.lives = 3;
+	global.dashStartX = 0;
+	global.dashEndX   = 0;
+	global.dashY      = 0;
+	global.currentSignSprite = "";
     room_goto(rmMenu);
 }

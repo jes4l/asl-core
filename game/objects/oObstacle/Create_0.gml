@@ -1,7 +1,2 @@
-// oObstacle - Create Event
-
-// Use the sObstacle sprite
-sprite_index = sObstacle0;
-
-// Optional: Movement speed down the screen
+sprite_index = choose(sObstacle0, sObstacle1, sObstacle2);
 fallSpeed = 5;
