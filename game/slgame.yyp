@@ -300,6 +300,7 @@
     {"id":{"name":"oTillWord","path":"objects/oTillWord/oTillWord.yy",},},
     {"id":{"name":"oTimeRemaining","path":"objects/oTimeRemaining/oTimeRemaining.yy",},},
     {"id":{"name":"oTimeRemainingPizza","path":"objects/oTimeRemainingPizza/oTimeRemainingPizza.yy",},},
+    {"id":{"name":"oTimeRemainingPlaces","path":"objects/oTimeRemainingPlaces/oTimeRemainingPlaces.yy",},},
     {"id":{"name":"oTimeRemainingRole","path":"objects/oTimeRemainingRole/oTimeRemainingRole.yy",},},
     {"id":{"name":"oWhatRole","path":"objects/oWhatRole/oWhatRole.yy",},},
     {"id":{"name":"pathShoppingGame","path":"paths/pathShoppingGame/pathShoppingGame.yy",},},

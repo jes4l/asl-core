@@ -9,7 +9,7 @@ else if (room == rmPizzaGame) {
     draw_set_font(fntSevenSegment);
 }
 else if (room == rmPlacesGame) {
-    draw_set_font(fntClock);
+    draw_set_font(fntSevenSegment);
 }
 else if (room == rmColourGame) {
     draw_set_font(fntClock);
