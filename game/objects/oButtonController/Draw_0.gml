@@ -1,7 +1,7 @@
 // oButtonController - Draw Event
 
 // Reset alpha to 1 to prevent residual transparency
-draw_set_alpha(1);
+draw_set_alpha(0.5);
 
 // Set the font once
 draw_set_font(fntButton);

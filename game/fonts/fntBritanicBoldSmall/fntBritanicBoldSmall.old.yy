@@ -1,11 +1,11 @@
 {
   "$GMFont":"",
-  "%Name":"fntButton",
+  "%Name":"fntBritanicBoldSmall",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":83,
   "ascenderOffset":0,
-  "bold":true,
+  "bold":false,
   "canGenerateBitmap":true,
   "charset":0,
   "first":0,
@@ -117,10 +117,10 @@
   "last":0,
   "lineHeight":100,
   "maintainGms1Font":false,
-  "name":"fntButton",
+  "name":"fntBritanicBoldSmall",
   "parent":{
-    "name":"Fonts",
-    "path":"folders/Fonts.yy",
+    "name":"MessageFonts",
+    "path":"folders/Fonts/MessageFonts.yy",
   },
   "pointRounding":0,
   "ranges":[
