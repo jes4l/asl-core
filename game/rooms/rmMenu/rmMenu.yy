@@ -20,7 +20,7 @@
         {"name":"g_TwistBlurTexture","type":2,"value":"_filter_twist_blur_texture",},
       ],"resourceType":"GMREffectLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMREffectLayer":"","%Name":"Effect_1","depth":200,"effectEnabled":true,"effectType":"_filter_dots","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Effect_1","properties":[
-        {"name":"g_DotsScale","type":0,"value":"33",},
+        {"name":"g_DotsScale","type":0,"value":"102",},
         {"name":"g_DotsSize","type":0,"value":"0.2",},
         {"name":"g_DotsSize","type":0,"value":"0.4",},
         {"name":"g_DotsOffset","type":0,"value":"0",},
