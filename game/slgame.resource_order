@@ -111,6 +111,7 @@
     {"name":"scrGetASLSprite","order":3,"path":"scripts/scrGetASLSprite/scrGetASLSprite.yy",},
     {"name":"scrGetWordPoolSprite","order":4,"path":"scripts/scrGetWordPoolSprite/scrGetWordPoolSprite.yy",},
     {"name":"scrUpdateWordList","order":1,"path":"scripts/scrUpdateWordList/scrUpdateWordList.yy",},
+    {"name":"sASLCoreLogo","order":1,"path":"sprites/sASLCoreLogo/sASLCoreLogo.yy",},
     {"name":"sBacon","order":5,"path":"sprites/sBacon/sBacon.yy",},
     {"name":"sBASL","order":1,"path":"sprites/sBASL/sBASL.yy",},
     {"name":"sBlankTestTube","order":9,"path":"sprites/sBlankTestTube/sBlankTestTube.yy",},

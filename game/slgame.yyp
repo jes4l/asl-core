@@ -321,6 +321,7 @@
     {"id":{"name":"scrUpdateWordList","path":"scripts/scrUpdateWordList/scrUpdateWordList.yy",},},
     {"id":{"name":"sAASL","path":"sprites/sAASL/sAASL.yy",},},
     {"id":{"name":"sApple","path":"sprites/sApple/sApple.yy",},},
+    {"id":{"name":"sASLCoreLogo","path":"sprites/sASLCoreLogo/sASLCoreLogo.yy",},},
     {"id":{"name":"sBacon","path":"sprites/sBacon/sBacon.yy",},},
     {"id":{"name":"sBASL","path":"sprites/sBASL/sBASL.yy",},},
     {"id":{"name":"sBlankTestTube","path":"sprites/sBlankTestTube/sBlankTestTube.yy",},},
