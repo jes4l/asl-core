@@ -7,9 +7,9 @@ startTime = current_time;
 progress = 0;
 
 fontBold = asset_get_index("fntBritanicBold");
-fontSmall = asset_get_index("fntBritanicBoldSmall");
-textMain = "SLGame";
+fontSmall = asset_get_index("fntBritanicBoldSmall");//65 size
+textMain = ""; //SLGame
 textSub = "Get Ready To Play...";
 
-textYMain = room_height * 0.4;
+textYMain = room_height * 0.7;//0.4
 textYSub = textYMain + 125;
