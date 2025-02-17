@@ -1,118 +1,86 @@
 import cv2
-import numpy as np
 import mediapipe as mp
-from tensorflow.keras.models import load_model
+import numpy as np
+from keras.models import load_model
 
-# Load the three different models
-model1 = load_model(r'C:\Users\LLR User\Desktop\slcv\saved_models\model1.h5')
-model2 = load_model(r'C:\Users\LLR User\Desktop\slcv\saved_models\model2.h5')
-model3 = load_model(r'C:\Users\LLR User\Desktop\slcv\saved_models\model3.h5')
-models = [model1, model2, model3]
-
-# Define ensemble weights (example weights, adjust as necessary)
-weights = [0.4, 0.2, 0.4]
-
-# Define gesture classes (adjust if needed)
-class_names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-               'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-               'U', 'V', 'W', 'X', 'Y']
-
-# Initialize MediaPipe Hands for hand detection
 mp_hands = mp.solutions.hands
-hands = mp_hands.Hands(
-    static_image_mode=False,
-    max_num_hands=1,
-    min_detection_confidence=0.7,
-    min_tracking_confidence=0.5)
-
+hands = mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.7, min_tracking_confidence=0.5)
 mp_draw = mp.solutions.drawing_utils
 
+models = [
+    load_model('saved_models/model1.hdf5'),
+    load_model('saved_models/model2.hdf5'),
+    load_model('saved_models/model3.hdf5')
+]
+class_names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+               'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
+               'T', 'U', 'V', 'W', 'X', 'Y']
 
-def preprocess_image(image):
-    """
-    Preprocess the image for the CNN:
-    - Convert to grayscale if necessary
-    - Resize to 28x28
-    - Normalize pixel values
-    - Reshape to (1, 28, 28, 1)
-    """
-    # Convert to grayscale (if not already)
+ensemble_weights = [0.4, 0.1, 0.2]
+
+def preprocess_roi(image):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    # Resize to 28x28
-    resized = cv2.resize(gray, (28, 28))
-    # Normalize the image
-    normalized = resized / 255.0
-    # Reshape to match model input
-    reshaped = normalized.reshape(1, 28, 28, 1)
-    return reshaped
+    gray = cv2.GaussianBlur(gray, (3, 3), 0)
+    gray = cv2.resize(gray, (28, 28))
+    processed = gray.astype('float32') / 255.0
+    return processed.reshape(1, 28, 28, 1), gray
 
+def get_dynamic_roi(image, landmarks):
+    x_coords = [landmark.x * image.shape[1] for landmark in landmarks.landmark]
+    y_coords = [landmark.y * image.shape[0] for landmark in landmarks.landmark]
+    padding = 30
+    min_x, max_x = int(min(x_coords)), int(max(x_coords))
+    min_y, max_y = int(min(y_coords)), int(max(y_coords))
+    width = max_x - min_x
+    height = max_y - min_y
+    size = max(width, height) + 2 * padding
+    center_x = (min_x + max_x) // 2
+    center_y = (min_y + max_y) // 2
+    min_x = max(0, center_x - size // 2)
+    max_x = min(image.shape[1], center_x + size // 2)
+    min_y = max(0, center_y - size // 2)
+    max_y = min(image.shape[0], center_y + size // 2)
+    return image[min_y:max_y, min_x:max_x], (min_x, min_y, max_x, max_y)
 
-# Start capturing from the webcam
+def predict_gesture(roi):
+    individual_preds = [model.predict(roi)[0] for model in models]
+    weighted_ensemble = np.average(individual_preds, axis=0, weights=ensemble_weights)
+    return individual_preds, weighted_ensemble
+
 cap = cv2.VideoCapture(0)
 
-while True:
+while cap.isOpened():
     ret, frame = cap.read()
     if not ret:
-        break
-
-    # Flip frame for a mirror-like effect (optional)
+        continue
     frame = cv2.flip(frame, 1)
-
-    # Convert the frame color for MediaPipe (expects RGB)
     rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
-    # Process the frame for hand landmarks
     results = hands.process(rgb_frame)
-
+    roi_image = None
     if results.multi_hand_landmarks:
-        # If a hand is detected, get the bounding box
         for hand_landmarks in results.multi_hand_landmarks:
-            # Draw landmarks on the frame
-            mp_draw.draw_landmarks(frame, hand_landmarks, mp_hands.HAND_CONNECTIONS)
-
-            # Calculate bounding box from landmarks
-            h, w, c = frame.shape
-            x_coords = [landmark.x * w for landmark in hand_landmarks.landmark]
-            y_coords = [landmark.y * h for landmark in hand_landmarks.landmark]
-            x_min, x_max = int(min(x_coords)), int(max(x_coords))
-            y_min, y_max = int(min(y_coords)), int(max(y_coords))
-
-            # Add some margin
-            margin = 20
-            x_min = max(x_min - margin, 0)
-            y_min = max(y_min - margin, 0)
-            x_max = min(x_max + margin, w)
-            y_max = min(y_max + margin, h)
-
-            # Crop the hand region
-            hand_roi = frame[y_min:y_max, x_min:x_max]
-
-            if hand_roi.size == 0:
-                continue  # Skip if the ROI is invalid
-
-            # Preprocess the hand region to feed into the CNN
-            processed_image = preprocess_image(hand_roi)
-
-            # Get predictions from each model
-            preds = [model.predict(processed_image) for model in models]
-            preds = np.array(preds)
-
-            # Ensemble prediction using weighted average
-            weighted_preds = np.tensordot(preds, weights, axes=((0), (0)))
-            prediction = np.argmax(weighted_preds, axis=1)[0]
-            gesture = class_names[prediction]
-
-            # Draw the predicted gesture on the frame
-            cv2.putText(frame, f"Gesture: {gesture}", (x_min, y_min - 10),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-
-            # Optionally, draw the bounding box
-            cv2.rectangle(frame, (x_min, y_min), (x_max, y_max), (255, 0, 0), 2)
-
-    cv2.imshow("Real-Time Hand Gesture Recognition", frame)
-
-    # Break loop if 'q' is pressed
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+            roi, (x1, y1, x2, y2) = get_dynamic_roi(frame, hand_landmarks)
+            if roi.size > 0:
+                processed_roi, gray_display = preprocess_roi(roi)
+                model_preds, ensemble_pred = predict_gesture(processed_roi)
+                ensemble_class = np.argmax(ensemble_pred)
+                model_classes = [np.argmax(pred) for pred in model_preds]
+                cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
+                y_pos = 30
+                colors = [(0, 255, 0), (0, 165, 255), (255, 0, 0)]
+                for i, (pred, cls) in enumerate(zip(model_preds, model_classes)):
+                    confidence = pred[cls]
+                    text = f"Model {i + 1}: {class_names[cls]} ({confidence:.2f})"
+                    cv2.putText(frame, text, (10, y_pos), cv2.FONT_HERSHEY_SIMPLEX, 0.7, colors[i], 2)
+                    y_pos += 30
+                ensemble_conf = ensemble_pred[ensemble_class]
+                text = f"Ensemble: {class_names[ensemble_class]} ({ensemble_conf:.2f})"
+                cv2.putText(frame, text, (10, y_pos), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
+                mp_draw.draw_landmarks(frame, hand_landmarks, mp_hands.HAND_CONNECTIONS)
+                gray_display = cv2.resize(gray_display, (280, 280))
+                cv2.imshow('Grayscale ROI Input', gray_display)
+    cv2.imshow('Sign Language Recognition', frame)
+    if cv2.waitKey(10) & 0xFF == ord('q'):
         break
 
 cap.release()
