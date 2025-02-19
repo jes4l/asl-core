@@ -1,95 +1,115 @@
-draw_set_alpha(0.5);
-draw_set_font(fntBritanicBoldSmall);
-var segments = 36;
+draw_set_font(fntBritanicBoldMenu);
 
 for (var i = 0; i < array_length_1d(buttonData); i++) {
     var btn = buttonData[i];
     
-    var polyPoints = [];
-    var angleDiff = btn.angleEnd - btn.angleStart;
-    if (angleDiff < 0) angleDiff += 360;
-    var stepSize = angleDiff / segments;
-
-    for (var j = 0; j <= segments; j++) {
-        var a = (btn.angleStart + j * stepSize) mod 360;
-        var vx = centerX + lengthdir_x(outerRadius, a);
-        var vy = centerY + lengthdir_y(outerRadius, a);
-        array_push(polyPoints, { x: vx, y: vy });
-    }
-
-    for (var j = segments; j >= 0; j--) {
-        var a = (btn.angleStart + j * stepSize) mod 360;
-        var vx = centerX + lengthdir_x(innerRadius, a);
-        var vy = centerY + lengthdir_y(innerRadius, a);
-        array_push(polyPoints, { x: vx, y: vy });
-    }
-
-    array_push(polyPoints, polyPoints[0]);
-
+    draw_set_alpha(0.4);
     draw_set_color(c_white);
-    draw_primitive_begin(pr_trianglefan);
-    for (var k = 0; k < array_length_1d(polyPoints); k++) {
-        draw_vertex(polyPoints[k].x, polyPoints[k].y);
+    
+    var steps = 10;
+    var angDiff = (btn.sectorEnd >= btn.sectorStart) 
+                  ? (btn.sectorEnd - btn.sectorStart)
+                  : ((2*pi - btn.sectorStart) + btn.sectorEnd);
+    var angleStep = angDiff / steps;
+    
+    for (var j = 0; j < steps; j++) {
+        var a1 = btn.sectorStart + j * angleStep;
+        var a2 = a1 + angleStep;
+        var ox1 = centerX + outerRadius * cos(a1);
+        var oy1 = centerY + outerRadius * sin(a1);
+        var ox2 = centerX + outerRadius * cos(a2);
+        var oy2 = centerY + outerRadius * sin(a2);
+        var ix1 = centerX + innerRadius * cos(a1);
+        var iy1 = centerY + innerRadius * sin(a1);
+        var ix2 = centerX + innerRadius * cos(a2);
+        var iy2 = centerY + innerRadius * sin(a2);
+        
+        draw_primitive_begin(pr_trianglelist);
+            draw_vertex(ox1, oy1);
+            draw_vertex(ox2, oy2);
+            draw_vertex(ix1, iy1);
+        draw_primitive_end();
+        
+        draw_primitive_begin(pr_trianglelist);
+            draw_vertex(ix1, iy1);
+            draw_vertex(ox2, oy2);
+            draw_vertex(ix2, iy2);
+        draw_primitive_end();
     }
-    draw_primitive_end();
-
+    
     draw_set_alpha(1);
-    draw_set_color(c_white);
-
-    for (var j = 0; j < segments; j++) {
-        var a1 = (btn.angleStart + j * stepSize) mod 360;
-        var a2 = (btn.angleStart + (j + 1) * stepSize) mod 360;
-        draw_line(
-            centerX + lengthdir_x(outerRadius, a1),
-            centerY + lengthdir_y(outerRadius, a1),
-            centerX + lengthdir_x(outerRadius, a2),
-            centerY + lengthdir_y(outerRadius, a2)
-        );
+    draw_set_color(c_black);
+    for (var j = 0; j < steps; j++) {
+        var a1 = btn.sectorStart + j * angleStep;
+        var a2 = a1 + angleStep;
+        var ox1 = centerX + outerRadius * cos(a1);
+        var oy1 = centerY + outerRadius * sin(a1);
+        var ox2 = centerX + outerRadius * cos(a2);
+        var oy2 = centerY + outerRadius * sin(a2);
+        var ix1 = centerX + innerRadius * cos(a1);
+        var iy1 = centerY + innerRadius * sin(a1);
+        var ix2 = centerX + innerRadius * cos(a2);
+        var iy2 = centerY + innerRadius * sin(a2);
+        draw_line(ox1, oy1, ox2, oy2);
+        draw_line(ix1, iy1, ix2, iy2);
     }
-
-    for (var j = 0; j < segments; j++) {
-        var a1 = (btn.angleStart + j * stepSize) mod 360;
-        var a2 = (btn.angleStart + (j + 1) * stepSize) mod 360;
-        draw_line(
-            centerX + lengthdir_x(innerRadius, a1),
-            centerY + lengthdir_y(innerRadius, a1),
-            centerX + lengthdir_x(innerRadius, a2),
-            centerY + lengthdir_y(innerRadius, a2)
-        );
-    }
-
-    var xOuterStart = centerX + lengthdir_x(outerRadius, btn.angleStart);
-    var yOuterStart = centerY + lengthdir_y(outerRadius, btn.angleStart);
-    var xInnerStart = centerX + lengthdir_x(innerRadius, btn.angleStart);
-    var yInnerStart = centerY + lengthdir_y(innerRadius, btn.angleStart);
-    draw_line(xInnerStart, yInnerStart, xOuterStart, yOuterStart);
-
+    
+    var rx1 = centerX + outerRadius * cos(btn.sectorStart);
+    var ry1 = centerY + outerRadius * sin(btn.sectorStart);
+    var rx2 = centerX + innerRadius * cos(btn.sectorStart);
+    var ry2 = centerY + innerRadius * sin(btn.sectorStart);
+    draw_line(rx1, ry1, rx2, ry2);
+    
+    var rx3 = centerX + outerRadius * cos(btn.sectorEnd);
+    var ry3 = centerY + outerRadius * sin(btn.sectorEnd);
+    var rx4 = centerX + innerRadius * cos(btn.sectorEnd);
+    var ry4 = centerY + innerRadius * sin(btn.sectorEnd);
+    draw_line(rx3, ry3, rx4, ry4);
+    
     var buttonText = btn.text;
     var len = string_length(buttonText);
-    angleDiff = btn.angleEnd - btn.angleStart;
-    if (angleDiff < 0) angleDiff += 360;
-
-    var totalTextAngle = angleDiff * 0.8;
-    var startTextAngle = btn.angleStart + (angleDiff - totalTextAngle) / 2;
-    var charAngleStep = totalTextAngle / max(len - 1, 1);
     var textRadius = innerRadius + 20;
-
-    draw_set_halign(fa_center);
-    draw_set_valign(fa_middle);
-    draw_set_color(c_black);
-
-    for (var c = 0; c < len; c++) {
-        var char = string_char_at(buttonText, c + 1);
-        var charAngle = startTextAngle + c * charAngleStep;
-        charAngle = (charAngle + 360) mod 360;
-        
-        var tx = centerX + lengthdir_x(textRadius, charAngle);
-        var ty = centerY + lengthdir_y(textRadius, charAngle);
-        draw_text_transformed(tx, ty, char, 1, 1, charAngle + 90);
-    }
-
-    draw_set_halign(fa_left);
-    draw_set_valign(fa_top);
     
-    draw_set_alpha(0.5);
+    draw_set_font(fntBritanicBoldMenu);
+    
+    var totalTextWidth = 0;
+    var letterWidths = [];
+    for (var k = 1; k <= len; k++) {
+        var letter = string_char_at(buttonText, k);
+        var lw = string_width(letter);
+        array_push(letterWidths, lw);
+        totalTextWidth += lw;
+    }
+    
+    var textAngularSpan = totalTextWidth / textRadius;
+    
+    var sectorMid;
+    if (btn.sectorStart <= btn.sectorEnd) {
+        sectorMid = (btn.sectorStart + btn.sectorEnd) / 2;
+    } else {
+        sectorMid = ((btn.sectorStart + (btn.sectorEnd + 2*pi)) / 2) mod (2*pi);
+    }
+    
+    var startAngle = sectorMid - textAngularSpan / 2;
+    
+    for (var k = 0; k < len; k++) {
+        var letterAngularWidth = letterWidths[k] / textRadius;
+        var letterCenterAngle = startAngle + letterAngularWidth / 2;
+        var tx = centerX + textRadius * cos(letterCenterAngle);
+        var ty = centerY + textRadius * sin(letterCenterAngle);
+        var rotateDegrees = -radtodeg(letterCenterAngle) - 90;
+        
+        draw_set_alpha(1);
+        draw_set_color(c_white);
+        draw_set_halign(fa_center);
+        draw_set_valign(fa_middle);
+        
+        draw_text_transformed(tx, ty, string_char_at(buttonText, k + 1), 1, 1, rotateDegrees);
+        
+        startAngle += letterAngularWidth;
+    }
 }
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_alpha(1);

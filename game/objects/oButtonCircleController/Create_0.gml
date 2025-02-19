@@ -1,12 +1,13 @@
-var numButtons = 5;
-var offsetAngle = -90;
-var sectorAngle = 360 / numButtons;
-
 centerX = room_width / 2;
 centerY = room_height / 2;
-
 outerRadius = min(room_width, room_height) * 0.4;
 innerRadius = outerRadius * 0.5;
+
+var numSectors = 5;
+var gapAngle = degtorad(5);
+var totalGap = numSectors * gapAngle;
+var sectorAngle = (2 * pi - totalGap) / numSectors;
+var offsetAngle = -pi/2;
 
 buttonList = [
     { text: "Pizza Game",    room: rmPizzaGame,    dashStartX: 100, dashEndX: 1510, dashY: 330, numOfActiveWords: 3 },
@@ -21,11 +22,16 @@ draw_set_font(fntButton);
 
 for (var i = 0; i < array_length_1d(buttonList); i++) {
     var btnInfo = buttonList[i];
-    var aStart = offsetAngle + (i * sectorAngle);
-    var aEnd = aStart + sectorAngle;
-    aStart = (aStart + 360) mod 360;
-    aEnd = (aEnd + 360) mod 360;
+    var secStart = offsetAngle + i * (sectorAngle + gapAngle);
+    var secEnd = secStart + sectorAngle;
+    secStart = (secStart < 0) ? secStart + 2*pi : secStart;
+    secEnd   = (secEnd   < 0) ? secEnd   + 2*pi : secEnd;
     
+    var angDiff = (secEnd >= secStart) ? (secEnd - secStart) : ((2*pi - secStart) + secEnd);
+    var textAngle = secStart + angDiff/2;
+    if (textAngle >= 2*pi) textAngle -= 2*pi;
+    
+    // Store extra data for later use
     array_push(buttonData, {
         text: btnInfo.text,
         room: btnInfo.room,
@@ -33,7 +39,10 @@ for (var i = 0; i < array_length_1d(buttonList); i++) {
         dashEndX: btnInfo.dashEndX,
         dashY: btnInfo.dashY,
         numOfActiveWords: btnInfo.numOfActiveWords,
-        angleStart: aStart,
-        angleEnd: aEnd
+        sectorStart: secStart,
+        sectorEnd: secEnd,
+        textX: centerX + ((innerRadius + outerRadius) / 2) * cos(textAngle),
+        textY: centerY + ((innerRadius + outerRadius) / 2) * sin(textAngle),
+        textAngle: textAngle
     });
 }
