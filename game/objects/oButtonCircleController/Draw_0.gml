@@ -1,20 +1,50 @@
 draw_set_font(fntBritanicBoldMenu);
 
+var m_dx = mouse_x - centerX;
+var m_dy = mouse_y - centerY;
+var m_dist = sqrt(sqr(m_dx) + sqr(m_dy));
+var m_angle = arctan2(m_dy, m_dx);
+if (m_angle < 0) m_angle += 2*pi;
+
+var anySectorHovered = false;
+
 for (var i = 0; i < array_length_1d(buttonData); i++) {
     var btn = buttonData[i];
     
-    draw_set_alpha(0.4);
+    var rotSectorStart = (btn.sectorStart + menuRotation + 2*pi) mod (2*pi);
+    var rotSectorEnd   = (btn.sectorEnd   + menuRotation + 2*pi) mod (2*pi);
+    
+    var isHovered = false;
+    if (m_dist >= innerRadius && m_dist <= outerRadius) {
+        if (rotSectorStart < rotSectorEnd) {
+            if (m_angle >= rotSectorStart && m_angle <= rotSectorEnd) {
+                isHovered = true;
+            }
+        } else {
+            if (m_angle >= rotSectorStart || m_angle <= rotSectorEnd) {
+                isHovered = true;
+            }
+        }
+    }
+    if (isHovered) anySectorHovered = true;
+    
+    var sectorAlpha = isHovered ? 0.6 : 0.4;
+    
+    draw_set_alpha(sectorAlpha);
     draw_set_color(c_white);
     
     var steps = 10;
-    var angDiff = (btn.sectorEnd >= btn.sectorStart) 
-                  ? (btn.sectorEnd - btn.sectorStart)
-                  : ((2*pi - btn.sectorStart) + btn.sectorEnd);
+    var angDiff;
+    if (rotSectorEnd >= rotSectorStart) {
+        angDiff = rotSectorEnd - rotSectorStart;
+    } else {
+        angDiff = (2*pi - rotSectorStart) + rotSectorEnd;
+    }
     var angleStep = angDiff / steps;
     
     for (var j = 0; j < steps; j++) {
-        var a1 = btn.sectorStart + j * angleStep;
-        var a2 = a1 + angleStep;
+        var a1 = rotSectorStart + j * angleStep;
+        var a2 = rotSectorStart + (j + 1) * angleStep;
         var ox1 = centerX + outerRadius * cos(a1);
         var oy1 = centerY + outerRadius * sin(a1);
         var ox2 = centerX + outerRadius * cos(a2);
@@ -40,8 +70,8 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
     draw_set_alpha(1);
     draw_set_color(c_black);
     for (var j = 0; j < steps; j++) {
-        var a1 = btn.sectorStart + j * angleStep;
-        var a2 = a1 + angleStep;
+        var a1 = rotSectorStart + j * angleStep;
+        var a2 = rotSectorStart + (j + 1) * angleStep;
         var ox1 = centerX + outerRadius * cos(a1);
         var oy1 = centerY + outerRadius * sin(a1);
         var ox2 = centerX + outerRadius * cos(a2);
@@ -54,16 +84,16 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
         draw_line(ix1, iy1, ix2, iy2);
     }
     
-    var rx1 = centerX + outerRadius * cos(btn.sectorStart);
-    var ry1 = centerY + outerRadius * sin(btn.sectorStart);
-    var rx2 = centerX + innerRadius * cos(btn.sectorStart);
-    var ry2 = centerY + innerRadius * sin(btn.sectorStart);
+    var rx1 = centerX + outerRadius * cos(rotSectorStart);
+    var ry1 = centerY + outerRadius * sin(rotSectorStart);
+    var rx2 = centerX + innerRadius * cos(rotSectorStart);
+    var ry2 = centerY + innerRadius * sin(rotSectorStart);
     draw_line(rx1, ry1, rx2, ry2);
     
-    var rx3 = centerX + outerRadius * cos(btn.sectorEnd);
-    var ry3 = centerY + outerRadius * sin(btn.sectorEnd);
-    var rx4 = centerX + innerRadius * cos(btn.sectorEnd);
-    var ry4 = centerY + innerRadius * sin(btn.sectorEnd);
+    var rx3 = centerX + outerRadius * cos(rotSectorEnd);
+    var ry3 = centerY + outerRadius * sin(rotSectorEnd);
+    var rx4 = centerX + innerRadius * cos(rotSectorEnd);
+    var ry4 = centerY + innerRadius * sin(rotSectorEnd);
     draw_line(rx3, ry3, rx4, ry4);
     
     var buttonText = btn.text;
@@ -71,7 +101,7 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
     var textRadius = innerRadius + 20;
     
     draw_set_font(fntBritanicBoldMenu);
-    
+
     var totalTextWidth = 0;
     var letterWidths = [];
     for (var k = 1; k <= len; k++) {
@@ -84,10 +114,10 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
     var textAngularSpan = totalTextWidth / textRadius;
     
     var sectorMid;
-    if (btn.sectorStart <= btn.sectorEnd) {
-        sectorMid = (btn.sectorStart + btn.sectorEnd) / 2;
+    if (rotSectorStart <= rotSectorEnd) {
+        sectorMid = (rotSectorStart + rotSectorEnd) / 2;
     } else {
-        sectorMid = ((btn.sectorStart + (btn.sectorEnd + 2*pi)) / 2) mod (2*pi);
+        sectorMid = ((rotSectorStart + (rotSectorEnd + 2*pi)) / 2) mod (2*pi);
     }
     
     var startAngle = sectorMid - textAngularSpan / 2;
@@ -113,3 +143,8 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_alpha(1);
+
+
+if (!anySectorHovered) {
+    draw_sprite(sASLCoreLogoMenu, 0, centerX, centerY);
+}

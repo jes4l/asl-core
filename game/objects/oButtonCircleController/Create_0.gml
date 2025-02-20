@@ -31,7 +31,6 @@ for (var i = 0; i < array_length_1d(buttonList); i++) {
     var textAngle = secStart + angDiff/2;
     if (textAngle >= 2*pi) textAngle -= 2*pi;
     
-    // Store extra data for later use
     array_push(buttonData, {
         text: btnInfo.text,
         room: btnInfo.room,
@@ -46,3 +45,6 @@ for (var i = 0; i < array_length_1d(buttonList); i++) {
         textAngle: textAngle
     });
 }
+
+menuRotation = 0;             
+rotationSpeed = degtorad(0.5);
