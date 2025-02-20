@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0160e8db-9569-427c-8738-c92d339b6eac" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../game/paths/ShoppingGamePath/ShoppingGamePath.yy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/rooms/rmShoppingGame/rmShoppingGame.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/rooms/rmShoppingGame/rmShoppingGame.yy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/slgame.resource_order" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.resource_order" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game/slgame.yyp" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.yyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vision.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Model/labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,28 +34,56 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2oTNPnVd0PHKk5ZJyE0zzXixwhp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jesal/Desktop/Project/diss/vision/Model&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.EnsembleMNISTSign.executor": "Run",
+    "Python.HandTrackingModule.executor": "Run",
+    "Python.MNISTCV.executor": "Run",
+    "Python.Runner.executor": "Run",
+    "Python.builder.executor": "Run",
+    "Python.carGameControls.executor": "Run",
+    "Python.computer_vision_here.executor": "Run",
+    "Python.data_collection.executor": "Run",
+    "Python.hand_segmentation.executor": "Run",
+    "Python.packet_getter.executor": "Run",
+    "Python.test.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/LLR User/Desktop/Project/diss/vision/Python",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\LLR User\Desktop\Project\diss\vision\Python" />
+      <recent name="C:\Users\LLR User\Desktop\Project\diss\vision\.venv\Lib\site-packages\google\protobuf\internal" />
       <recent name="C:\Users\jesal\Desktop\Project\diss\vision\Model" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -73,15 +106,58 @@
       <workItem from="1732811771201" duration="19000" />
       <workItem from="1732811963471" duration="1437000" />
       <workItem from="1733154418149" duration="2913000" />
+      <workItem from="1737410440757" duration="493000" />
+      <workItem from="1737410981776" duration="1138000" />
+      <workItem from="1737413595648" duration="2896000" />
+      <workItem from="1737454582195" duration="523000" />
+      <workItem from="1737455189092" duration="6371000" />
+      <workItem from="1737466653992" duration="338000" />
+      <workItem from="1737467015663" duration="1288000" />
+      <workItem from="1737468355757" duration="961000" />
+      <workItem from="1737469463872" duration="3664000" />
+      <workItem from="1737490431240" duration="33000" />
+      <workItem from="1737816955012" duration="305000" />
+      <workItem from="1738525360025" duration="114000" />
+      <workItem from="1738525647776" duration="2078000" />
+      <workItem from="1739638175984" duration="141000" />
+      <workItem from="1739639088001" duration="54000" />
+      <workItem from="1739656700215" duration="102000" />
+      <workItem from="1739656979786" duration="14000" />
+      <workItem from="1739658699754" duration="60000" />
+      <workItem from="1739659045229" duration="125000" />
+      <workItem from="1739659204542" duration="186000" />
+      <workItem from="1739660024953" duration="1009000" />
+      <workItem from="1739715872552" duration="20318000" />
+      <workItem from="1739798466751" duration="1321000" />
+      <workItem from="1739805025703" duration="16715000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/vision$carGameControls.coverage" NAME="carGameControls Coverage Results" MODIFIED="1732729911530" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
-    <SUITE FILE_PATH="coverage/vision$Runner.coverage" NAME="Runner Coverage Results" MODIFIED="1730889666203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/vision$computer_vision_here.coverage" NAME="computer_vision_here Coverage Results" MODIFIED="1733157652819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/vision$computer_vision_here.coverage" NAME="computer_vision_here Coverage Results" MODIFIED="1739660527094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/vision$builder.coverage" NAME="builder Coverage Results" MODIFIED="1739889109516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/vision$data_collection.coverage" NAME="data_collection Coverage Results" MODIFIED="1739887647671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/archive" />
+    <SUITE FILE_PATH="coverage/vision$Runner.coverage" NAME="Runner Coverage Results" MODIFIED="1737489087544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/vision$EnsembleMNISTSign.coverage" NAME="EnsembleMNISTSign Coverage Results" MODIFIED="1739888255213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/vision$packet_getter.coverage" NAME="packet_getter Coverage Results" MODIFIED="1737466980874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/mediapipe/python" />
+    <SUITE FILE_PATH="coverage/vision$carGameControls.coverage" NAME="carGameControls Coverage Results" MODIFIED="1739885208240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/vision$MNISTCV.coverage" NAME="MNISTCV Coverage Results" MODIFIED="1739890849626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/vision$HandTrackingModule.coverage" NAME="HandTrackingModule Coverage Results" MODIFIED="1737466064284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/cvzone" />
+    <SUITE FILE_PATH="coverage/vision$test.coverage" NAME="test Coverage Results" MODIFIED="1739890099310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/archive" />
+    <SUITE FILE_PATH="coverage/vision$hand_segmentation.coverage" NAME="hand_segmentation Coverage Results" MODIFIED="1739807603709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/damn" />
   </component>
 </project>

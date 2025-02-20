@@ -6,7 +6,9 @@ import math
 
 cameraCapture = cv2.VideoCapture(0)
 handDetector = HandDetector(maxHands=1)
-signClassifier = Classifier("Model/keras_model.h5", "Model/labels.txt")
+signClassifier = Classifier(r"C:\Users\LLR User\Desktop\Project\diss\vision\Model\keras_model.h5",
+                            r"C:\Users\LLR User\Desktop\Project\diss\vision\Model\labels.txt")
+
 margin = 20
 imageSize = 300
 signLabels = ["al", "bl", "cl", "dl", "el"]

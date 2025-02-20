@@ -1,4 +1,4 @@
-menuRotation -= rotationSpeed;
+menuRotation += rotationSpeed;
 menuRotation = (menuRotation + 2*pi) mod (2*pi);
 
 if (mouse_check_button_pressed(mb_left)) {

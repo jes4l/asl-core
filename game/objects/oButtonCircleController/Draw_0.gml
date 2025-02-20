@@ -1,5 +1,3 @@
-draw_set_font(fntBritanicBoldMenu);
-
 var m_dx = mouse_x - centerX;
 var m_dy = mouse_y - centerY;
 var m_dist = sqrt(sqr(m_dx) + sqr(m_dy));
@@ -7,6 +5,9 @@ var m_angle = arctan2(m_dy, m_dx);
 if (m_angle < 0) m_angle += 2*pi;
 
 var anySectorHovered = false;
+var hoveredSprite = -1;
+
+var textRadius = (innerRadius + outerRadius) / 2;
 
 for (var i = 0; i < array_length_1d(buttonData); i++) {
     var btn = buttonData[i];
@@ -26,20 +27,16 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
             }
         }
     }
-    if (isHovered) anySectorHovered = true;
-    
-    var sectorAlpha = isHovered ? 0.6 : 0.4;
-    
-    draw_set_alpha(sectorAlpha);
-    draw_set_color(c_white);
-    
-    var steps = 10;
-    var angDiff;
-    if (rotSectorEnd >= rotSectorStart) {
-        angDiff = rotSectorEnd - rotSectorStart;
-    } else {
-        angDiff = (2*pi - rotSectorStart) + rotSectorEnd;
+    if (isHovered) {
+        anySectorHovered = true;
+        hoveredSprite = btn.sprite;
     }
+    
+    draw_set_alpha(isHovered ? 0.8 : 0.4);
+    draw_set_color(isHovered ? c_white : c_gray);
+    
+    var steps = 20;
+    var angDiff = (rotSectorEnd >= rotSectorStart) ? (rotSectorEnd - rotSectorStart) : ((2*pi - rotSectorStart) + rotSectorEnd);
     var angleStep = angDiff / steps;
     
     for (var j = 0; j < steps; j++) {
@@ -98,28 +95,19 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
     
     var buttonText = btn.text;
     var len = string_length(buttonText);
-    var textRadius = innerRadius + 20;
     
-    draw_set_font(fntBritanicBoldMenu);
-
     var totalTextWidth = 0;
     var letterWidths = [];
+    var padding = 2;
     for (var k = 1; k <= len; k++) {
         var letter = string_char_at(buttonText, k);
-        var lw = string_width(letter);
+        var lw = string_width(letter) + padding;
         array_push(letterWidths, lw);
         totalTextWidth += lw;
     }
     
     var textAngularSpan = totalTextWidth / textRadius;
-    
-    var sectorMid;
-    if (rotSectorStart <= rotSectorEnd) {
-        sectorMid = (rotSectorStart + rotSectorEnd) / 2;
-    } else {
-        sectorMid = ((rotSectorStart + (rotSectorEnd + 2*pi)) / 2) mod (2*pi);
-    }
-    
+    var sectorMid = (rotSectorStart <= rotSectorEnd) ? (rotSectorStart + rotSectorEnd) / 2 : (((rotSectorStart + (rotSectorEnd + 2*pi)) / 2) mod (2*pi));
     var startAngle = sectorMid - textAngularSpan / 2;
     
     for (var k = 0; k < len; k++) {
@@ -144,7 +132,8 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_alpha(1);
 
-
-if (!anySectorHovered) {
+if (anySectorHovered && hoveredSprite != -1) {
+    draw_sprite(hoveredSprite, 0, centerX, centerY);
+} else {
     draw_sprite(sASLCoreLogoMenu, 0, centerX, centerY);
 }
