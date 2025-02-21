@@ -32,8 +32,12 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
         hoveredSprite = btn.sprite;
     }
     
+    var sectorColor = isHovered ? c_white : c_gray;
+    var textColor = isHovered ? make_color_rgb(80,80,80) : c_white;
+    
+	
     draw_set_alpha(isHovered ? 0.8 : 0.4);
-    draw_set_color(isHovered ? c_white : c_gray);
+    draw_set_color(sectorColor);
     
     var steps = 20;
     var angDiff = (rotSectorEnd >= rotSectorStart) ? (rotSectorEnd - rotSectorStart) : ((2*pi - rotSectorStart) + rotSectorEnd);
@@ -118,7 +122,7 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
         var rotateDegrees = -radtodeg(letterCenterAngle) - 90;
         
         draw_set_alpha(1);
-        draw_set_color(c_white);
+        draw_set_color(textColor);
         draw_set_halign(fa_center);
         draw_set_valign(fa_middle);
         
@@ -127,6 +131,7 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
         startAngle += letterAngularWidth;
     }
 }
+
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

@@ -14,8 +14,9 @@ buttonList = [
     { text: "Places Game",   room: rmPlacesGame,   dashStartX: 264, dashEndX: 1700, dashY: 500, numOfActiveWords: 1, sprite: sPlacesGameMenuSprite },
     { text: "Role Game",     room: rmRoleGame,     dashStartX: 1030, dashEndX: 1790, dashY: 607, numOfActiveWords: 3, sprite: sRoleGameMenuSprite },
     { text: "Shopping Game", room: rmShoppingGame, dashStartX: 111, dashEndX: 1360, dashY: 251, numOfActiveWords: 3, sprite: sShoppingGameMenuSprite },
-    { text: "Colours Game",  room: rmColourGame,   dashStartX: 264, dashEndX: 1700, dashY: 800, numOfActiveWords: 3, sprite: sColourGameMenuSprite }
+    { text: "Colours Game",  room: rmColourGame,   dashStartX: 264, dashEndX: 1700, dashY: 800, numOfActiveWords: 3, sprite: sColoursGameMenuSprite }
 ];
+
 
 buttonData = [];
 draw_set_font(fntBritanicBoldMenu);
@@ -44,7 +45,6 @@ for (var i = 0; i < array_length_1d(buttonList); i++) {
         sprite: btnInfo.sprite
     });
 }
-
 
 menuRotation = 0;
 rotationSpeed = degtorad(0.5);
