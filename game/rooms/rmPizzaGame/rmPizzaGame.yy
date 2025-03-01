@@ -20,8 +20,8 @@
     {"name":"inst_74B05FA3","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_3A4F5172","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_7094B0D5","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
-    {"name":"inst_414601A3","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_10320795","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
+    {"name":"inst_75EADBB2","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -43,7 +43,7 @@
         {"$GMRInstance":"v1","%Name":"inst_74B05FA3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_74B05FA3","objectId":{"name":"oReceipt","path":"objects/oReceipt/oReceipt.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0778947,"scaleY":1.2064517,"x":346.0905,"y":460.61935,},
         {"$GMRInstance":"v1","%Name":"inst_3A4F5172","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3A4F5172","objectId":{"name":"oOrderTicket","path":"objects/oOrderTicket/oOrderTicket.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.9496563,"scaleY":0.88006747,"x":344.37537,"y":659.0,},
         {"$GMRInstance":"v1","%Name":"inst_7094B0D5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7094B0D5","objectId":{"name":"oPizzaMachineTimer","path":"objects/oPizzaMachineTimer/oPizzaMachineTimer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.3476564,"scaleY":1.15625,"x":1733.5,"y":199.0,},
-        {"$GMRInstance":"v1","%Name":"inst_414601A3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_414601A3","objectId":{"name":"oPizzaBase","path":"objects/oPizzaBase/oPizzaBase.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.27,"scaleY":1.0766667,"x":1176.5,"y":786.5,},
+        {"$GMRInstance":"v1","%Name":"inst_75EADBB2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_75EADBB2","objectId":{"name":"oPizzaBase","path":"objects/oPizzaBase/oPizzaBase.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.2643676,"scaleY":1.0909091,"x":1168.3679,"y":798.4545,},
       ],"layers":[],"name":"BackgroundInstance","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":"_filter_large_blur","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[
         {"name":"g_Radius","type":0,"value":"10",},

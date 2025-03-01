@@ -281,6 +281,7 @@
     {"id":{"name":"oOrderTicket","path":"objects/oOrderTicket/oOrderTicket.yy",},},
     {"id":{"name":"oPizzaBase","path":"objects/oPizzaBase/oPizzaBase.yy",},},
     {"id":{"name":"oPizzaController","path":"objects/oPizzaController/oPizzaController.yy",},},
+    {"id":{"name":"oPizzaItems","path":"objects/oPizzaItems/oPizzaItems.yy",},},
     {"id":{"name":"oPizzaMachine","path":"objects/oPizzaMachine/oPizzaMachine.yy",},},
     {"id":{"name":"oPizzaMachineTimer","path":"objects/oPizzaMachineTimer/oPizzaMachineTimer.yy",},},
     {"id":{"name":"oPizzaWorkbench","path":"objects/oPizzaWorkbench/oPizzaWorkbench.yy",},},
@@ -315,6 +316,7 @@
     {"id":{"name":"rmColourGame","path":"rooms/rmColourGame/rmColourGame.yy",},},
     {"id":{"name":"rmMenu","path":"rooms/rmMenu/rmMenu.yy",},},
     {"id":{"name":"rmPizzaGame","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},},
+    {"id":{"name":"rmPizzaGameOven","path":"rooms/rmPizzaGameOven/rmPizzaGameOven.yy",},},
     {"id":{"name":"rmPlacesGame","path":"rooms/rmPlacesGame/rmPlacesGame.yy",},},
     {"id":{"name":"rmRoleGame","path":"rooms/rmRoleGame/rmRoleGame.yy",},},
     {"id":{"name":"rmShoppingGame","path":"rooms/rmShoppingGame/rmShoppingGame.yy",},},
@@ -444,6 +446,7 @@
     {"roomId":{"name":"rmPlacesGame","path":"rooms/rmPlacesGame/rmPlacesGame.yy",},},
     {"roomId":{"name":"rmColourGame","path":"rooms/rmColourGame/rmColourGame.yy",},},
     {"roomId":{"name":"rmCarGame","path":"rooms/rmCarGame/rmCarGame.yy",},},
+    {"roomId":{"name":"rmPizzaGameOven","path":"rooms/rmPizzaGameOven/rmPizzaGameOven.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

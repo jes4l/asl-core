@@ -26,6 +26,9 @@ if (wordIndex >= wordsTotal) {
     if (instance_exists(oClock)) {
         oClock.timeLeft = 0;
     }
+    if (room == rmPizzaGame) {
+        room_goto(rmPizzaGameOven);
+    }
     return;
 }
 
