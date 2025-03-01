@@ -1,7 +1,3 @@
-// oShoppingController - Draw Event
-
-/// @description Draws the current word’s sprite at the interpolated position
-
 if (currentSprite != -1) {
     draw_sprite_ext(
         currentSprite, 

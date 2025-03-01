@@ -1,11 +1,5 @@
-/// oLetterOnDashes - Create Event
-
-// Set depth to draw on top of other objects
 depth = -10;
 
-
-
-// Reference to the words list
 var listObj = instance_find(oGameWordList, 0);
 if (!instance_exists(listObj)) {
     show_debug_message("No game word list found. Destroying oLetterOnDashes.");
@@ -47,7 +41,7 @@ incompleteLetters = [];
 // Status message
 statusMessage = "";
 statusTimer   = 0;
-nextWordDelay = 0; // Timer for delaying the transition to the next word
+nextWordDelay = 0;
 
 // Helper function to load a word
 function LoadWord(_index)
@@ -76,10 +70,8 @@ function LoadWord(_index)
         letterWasWrong[j] = false;
     }
 
-    // Reset current index
     currentIndex = 0;
 
-    // Dash positioning parameters
     var margin    = room_width * 0.05;
     var dashStart = global.dashStartX + margin;
     var dashEnd   = global.dashEndX   - margin;
@@ -95,7 +87,6 @@ function LoadWord(_index)
     xPositions = [];
     yPositions = [];
 
-    // Define the vertical offset (in pixels)
     var letterYOffset = 80;
 
     var cx = dashStart;
@@ -106,26 +97,23 @@ function LoadWord(_index)
         cx += rectWidth + dashGap;
     }
 
-    // Update global variables for the current word
     global.currentWordLetters = letters;
     global.currentWordCount   = letterCount;
 
-    // Tell oClock to refresh its timer using THIS word's length
-    if instance_exists(oClock) {
+    if (instance_exists(oClock)) {
         with (oClock) {
             ResetClock();
         }
     }
-	
-	if (instance_exists(oShoppingController)) {
-	   with (oShoppingController) {
-	       fraction = 0; // start new next word at path start
-	       initialTime = clockObj.timeLeft; 
-	   }
-	}
-
+    
+    if (instance_exists(oShoppingController)) {
+       with (oShoppingController) {
+           fraction = 0;
+           initialTime = clockObj.timeLeft; 
+       }
+    }
 }
 
 // Load the first word
 LoadWord(wordIndex);
-drawOLetterOnDashes = false;
+drawOLetterOnDashes = true;

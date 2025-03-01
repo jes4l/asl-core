@@ -85,6 +85,7 @@
     {"name":"oPizzaMachine","order":8,"path":"objects/oPizzaMachine/oPizzaMachine.yy",},
     {"name":"oPizzaMachineTimer","order":11,"path":"objects/oPizzaMachineTimer/oPizzaMachineTimer.yy",},
     {"name":"oPizzaWorkbench","order":13,"path":"objects/oPizzaWorkbench/oPizzaWorkbench.yy",},
+    {"name":"oPizzzCookAnimation","order":2,"path":"objects/oPizzzCookAnimation/oPizzzCookAnimation.yy",},
     {"name":"oPlaces","order":4,"path":"objects/oPlaces/oPlaces.yy",},
     {"name":"oPlacesSpawner","order":5,"path":"objects/oPlacesSpawner/oPlacesSpawner.yy",},
     {"name":"oReceipt","order":15,"path":"objects/oReceipt/oReceipt.yy",},

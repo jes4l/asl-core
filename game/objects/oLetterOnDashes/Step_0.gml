@@ -1,15 +1,20 @@
-/// oLetterOnDashes - Step Event
+// Clamp clock time so it never goes below 0
+if (instance_exists(oClock) && oClock.timeLeft < 0) {
+    oClock.timeLeft = 0;
+}
 
 // 1. Handle next word delay
 if (nextWordDelay > 0) {
     nextWordDelay--;
+    // Ensure nextWordDelay never goes negative
     if (nextWordDelay <= 0) {
-        // After delay, move to the next word
+        nextWordDelay = 0;
+        // Always load the next word after the delay is up, if available
         if (wordIndex < wordsTotal) {
             LoadWord(wordIndex);
         }
     }
-    return; // Skip further processing during the delay
+    return;
 }
 
 // 2. Fade out the wrong letter if any
@@ -21,14 +26,22 @@ if (wrongLetter != "") {
     }
 }
 
-// 3. If all words are completed, do nothing
+// 3. Check if all words are completed
 if (wordIndex >= wordsTotal) {
     if (instance_exists(oClock)) {
         oClock.timeLeft = 0;
+        oClock.drawTimer = false;
     }
-    if (room == rmPizzaGame) {
-        room_goto(rmPizzaGameOven);
-    }
+    
+    // Clear status and letter data
+    statusMessage = "";
+    statusTimer   = 0;
+    drawOLetterOnDashes = false;
+    letters = [];
+    letterCount = 0;
+    
+    global.gameComplete = true;
+    
     return;
 }
 
@@ -46,14 +59,13 @@ if (instance_exists(oClock) && oClock.timeLeft <= 0) {
         }
 
         statusMessage = "Time Is Up!";
-        statusTimer   = 180;
+        statusTimer   = 30;
 
         wordsCompleted++;
         wordIndex++;
 
-        // Introduce a delay before loading the next word
-        nextWordDelay = room_speed; // 1 second delay
-        return; // Stop further processing for this step
+        nextWordDelay = room_speed * 0.5;
+        return;
     }
 }
 
@@ -63,7 +75,7 @@ if (currentIndex >= letterCount) {
         var doneWord = ds_list_find_value(wordsDS, wordIndex);
         show_debug_message("Word Complete: " + doneWord);
         statusMessage = "Word Complete!";
-        statusTimer   = 180;
+        statusTimer   = 30;
     }
 
     wordsCompleted++;
@@ -71,17 +83,23 @@ if (currentIndex >= letterCount) {
 
     if (wordIndex >= wordsTotal) {
         show_debug_message("List Complete!");
-        statusMessage = "List Complete!";
-        statusTimer   = 180;
+        
+        statusMessage = "";
+        statusTimer   = 0;
 
         if (instance_exists(oClock)) {
             oClock.timeLeft = 0;
+            oClock.drawTimer = false;
         }
+        
+        drawOLetterOnDashes = false;
+        letters = [];
+        letterCount = 0;
+        global.gameComplete = true;
         return;
     } else {
-        // Introduce a delay before loading the next word
-        nextWordDelay = room_speed; // 1 second delay
-        return; // Stop further processing for this step
+        nextWordDelay = room_speed * 0.5;
+        return;
     }
 }
 
@@ -98,11 +116,11 @@ if (global.letter != "") {
         letterAlpha[currentIndex] = 1.0;
         currentIndex++;
 
-        // **If the letter was previously wrong and now correct, move it to wasWrongLetters**
+        // If the letter was previously wrong and now correct, record it
         if (letterWasWrong[currentIndex - 1]) {
             var correctedLetter = string_lower(global.letter);
             ds_list_add(global.wasWrongLetters, correctedLetter);
-            letterWasWrong[currentIndex - 1] = false; // Reset the wrong flag
+            letterWasWrong[currentIndex - 1] = false;
         }
     } else {
         var wrongChar = string_lower(global.letter);
@@ -135,7 +153,7 @@ if (statusTimer > 0) {
     }
 }
 
-// 8. Debug Message for Tracking Lists
+// 8. (Optional) Debug Logging for Tracking Lists
 var wrongLettersDebug = "Wrong Letters: ";
 if (ds_exists(global.wrongLetters, ds_type_list)) {
     for (var i = 0; i < ds_list_size(global.wrongLetters); i++) {
@@ -154,7 +172,4 @@ if (ds_exists(global.wasWrongLetters, ds_type_list)) {
     wasWrongLettersDebug += "None";
 }
 
-
-//show_debug_message("Debugging Tracking Lists:\n" + 
-  //  wrongLettersDebug + "\n" + 
-    //wasWrongLettersDebug);
+// show_debug_message("Debugging Tracking Lists:\n" + wrongLettersDebug + "\n" + wasWrongLettersDebug);
