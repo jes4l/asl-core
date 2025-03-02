@@ -1,6 +1,6 @@
-// oGameWordList - Create Event
-
-wordsList = ds_list_create();
+if (!variable_instance_exists(self, "wordsList") || !ds_list_exists(wordsList)) {
+    wordsList = ds_list_create();
+}
 
 if (is_array(global.activeWords) && array_length_1d(global.activeWords) > 0) {
     for (var i = 0; i < array_length_1d(global.activeWords); i++) {

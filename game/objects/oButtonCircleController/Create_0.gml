@@ -8,7 +8,7 @@ var totalGap = numSectors * gapAngle;
 var sectorAngle = (2 * pi - totalGap) / numSectors;
 var offsetAngle = -pi/2;
 buttonList = [
-    { text: "Pizza Game",    room: rmPizzaGame,    dashStartX: 100, dashEndX: 1510, dashY: 330, numOfActiveWords: 3, sprite: sPizzaGameMenuSprite },
+    { text: "Pizza Game",    room: rmPizzaGameStart,    dashStartX: 100, dashEndX: 1510, dashY: 330, numOfActiveWords: 3, sprite: sPizzaGameMenuSprite },
     { text: "Places Game",   room: rmPlacesGame,   dashStartX: 264, dashEndX: 1700, dashY: 500, numOfActiveWords: 1, sprite: sPlacesGameMenuSprite },
     { text: "Role Game",     room: rmRoleGame,     dashStartX: 1030, dashEndX: 1790, dashY: 607, numOfActiveWords: 3, sprite: sRoleGameMenuSprite },
     { text: "Shopping Game", room: rmShoppingGame, dashStartX: 111, dashEndX: 1360, dashY: 251, numOfActiveWords: 3, sprite: sShoppingGameMenuSprite },

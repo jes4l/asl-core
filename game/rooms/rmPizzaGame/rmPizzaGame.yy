@@ -6,12 +6,9 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_68E2271F","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_559FF692","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
-    {"name":"inst_28928E6A","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_3EBCA997","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_6F40765E","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
-    {"name":"inst_7BD97183","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_7A5D9C40","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_4D84EDBB","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_189355B9","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
@@ -22,6 +19,9 @@
     {"name":"inst_7094B0D5","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_10320795","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_75EADBB2","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
+    {"name":"inst_68E2271F","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
+    {"name":"inst_28928E6A","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
+    {"name":"inst_7BD97183","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
   ],
   "isDnd":false,
   "layers":[

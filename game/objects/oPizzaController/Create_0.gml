@@ -1,4 +1,5 @@
 letterController = instance_find(oLetterOnDashes, 0);
+global.pizzaItems = undefined;
 if(letterController != noone){
     previousWord = "";
 } else {

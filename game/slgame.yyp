@@ -287,6 +287,7 @@
     {"id":{"name":"oPizzaItems","path":"objects/oPizzaItems/oPizzaItems.yy",},},
     {"id":{"name":"oPizzaMachine","path":"objects/oPizzaMachine/oPizzaMachine.yy",},},
     {"id":{"name":"oPizzaMachineTimer","path":"objects/oPizzaMachineTimer/oPizzaMachineTimer.yy",},},
+    {"id":{"name":"oPizzaStartMessage","path":"objects/oPizzaStartMessage/oPizzaStartMessage.yy",},},
     {"id":{"name":"oPizzaWorkbench","path":"objects/oPizzaWorkbench/oPizzaWorkbench.yy",},},
     {"id":{"name":"oPlaces","path":"objects/oPlaces/oPlaces.yy",},},
     {"id":{"name":"oPlacesSpawner","path":"objects/oPlacesSpawner/oPlacesSpawner.yy",},},
