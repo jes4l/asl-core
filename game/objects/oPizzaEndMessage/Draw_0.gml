@@ -4,7 +4,7 @@ if (pb != noone && pb.reachedEnd) {
         alarm[0] = room_speed * 5;
         scoreShown = true;
     }
-    timeRemainingText = "You Got A Score Of 0\n This Is Your Overall Score " + string(global.score);
+    timeRemainingText = "You Got A Score Of" + string(global.scoreGained) + "\n This Is Your Overall Score " + string(global.score);
     scrDrawText(textX, textY, timeRemainingText, textColor, textAlpha, fontToUse);
     scrDrawText(textX, 470, "I Cannot Wait To Eat This!", textColor, textAlpha, fontToUse);
 } else {

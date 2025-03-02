@@ -49,7 +49,7 @@ if (wordIndex >= wordsTotal) {
 if (instance_exists(oClock) && oClock.timeLeft <= 0) {
     if (currentIndex < letterCount) {
         for (var z = currentIndex; z < letterCount; z++) {
-            letterColor[z] = c_orange;
+            letterColor[z] = c_red;
             letterAlpha[z] = 1.0;
         }
 
@@ -110,8 +110,12 @@ if (global.letter != "") {
     if (string_lower(global.letter) == string_lower(neededChar)) {
         if (letterWasWrong[currentIndex]) {
             letterColor[currentIndex] = c_orange;
+			global.score += 1
+			global.scoreGained +=1;
         } else {
             letterColor[currentIndex] = c_green;
+			global.score += 2;
+			global.scoreGained += 2;
         }
         letterAlpha[currentIndex] = 1.0;
         currentIndex++;

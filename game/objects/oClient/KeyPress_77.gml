@@ -15,4 +15,5 @@ if(variable_global_exists("pizzaItems") && global.pizzaItems != undefined && ds_
     global.pizzaItems = undefined;
 }
 global.chosenSprite = -1;
+global.scoreGained = 0;
 room_goto(rmMenu);

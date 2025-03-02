@@ -27,6 +27,7 @@ global.wasWrongLetters    = ds_list_create();
 //Car Game
 global.lives = 3;
 global.score = 0;
+global.scoreGained = 0;
 global.chosenSprite = -1;
 
 
