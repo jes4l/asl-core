@@ -32,7 +32,7 @@ bottomMessages = [
     "You Got To Use Sign Language",
     "",
     "It Always Shows The Current\n Letter You Need To Sign",
-    "Good Luck!."
+    "Good Luck!"
 ];
 receiptInstance = noone;
 orderTicketInstance = noone;
