@@ -299,6 +299,7 @@
     {"id":{"name":"oSeats","path":"objects/oSeats/oSeats.yy",},},
     {"id":{"name":"oSetup","path":"objects/oSetup/oSetup.yy",},},
     {"id":{"name":"oShoppingController","path":"objects/oShoppingController/oShoppingController.yy",},},
+    {"id":{"name":"oShowScores","path":"objects/oShowScores/oShowScores.yy",},},
     {"id":{"name":"oSpriteSpawn","path":"objects/oSpriteSpawn/oSpriteSpawn.yy",},},
     {"id":{"name":"oSpriteSpawnPizza","path":"objects/oSpriteSpawnPizza/oSpriteSpawnPizza.yy",},},
     {"id":{"name":"oStartRoom","path":"objects/oStartRoom/oStartRoom.yy",},},

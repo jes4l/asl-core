@@ -97,6 +97,7 @@
     {"name":"oScienceTable","order":1,"path":"objects/oScienceTable/oScienceTable.yy",},
     {"name":"oSeats","order":9,"path":"objects/oSeats/oSeats.yy",},
     {"name":"oSetup","order":1,"path":"objects/oSetup/oSetup.yy",},
+    {"name":"oShowScores","order":5,"path":"objects/oShowScores/oShowScores.yy",},
     {"name":"oSpriteSpawn","order":8,"path":"objects/oSpriteSpawn/oSpriteSpawn.yy",},
     {"name":"oSpriteSpawnPizza","order":2,"path":"objects/oSpriteSpawnPizza/oSpriteSpawnPizza.yy",},
     {"name":"oStartRoom","order":4,"path":"objects/oStartRoom/oStartRoom.yy",},
