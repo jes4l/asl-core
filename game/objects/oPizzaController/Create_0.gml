@@ -11,3 +11,5 @@ if(pizzaBase == noone){
 if(!variable_global_exists("pizzaItems") || global.pizzaItems == undefined){
     global.pizzaItems = ds_list_create();
 }
+global.gameComplete = false;
+pizzaBasePathStarted = false;

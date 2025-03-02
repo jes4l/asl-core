@@ -70,3 +70,20 @@ if(letterController != noone){
 } else {
     show_debug_message("letterController is noone.");
 }
+if(global.gameComplete){
+    if(letterController != noone){
+        letterController.statusMessage = "Cooking";
+    }
+    if(pizzaBase != noone){
+        if(!pizzaBasePathStarted){
+            with(pizzaBase){
+                path_start(pathPizzaGameEnd, 4, path_action_stop, false);
+            }
+            pizzaBasePathStarted = true;
+        } else {
+            if(pizzaBase.path_index == -1){
+                room_goto(rmPizzaGameEnd);
+            }
+        }
+    }
+}

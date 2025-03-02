@@ -1,0 +1,18 @@
+{
+  "$GMPath":"",
+  "%Name":"pathPizzaGameEnd",
+  "closed":false,
+  "kind":0,
+  "name":"pathPizzaGameEnd",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":272.0,"y":800.0,},
+    {"speed":100.0,"x":1552.0,"y":800.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

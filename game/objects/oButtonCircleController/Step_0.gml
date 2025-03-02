@@ -55,6 +55,7 @@ if (mouse_check_button_pressed(mb_left)) {
                     global.dashStartX = btn.dashStartX;
                     global.dashEndX   = btn.dashEndX;
                     global.dashY      = btn.dashY;
+					global.chosenSprite = -1;
                     room_goto(btn.room);
                     break;
                 }
@@ -64,6 +65,7 @@ if (mouse_check_button_pressed(mb_left)) {
                     global.dashStartX = btn.dashStartX;
                     global.dashEndX   = btn.dashEndX;
                     global.dashY      = btn.dashY;
+					global.chosenSprite = -1;
                     room_goto(btn.room);
                     break;
                 }

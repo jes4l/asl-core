@@ -27,6 +27,8 @@ global.wasWrongLetters    = ds_list_create();
 //Car Game
 global.lives = 3;
 
+global.chosenSprite = -1;
+
 
 
 function AddPartialSegment(_colorSprite)

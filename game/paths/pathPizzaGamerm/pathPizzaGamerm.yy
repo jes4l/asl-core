@@ -1,0 +1,18 @@
+{
+  "$GMPath":"",
+  "%Name":"pathPizzaGamerm",
+  "closed":false,
+  "kind":0,
+  "name":"pathPizzaGamerm",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":1168.0,"y":800.0,},
+    {"speed":100.0,"x":1920.0,"y":800.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}
