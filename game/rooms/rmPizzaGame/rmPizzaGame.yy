@@ -15,13 +15,13 @@
     {"name":"inst_75E88DF6","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_3A699E60","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_74B05FA3","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
-    {"name":"inst_3A4F5172","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_7094B0D5","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_10320795","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_75EADBB2","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_68E2271F","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_28928E6A","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
     {"name":"inst_7BD97183","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
+    {"name":"inst_3A4F5172","path":"rooms/rmPizzaGame/rmPizzaGame.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -41,7 +41,7 @@
     {"$GMRInstanceLayer":"","%Name":"BackgroundInstance","depth":200,"effectEnabled":true,"effectType":null,"gridX":1,"gridY":1,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_75E88DF6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_75E88DF6","objectId":{"name":"oPizzaWorkbench","path":"objects/oPizzaWorkbench/oPizzaWorkbench.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.5,"scaleY":2.9296875,"x":-1.0,"y":331.0,},
         {"$GMRInstance":"v1","%Name":"inst_3A699E60","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3A699E60","objectId":{"name":"oPizzaMachine","path":"objects/oPizzaMachine/oPizzaMachine.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.3509091,"scaleY":1.28125,"x":90.629486,"y":0.0,},
-        {"$GMRInstance":"v1","%Name":"inst_74B05FA3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_74B05FA3","objectId":{"name":"oReceipt","path":"objects/oReceipt/oReceipt.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0778947,"scaleY":1.2064517,"x":346.0905,"y":460.61935,},
+        {"$GMRInstance":"v1","%Name":"inst_74B05FA3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_74B05FA3","objectId":{"name":"oReciept","path":"objects/oReciept/oReciept.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0778947,"scaleY":1.2064517,"x":346.0905,"y":460.61935,},
         {"$GMRInstance":"v1","%Name":"inst_3A4F5172","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3A4F5172","objectId":{"name":"oOrderTicket","path":"objects/oOrderTicket/oOrderTicket.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.9496563,"scaleY":0.88006747,"x":344.37537,"y":659.0,},
         {"$GMRInstance":"v1","%Name":"inst_7094B0D5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7094B0D5","objectId":{"name":"oPizzaMachineTimer","path":"objects/oPizzaMachineTimer/oPizzaMachineTimer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.3476564,"scaleY":1.15625,"x":1733.5,"y":199.0,},
         {"$GMRInstance":"v1","%Name":"inst_75EADBB2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_75EADBB2","objectId":{"name":"oPizzaBase","path":"objects/oPizzaBase/oPizzaBase.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.2643676,"scaleY":1.0909091,"x":1168.3679,"y":798.4545,},

@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"oReceipt",
+  "%Name":"oReciept",
   "eventList":[],
   "managed":true,
-  "name":"oReceipt",
+  "name":"oReciept",
   "overriddenProperties":[],
   "parent":{
     "name":"PizzaGame",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sReceipt",
-    "path":"sprites/sReceipt/sReceipt.yy",
+    "name":"sReciept",
+    "path":"sprites/sReciept/sReciept.yy",
   },
   "spriteMaskId":null,
   "visible":true,
