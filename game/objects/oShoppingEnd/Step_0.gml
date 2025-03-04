@@ -22,6 +22,7 @@ if (!allBagsStopped) {
             bag.progress = min(bag.progress + bagSpeed, 1);
             bag.x = lerp(bagStartX, bagEndX, bag.progress);
             bag.y = bagStartY;
+  
             bag2.progress = bag.progress;
             bag2.x = bag.x;
             bag2.y = bag.y;

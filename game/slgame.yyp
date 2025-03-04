@@ -304,6 +304,7 @@
     {"id":{"name":"oShoppingBasketStart","path":"objects/oShoppingBasketStart/oShoppingBasketStart.yy",},},
     {"id":{"name":"oShoppingController","path":"objects/oShoppingController/oShoppingController.yy",},},
     {"id":{"name":"oShoppingEnd","path":"objects/oShoppingEnd/oShoppingEnd.yy",},},
+    {"id":{"name":"oShoppingEndMessage","path":"objects/oShoppingEndMessage/oShoppingEndMessage.yy",},},
     {"id":{"name":"oShowScores","path":"objects/oShowScores/oShowScores.yy",},},
     {"id":{"name":"oSpriteSpawn","path":"objects/oSpriteSpawn/oSpriteSpawn.yy",},},
     {"id":{"name":"oSpriteSpawnPizza","path":"objects/oSpriteSpawnPizza/oSpriteSpawnPizza.yy",},},

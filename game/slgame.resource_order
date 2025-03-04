@@ -102,6 +102,7 @@
     {"name":"oShoppingBag2","order":17,"path":"objects/oShoppingBag2/oShoppingBag2.yy",},
     {"name":"oShoppingBasketStart","order":2,"path":"objects/oShoppingBasketStart/oShoppingBasketStart.yy",},
     {"name":"oShoppingEnd","order":3,"path":"objects/oShoppingEnd/oShoppingEnd.yy",},
+    {"name":"oShoppingEndMessage","order":4,"path":"objects/oShoppingEndMessage/oShoppingEndMessage.yy",},
     {"name":"oShowScores","order":5,"path":"objects/oShowScores/oShowScores.yy",},
     {"name":"oSpriteSpawn","order":8,"path":"objects/oSpriteSpawn/oSpriteSpawn.yy",},
     {"name":"oSpriteSpawnPizza","order":2,"path":"objects/oSpriteSpawnPizza/oSpriteSpawnPizza.yy",},
