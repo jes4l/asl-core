@@ -29,5 +29,5 @@ if (bottomMessages[currentPoint] != "") {
     var offsetY = basket.y - 695;
     var regionBaseY = 620 + offsetY;
     if (regionBaseY < 620) regionBaseY = 620;
-    scrDrawText(textX, regionBaseY, bottomMessages[currentPoint], textColor, textAlpha, fontToUse);
+    scrDrawText(textX + 20, regionBaseY - 235, bottomMessages[currentPoint], textColor, textAlpha, fontToUse);
 }

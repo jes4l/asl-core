@@ -11,6 +11,7 @@
     {"name":"inst_47ACABD5_1","path":"rooms/rmShoppingGameEnd/rmShoppingGameEnd.yy",},
     {"name":"inst_7E85E187","path":"rooms/rmShoppingGameEnd/rmShoppingGameEnd.yy",},
     {"name":"inst_453767FA","path":"rooms/rmShoppingGameEnd/rmShoppingGameEnd.yy",},
+    {"name":"inst_5F9EF021","path":"rooms/rmShoppingGameEnd/rmShoppingGameEnd.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -22,8 +23,9 @@
     {"$GMRInstanceLayer":"","%Name":"BackgroundInstances","depth":100,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_1434F91_1_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1434F91_1_1","objectId":{"name":"oConveyorBelt","path":"objects/oConveyorBelt/oConveyorBelt.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":7.4999995,"scaleY":3.4062498,"x":960.0,"y":736.0,},
       ],"layers":[],"name":"BackgroundInstances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"Instances_1","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+    {"$GMRInstanceLayer":"","%Name":"Instances_1","depth":200,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_47ACABD5_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_47ACABD5_1","objectId":{"name":"oSpriteSpawnShopping","path":"objects/oSpriteSpawnShopping/oSpriteSpawnShopping.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1472.0,"y":512.0,},
+        {"$GMRInstance":"v1","%Name":"inst_5F9EF021","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5F9EF021","objectId":{"name":"oShoppingDisplay","path":"objects/oShoppingDisplay/oShoppingDisplay.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.1221374,"scaleY":1.028369,"x":583.9389,"y":241.9859,},
       ],"layers":[],"name":"Instances_1","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":300,"effectEnabled":true,"effectType":"_filter_large_blur","gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[
         {"name":"g_Radius","type":0,"value":"20",},

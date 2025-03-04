@@ -10,8 +10,8 @@
     {"name":"inst_3967758F","path":"rooms/rmPizzaGameEnd/rmPizzaGameEnd.yy",},
     {"name":"inst_4D407826","path":"rooms/rmPizzaGameEnd/rmPizzaGameEnd.yy",},
     {"name":"inst_1CA79788","path":"rooms/rmPizzaGameEnd/rmPizzaGameEnd.yy",},
-    {"name":"inst_64E710AC","path":"rooms/rmPizzaGameEnd/rmPizzaGameEnd.yy",},
     {"name":"inst_304B405A","path":"rooms/rmPizzaGameEnd/rmPizzaGameEnd.yy",},
+    {"name":"inst_64E710AC","path":"rooms/rmPizzaGameEnd/rmPizzaGameEnd.yy",},
   ],
   "isDnd":false,
   "layers":[
