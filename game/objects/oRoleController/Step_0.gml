@@ -1,4 +1,3 @@
-// oRoleController - Step Event (All Words with M/F Variations and Fallback)
 if (letterController != noone) {
     if (ds_exists(letterController.wordsDS, ds_type_list)) {
         var currentWord = "";
