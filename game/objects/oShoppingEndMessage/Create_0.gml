@@ -1,5 +1,5 @@
 timeRemainingText = "Thank You For Scanning My Items:";
-textX = 560;
+textX = 580;
 textY = 170;
 fontToUse = fntSevenSegmentMessagePizza;
 textColor = c_white;

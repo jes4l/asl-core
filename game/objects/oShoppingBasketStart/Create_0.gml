@@ -1,10 +1,10 @@
-textX = 560;
+textX = 580;
 textY = 170;
 fontToUse = fntSevenSegmentMessagePizza;
 textColor = c_white;
 textAlpha = 1;
 basket = instance_find(oBasket, 0);
-totalPoints = 6;
+totalPoints = 5;
 points = array_create(totalPoints);
 var startX = 267;
 var startY = 695;
@@ -23,18 +23,18 @@ if (basket != noone) {
 }
 isMoving = false;
 topMessages = [
-    "Top message 0",
-    "Top message 1",
-    "Top message 2",
-    "Top message 3",
-    "Top message 4",
-    "Top message 5"
+    "Hi There, I Need You to Scan My Shopping\n Dont Worry I Will Walk You Through It",
+    "The Items In My Basket Will Be Put On\n The Conveyor Belt",
+    "You Will Have To Sign The Item\n Before They Reach The Scanner",
+    "You Will Not Be Given A ASL Letter\n To Guide You",
+    "The Letters You Sign Will Be On\n A Display Like This One",
 ];
 bottomMessages = [
-    "Bottom message 0",
-    "Bottom message 1",
-    "Bottom message 2",
-    "Bottom message 3",
-    "Bottom message 4",
-    "Bottom message 5"
+    "You Will Have Fun",
+    "Just Like The One Below",
+    "The Itmes Will Travel Via\n Conveyor Belt",
+    "The Time The Item Takes To\n Reach The Scanner Is Shown",
+    "Hope You Enjoy",
 ];
+
+tutorialInstance = noone;

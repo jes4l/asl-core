@@ -20,3 +20,14 @@ if (isMoving && basket != noone) {
         basket.y += (dy / distance) * moveSpeed;
     }
 }
+
+if (currentPoint == 2 && tutorialInstance == noone) {
+    tutorialInstance = instance_create_layer(607, 674, "Instances", oScanTutorial);
+    tutorialInstance.image_xscale = 2.624234;
+    tutorialInstance.image_yscale = 2.905959;
+}
+
+if (currentPoint == 3 && instance_exists(tutorialInstance)) {
+    instance_destroy(tutorialInstance);
+    tutorialInstance = noone;
+}

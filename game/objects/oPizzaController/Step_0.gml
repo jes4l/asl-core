@@ -82,6 +82,7 @@ if(global.gameComplete){
             pizzaBasePathStarted = true;
         } else {
             if(pizzaBase.path_index == -1){
+				global.gameComplete = false;
                 room_goto(rmPizzaGameEnd);
             }
         }

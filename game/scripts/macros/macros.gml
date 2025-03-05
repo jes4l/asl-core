@@ -29,7 +29,7 @@ global.lives = 3;
 global.score = 0;
 global.scoreGained = 0;
 global.chosenSprite = -1;
-
+global.gameComplete = false;
 
 
 function AddPartialSegment(_colorSprite)
