@@ -17,4 +17,5 @@ if(variable_global_exists("pizzaItems") && global.pizzaItems != undefined && ds_
 global.chosenSprite = -1;
 global.scoreGained = 0;
 global.gameComplete = false;
+global.oRoleGameSprites = undefined;
 room_goto(rmMenu);

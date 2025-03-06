@@ -31,10 +31,10 @@ global.scoreGained = 0;
 global.chosenSprite = -1;
 global.gameComplete = false;
 
+global.oRoleGameSprites = undefined;
 
 function AddPartialSegment(_colorSprite)
 {
-    // If we've already filled 4 segments, do nothing
     if (segmentCount >= 4) {
         show_debug_message("oColourController: All 4 segments already filled!");
         return;
