@@ -4,6 +4,9 @@ if (feedbackTimer > 0) {
         if (feedbackMessage == "Correct!") {
             wordIndex++;
             RefreshPositions();
+            if (wordIndex >= array_length_1d(global.activeWords)) {
+                global.gameComplete = true;
+            }
             if (instance_exists(oColourAutoSigner)) {
                 with (oColourAutoSigner) {
                     instance_destroy();
@@ -11,10 +14,11 @@ if (feedbackTimer > 0) {
             }
             instance_create_layer(x, y, "Instances", oColourAutoSigner);
         }
-        feedbackMessage = "Select The Correct Test Tube";
+        feedbackMessage = "";
     }
     return;
 }
+
 if (mouse_check_button_pressed(mb_left)) {
     var mx = mouse_x;
     var my = mouse_y;
@@ -24,9 +28,9 @@ if (mouse_check_button_pressed(mb_left)) {
         var sprWidth = sprite_get_width(slot.sprite);
         var sprHeight = sprite_get_height(slot.sprite);
         var left = slot.x - sprWidth / 2;
-        var top = slot.y - sprHeight / 2;
+        var top = slot.y - sprHeight/2;
         var right = slot.x + sprWidth / 2;
-        var bottom = slot.y + sprHeight / 2;
+        var bottom = slot.y + sprHeight/2;
         if (mx > left && mx < right && my > top && my < bottom) {
             if (slot.correct) {
                 feedbackMessage = "Correct!";
@@ -43,5 +47,15 @@ if (mouse_check_button_pressed(mb_left)) {
             }
             break;
         }
+    }
+}
+
+if (global.gameComplete) {
+    if (mixingTimer == 0) {
+        mixingTimer = room_speed * 2;
+    }
+    mixingTimer--;
+    if (mixingTimer <= 0) {
+        room_goto(rmColourGameEnd);
     }
 }

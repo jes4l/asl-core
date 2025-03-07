@@ -58,6 +58,7 @@ if (mouse_check_button_pressed(mb_left)) {
 					global.chosenSprite = -1;
 					global.scoreGained = 0;
 					global.oRoleGameSprites = undefined;
+					global.gameComplete = false;
                     room_goto(btn.room);
                     break;
                 }
@@ -70,6 +71,7 @@ if (mouse_check_button_pressed(mb_left)) {
 					global.chosenSprite = -1;
 					global.scoreGained = 0;
 					global.oRoleGameSprites = undefined;
+					global.gameComplete = false;
                     room_goto(btn.room);
                     break;
                 }

@@ -7,11 +7,14 @@ positions = [
 ];
 wordIndex = 0;
 slots = [];
-feedbackMessage = "Select The Correct Test Tube";
+feedbackMessage = "";
 feedbackTimer = 0;
-function RefreshPositions() {
+global.gameComplete = false;
+mixingTimer = 0;
+
+function RefreshPositions()
+{
     if (wordIndex >= array_length_1d(global.activeWords)) {
-        show_debug_message("oColourController: No more words left (4 slots = none).");
         slots = [
             { sprite: -1, x: positions[0].x, y: positions[0].y, correct: false },
             { sprite: -1, x: positions[1].x, y: positions[1].y, correct: false },
@@ -25,7 +28,12 @@ function RefreshPositions() {
     var activeWordPosIndex = irandom_range(0, 3);
     slots = [];
     for (var i = 0; i < 4; i++) {
-        slots[i] = { sprite: -1, x: positions[i].x, y: positions[i].y, correct: false };
+        slots[i] = {
+            sprite: -1,
+            x: positions[i].x,
+            y: positions[i].y,
+            correct: false
+        };
     }
     slots[activeWordPosIndex].sprite = activeSprite;
     slots[activeWordPosIndex].correct = true;
@@ -55,4 +63,5 @@ function RefreshPositions() {
     ds_list_destroy(usedSprites);
     show_debug_message("oColourController: Word='" + currentWord + "' => correct sprite at slot " + string(activeWordPosIndex));
 }
+
 RefreshPositions();
