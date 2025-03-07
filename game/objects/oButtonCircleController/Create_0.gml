@@ -10,9 +10,9 @@ var offsetAngle = -pi/2;
 buttonList = [
     { text: "Pizza Game",    room: rmPizzaGameStart,    dashStartX: 100, dashEndX: 1510, dashY: 330, numOfActiveWords: 3, sprite: sPizzaGameMenuSprite },
     { text: "Places Game",   room: rmPlacesGame,   dashStartX: 264, dashEndX: 1700, dashY: 500, numOfActiveWords: 1, sprite: sPlacesGameMenuSprite },
-    { text: "Role Game",     room: rmRoleGame,     dashStartX: 1030, dashEndX: 1790, dashY: 607, numOfActiveWords: 3, sprite: sRoleGameMenuSprite },
+    { text: "Role Game",     room: rmRoleGameStart,     dashStartX: 1030, dashEndX: 1790, dashY: 607, numOfActiveWords: 3, sprite: sRoleGameMenuSprite },
     { text: "Shopping Game", room: rmShoppingGameStart, dashStartX: 111, dashEndX: 1360, dashY: 251, numOfActiveWords: 3, sprite: sShoppingGameMenuSprite },
-    { text: "Colours Game",  room: rmColourGame,   dashStartX: 264, dashEndX: 1700, dashY: 800, numOfActiveWords: 3, sprite: sColoursGameMenuSprite }
+    { text: "Colours Game",  room: rmColourGameStart,   dashStartX: 264, dashEndX: 1700, dashY: 800, numOfActiveWords: 3, sprite: sColoursGameMenuSprite }
 ];
 buttonData = [];
 draw_set_font(fntBritanicBoldMenu);
