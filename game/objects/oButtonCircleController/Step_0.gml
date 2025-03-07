@@ -39,6 +39,13 @@ if (hoveredIndex != prevHoveredIndex) {
 } else if (hoveredIndex != -1) {
     animFrame += animation_speed;
 }
+
+if (hoveredIndex != -1) {
+    rotationSpeed = 0;
+} else {
+    rotationSpeed = degtorad(0.5);
+}
+
 if (mouse_check_button_pressed(mb_left)) {
     var dx = mouse_x - centerX;
     var dy = mouse_y - centerY;
