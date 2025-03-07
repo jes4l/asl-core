@@ -6,6 +6,12 @@ if (feedbackTimer > 0) {
             RefreshPositions();
             if (wordIndex >= array_length_1d(global.activeWords)) {
                 global.gameComplete = true;
+                if (instance_exists(oBlankTube)) {
+                    with (oBlankTube) {
+                        array_copy(global.finalSegments, 0, testTubeSegments, 0, 4);
+                        global.finalSegmentCount = segmentCount;
+                    }
+                }
             }
             if (instance_exists(oColourAutoSigner)) {
                 with (oColourAutoSigner) {
@@ -38,6 +44,9 @@ if (mouse_check_button_pressed(mb_left)) {
                 if (instance_exists(oBlankTube)) {
                     with (oBlankTube) {
                         AddPartialSegment(slot.sprite);
+						global.score += 2;
+			            global.scoreGained +=2;
+						
                     }
                 }
                 show_debug_message("oColourController: Correct clicked => partial segment added!");

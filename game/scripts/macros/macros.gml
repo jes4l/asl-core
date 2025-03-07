@@ -1,8 +1,8 @@
-// macros - Initialization Script
+// macros
 
 randomize(); 
 
-// oClient Initialization
+// oClient
 global.running = false;
 global.lastLetter = "";
 global.letter = "";
@@ -11,16 +11,14 @@ global.letterTimeStamp = "";
 global.yHand = -1;
 global.xHand = -1;
 
-// oGameWordList Initialization
+// oGameWordList
 global.activeWords = [];
 
-// oDrawDashes Initialization
+// oDrawDashes
 global.dashStartX = 0;
 global.dashEndX   = 0;
 global.dashY      = 0;
 
-// **New Tracking Variables Initialization**
-// Initialize ds_lists for tracking wrong letters, corrected wrong letters, and incomplete letters
 global.wrongLetters       = ds_list_create();
 global.wasWrongLetters    = ds_list_create();
 
@@ -39,10 +37,10 @@ function AddPartialSegment(_colorSprite)
         show_debug_message("oColourController: All 4 segments already filled!");
         return;
     }
-
-    // Store the correct color in the next available segment
     testTubeSegments[segmentCount] = _colorSprite;
     segmentCount++;
 
     show_debug_message("oColourController: Segment " + string(segmentCount-1) + " filled with sprite " + string(_colorSprite));
 }
+global.finalSegments = [ -1, -1, -1, -1 ];
+global.finalSegmentCount = 0;

@@ -11,6 +11,8 @@ feedbackMessage = "";
 feedbackTimer = 0;
 global.gameComplete = false;
 mixingTimer = 0;
+global.finalSegments = [ -1, -1, -1, -1 ];
+global.finalSegmentCount = 0;
 
 function RefreshPositions()
 {
