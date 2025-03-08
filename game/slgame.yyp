@@ -356,6 +356,7 @@
     {"id":{"name":"rmPizzaGameEnd","path":"rooms/rmPizzaGameEnd/rmPizzaGameEnd.yy",},},
     {"id":{"name":"rmPizzaGameStart","path":"rooms/rmPizzaGameStart/rmPizzaGameStart.yy",},},
     {"id":{"name":"rmPlacesGame","path":"rooms/rmPlacesGame/rmPlacesGame.yy",},},
+    {"id":{"name":"rmPlacesGamePark","path":"rooms/rmPlacesGamePark/rmPlacesGamePark.yy",},},
     {"id":{"name":"rmPlacesGameStart","path":"rooms/rmPlacesGameStart/rmPlacesGameStart.yy",},},
     {"id":{"name":"rmRoleGame","path":"rooms/rmRoleGame/rmRoleGame.yy",},},
     {"id":{"name":"rmRoleGameEnd","path":"rooms/rmRoleGameEnd/rmRoleGameEnd.yy",},},
@@ -448,6 +449,7 @@
     {"id":{"name":"sprMenuPallete","path":"sprites/sprMenuPallete/sprMenuPallete.yy",},},
     {"id":{"name":"sprPizzaBackground","path":"sprites/sprPizzaBackground/sprPizzaBackground.yy",},},
     {"id":{"name":"sprPlacesGameBackground","path":"sprites/sprPlacesGameBackground/sprPlacesGameBackground.yy",},},
+    {"id":{"name":"sprPlacesGameParkBackground","path":"sprites/sprPlacesGameParkBackground/sprPlacesGameParkBackground.yy",},},
     {"id":{"name":"sprRoleBackground","path":"sprites/sprRoleBackground/sprRoleBackground.yy",},},
     {"id":{"name":"sprRoleBackgroundStart","path":"sprites/sprRoleBackgroundStart/sprRoleBackgroundStart.yy",},},
     {"id":{"name":"sprSetup","path":"sprites/sprSetup/sprSetup.yy",},},
@@ -513,6 +515,7 @@
     {"roomId":{"name":"rmColourGameEnd","path":"rooms/rmColourGameEnd/rmColourGameEnd.yy",},},
     {"roomId":{"name":"rmPlacesGameStart","path":"rooms/rmPlacesGameStart/rmPlacesGameStart.yy",},},
     {"roomId":{"name":"rmCarGameStart","path":"rooms/rmCarGameStart/rmCarGameStart.yy",},},
+    {"roomId":{"name":"rmPlacesGamePark","path":"rooms/rmPlacesGamePark/rmPlacesGamePark.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

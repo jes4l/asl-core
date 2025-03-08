@@ -43,6 +43,7 @@ if (instance_exists(oClock) && oClock.timeLeft <= 0) {
         for (var z = currentIndex; z < letterCount; z++) {
             letterColor[z] = c_red;
             letterAlpha[z] = 1.0;
+			ds_list_add(global.wrongLetters, letters[z]);
         }
 
         if (wordIndex < wordsTotal) {
@@ -163,4 +164,4 @@ if (ds_exists(global.wasWrongLetters, ds_type_list)) {
     wasWrongLettersDebug += "None";
 }
 
-// show_debug_message("Debugging Tracking Lists:\n" + wrongLettersDebug + "\n" + wasWrongLettersDebug);
+//show_debug_message("Debugging Tracking Lists:\n" + wrongLettersDebug + "\n" + wasWrongLettersDebug);
