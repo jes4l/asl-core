@@ -55,7 +55,6 @@ if (statusMessage != "") {
 }
 
 if (drawOLetterOnDashes) { 
-    // **Draw Correct Letters (Green or Orange)**
     for (var i = 0; i < letterCount; i++) {
         if (letterAlpha[i] > 0) {
             scrDrawText(
@@ -69,7 +68,6 @@ if (drawOLetterOnDashes) {
         }
     }
 
-    // **Draw Wrong Letter Guess in Red**
     if (wrongLetter != "" && wrongLetterAlpha > 0) {
         scrDrawText(
             wrongLetterX,

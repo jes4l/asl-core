@@ -151,6 +151,7 @@
     {"name":"scrDrawText","order":2,"path":"scripts/scrDrawText/scrDrawText.yy",},
     {"name":"scrGetASLSprite","order":3,"path":"scripts/scrGetASLSprite/scrGetASLSprite.yy",},
     {"name":"scrGetWordPoolSprite","order":4,"path":"scripts/scrGetWordPoolSprite/scrGetWordPoolSprite.yy",},
+    {"name":"scrLoadWord","order":5,"path":"scripts/scrLoadWord/scrLoadWord.yy",},
     {"name":"scrUpdateWordList","order":1,"path":"scripts/scrUpdateWordList/scrUpdateWordList.yy",},
     {"name":"sASLCoreLogo","order":3,"path":"sprites/sASLCoreLogo/sASLCoreLogo.yy",},
     {"name":"sASLCoreLogoMenu","order":2,"path":"sprites/sASLCoreLogoMenu/sASLCoreLogoMenu.yy",},

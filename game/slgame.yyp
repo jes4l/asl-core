@@ -361,6 +361,7 @@
     {"id":{"name":"scrDrawText","path":"scripts/scrDrawText/scrDrawText.yy",},},
     {"id":{"name":"scrGetASLSprite","path":"scripts/scrGetASLSprite/scrGetASLSprite.yy",},},
     {"id":{"name":"scrGetWordPoolSprite","path":"scripts/scrGetWordPoolSprite/scrGetWordPoolSprite.yy",},},
+    {"id":{"name":"scrLoadWord","path":"scripts/scrLoadWord/scrLoadWord.yy",},},
     {"id":{"name":"scrUpdateWordList","path":"scripts/scrUpdateWordList/scrUpdateWordList.yy",},},
     {"id":{"name":"sAASL","path":"sprites/sAASL/sAASL.yy",},},
     {"id":{"name":"sApple","path":"sprites/sApple/sApple.yy",},},

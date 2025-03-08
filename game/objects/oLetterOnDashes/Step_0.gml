@@ -1,39 +1,32 @@
-// Clamp clock time so it never goes below 0
 if (instance_exists(oClock) && oClock.timeLeft < 0) {
     oClock.timeLeft = 0;
 }
 
-// 1. Handle next word delay
 if (nextWordDelay > 0) {
     nextWordDelay--;
-    // Ensure nextWordDelay never goes negative
     if (nextWordDelay <= 0) {
         nextWordDelay = 0;
-        // Always load the next word after the delay is up, if available
         if (wordIndex < wordsTotal) {
-            LoadWord(wordIndex);
+            scrLoadWord(wordIndex);
         }
     }
     return;
 }
 
-// 2. Fade out the wrong letter if any
 if (wrongLetter != "") {
-    wrongLetterAlpha -= 0.02; // fade speed
+    wrongLetterAlpha -= 0.02;
     if (wrongLetterAlpha <= 0) {
         wrongLetter      = "";
         wrongLetterAlpha = 0;
     }
 }
 
-// 3. Check if all words are completed
 if (wordIndex >= wordsTotal) {
     if (instance_exists(oClock)) {
         oClock.timeLeft = 0;
         oClock.drawTimer = false;
     }
     
-    // Clear status and letter data
     statusMessage = "";
     statusTimer   = 0;
     drawOLetterOnDashes = false;
@@ -45,7 +38,6 @@ if (wordIndex >= wordsTotal) {
     return;
 }
 
-// 4. If the clock is 0, end the current word
 if (instance_exists(oClock) && oClock.timeLeft <= 0) {
     if (currentIndex < letterCount) {
         for (var z = currentIndex; z < letterCount; z++) {
@@ -69,7 +61,6 @@ if (instance_exists(oClock) && oClock.timeLeft <= 0) {
     }
 }
 
-// 5. Check if the current word is completed
 if (currentIndex >= letterCount) {
     if (letters != undefined && letterCount > 0 && wordIndex < wordsTotal) {
         var doneWord = ds_list_find_value(wordsDS, wordIndex);
@@ -103,7 +94,6 @@ if (currentIndex >= letterCount) {
     }
 }
 
-// 6. Check user’s guess (global.letter)
 if (global.letter != "") {
     var neededChar = (letterCount > 0) ? letters[currentIndex] : "";
 
@@ -120,7 +110,6 @@ if (global.letter != "") {
         letterAlpha[currentIndex] = 1.0;
         currentIndex++;
 
-        // If the letter was previously wrong and now correct, record it
         if (letterWasWrong[currentIndex - 1]) {
             var correctedLetter = string_lower(global.letter);
             ds_list_add(global.wasWrongLetters, correctedLetter);
@@ -128,7 +117,7 @@ if (global.letter != "") {
         }
     } else {
         var wrongChar = string_lower(global.letter);
-        ds_list_add(global.wrongLetters, wrongChar); // Add to wrongLetters
+        ds_list_add(global.wrongLetters, wrongChar);
 
         wrongLetter      = wrongChar;
         wrongLetterAlpha = 0.8;
@@ -149,7 +138,6 @@ if (global.letter != "") {
     global.letter = "";
 }
 
-// 7. Handle status message timer
 if (statusTimer > 0) {
     statusTimer--;
     if (statusTimer <= 0) {
@@ -157,7 +145,6 @@ if (statusTimer > 0) {
     }
 }
 
-// 8. (Optional) Debug Logging for Tracking Lists
 var wrongLettersDebug = "Wrong Letters: ";
 if (ds_exists(global.wrongLetters, ds_type_list)) {
     for (var i = 0; i < ds_list_size(global.wrongLetters); i++) {
