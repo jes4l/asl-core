@@ -1,16 +1,12 @@
-/// oClock - Create Event
-
 function ResetClock() {
     if (instance_exists(oLetterOnDashes)) {
-        // Each letter = 5 seconds
-        timeLeft = oLetterOnDashes.letterCount * 1; 
+        timeLeft = oLetterOnDashes.letterCount * 3; 
     } else {
 
-        timeLeft = string_length(global.activeWords[0]) * 5;
+        timeLeft = string_length(global.activeWords[0]) * 3;
     }
 }
 
 
-// Initialize timeLeft to 0 or any default
 timeLeft = 0;
 ResetClock();

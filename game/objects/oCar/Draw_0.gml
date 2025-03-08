@@ -17,6 +17,8 @@ for (var i = 1; i <= 4; i++) {
 
 draw_sprite_ext(sCar, 0, x, y, 1, 1, 0, c_white, 1);
 
-var livesString = "Lives: " + string(global.lives);
+if (room != rmCarGameStart) {
+    var livesString = "Lives: " + string(global.lives);
+    scrDrawText(150, 100, livesString, c_white, 1, fntWord);
+}
 
-scrDrawText(150, 100, livesString, c_white, 1, fntWord);
