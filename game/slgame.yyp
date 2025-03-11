@@ -356,6 +356,7 @@
     {"id":{"name":"rmPizzaGameEnd","path":"rooms/rmPizzaGameEnd/rmPizzaGameEnd.yy",},},
     {"id":{"name":"rmPizzaGameStart","path":"rooms/rmPizzaGameStart/rmPizzaGameStart.yy",},},
     {"id":{"name":"rmPlacesGame","path":"rooms/rmPlacesGame/rmPlacesGame.yy",},},
+    {"id":{"name":"rmPlacesGameCinema","path":"rooms/rmPlacesGameCinema/rmPlacesGameCinema.yy",},},
     {"id":{"name":"rmPlacesGameHospital","path":"rooms/rmPlacesGameHospital/rmPlacesGameHospital.yy",},},
     {"id":{"name":"rmPlacesGameLibrary","path":"rooms/rmPlacesGameLibrary/rmPlacesGameLibrary.yy",},},
     {"id":{"name":"rmPlacesGamePark","path":"rooms/rmPlacesGamePark/rmPlacesGamePark.yy",},},
@@ -390,6 +391,7 @@
     {"id":{"name":"sCarFrontSeat","path":"sprites/sCarFrontSeat/sCarFrontSeat.yy",},},
     {"id":{"name":"sCarGameBanner","path":"sprites/sCarGameBanner/sCarGameBanner.yy",},},
     {"id":{"name":"sCarrot","path":"sprites/sCarrot/sCarrot.yy",},},
+    {"id":{"name":"sCarSide","path":"sprites/sCarSide/sCarSide.yy",},},
     {"id":{"name":"sCASL","path":"sprites/sCASL/sCASL.yy",},},
     {"id":{"name":"sChefF","path":"sprites/sChefF/sChefF.yy",},},
     {"id":{"name":"sChefM","path":"sprites/sChefM/sChefM.yy",},},
@@ -528,6 +530,7 @@
     {"roomId":{"name":"rmPlacesGameHospital","path":"rooms/rmPlacesGameHospital/rmPlacesGameHospital.yy",},},
     {"roomId":{"name":"rmPlacesGameLibrary","path":"rooms/rmPlacesGameLibrary/rmPlacesGameLibrary.yy",},},
     {"roomId":{"name":"rmPlacesGameSchool","path":"rooms/rmPlacesGameSchool/rmPlacesGameSchool.yy",},},
+    {"roomId":{"name":"rmPlacesGameCinema","path":"rooms/rmPlacesGameCinema/rmPlacesGameCinema.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
