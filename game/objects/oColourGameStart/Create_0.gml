@@ -1,6 +1,6 @@
 textX = 1355;
 textY = 160;
-fontToUse = fntSevenSegmentMessagePizza;
+fontToUse = fntSevenSegment40;
 textColor = c_white;
 textAlpha = 1;
 

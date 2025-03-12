@@ -22,13 +22,13 @@ if (isMoving && pizzaBase != noone) {
 }
 if (currentPoint == 2) {
     if (receiptInstance == noone) {
-        receiptInstance = instance_create_layer(605, 490, "Instances", oReciept);
+        receiptInstance = instance_create_layer(605, 493, "Instances", oReciept);
         receiptInstance.image_xscale = 1.077895;
         receiptInstance.image_yscale = 1.206452;
         receiptInstance.depth = 0;
     }
     if (orderTicketInstance == noone) {
-        orderTicketInstance = instance_create_layer(603, 687, "Instances", oOrderTicket);
+        orderTicketInstance = instance_create_layer(603, 690, "Instances", oOrderTicket);
         orderTicketInstance.image_xscale = 0.9496563;
         orderTicketInstance.image_yscale = 0.8800675;
         orderTicketInstance.depth = -1;

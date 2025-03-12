@@ -1,44 +1,32 @@
 draw_set_alpha(1);
 
-var letterFont = fntLetter;
-var statusFont = fntLetter;
+var letterFont = fntSevenSegment100;
+var statusFont = fntSevenSegment100;
 var statusX    = room_width / 2;
 var statusY    = 50;
 
 switch(room) {
     case rmShoppingGame:
-        letterFont = fntSevenSegmentLetter;
-        statusFont = fntSevenSegment;
+        letterFont = fntSevenSegment100;
+        statusFont = fntSevenSegment80;
         statusX    = 463;
         statusY    = 459;
         break;
     case rmPizzaGame:
-        letterFont = fntSevenSegmentLetterPizza;
-        statusFont = fntSevenSegment;
-        statusX    = 1050;
-        statusY    = 520;
-        break;
-    case rmPlacesGame:
-        letterFont = fntLetter;
-        statusFont = fntLetter;
-        statusX    = room_width / 2;
-        statusY    = 50;
-        break;
-    case rmColourGame:
-        letterFont = fntLetter;
-        statusFont = fntLetter;
-        statusX    = room_width / 2;
-        statusY    = 50;
+        letterFont = fntSevenSegment80;
+        statusFont = fntSevenSegment80;
+        statusX    = 1100;
+        statusY    = 550;
         break;
     case rmRoleGame:
-        letterFont = fntSevenSegmentLetter;
-        statusFont = fntSevenSegmentLetter;
+        letterFont = fntSevenSegment100;
+        statusFont = fntSevenSegment100;
         statusX    = 1416;
         statusY    = 883;
         break;
     default:
-        letterFont = fntLetter;
-        statusFont = fntLetter;
+        letterFont = fntSevenSegment100;
+        statusFont = fntSevenSegment100;
         statusX    = room_width / 2;
         statusY    = 50;
 }

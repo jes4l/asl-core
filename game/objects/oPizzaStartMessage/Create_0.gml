@@ -1,6 +1,6 @@
 textX = 590;
 textY = 220;
-fontToUse = fntSevenSegmentMessagePizza;
+fontToUse = fntSevenSegment40;
 textColor = c_white;
 textAlpha = 1;
 pizzaBase = instance_find(oPizzaBase, 0);

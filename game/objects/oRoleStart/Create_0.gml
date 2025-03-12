@@ -1,7 +1,7 @@
 textX = 1360;
 textY = 180;
 bottomMessageY = 395;
-fontToUse = fntSevenSegmentMessagePizza;
+fontToUse = fntSevenSegment40;
 textColor = c_white;
 textAlpha = 1;
 totalPoints = 5;

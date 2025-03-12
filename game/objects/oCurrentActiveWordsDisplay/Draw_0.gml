@@ -1,22 +1,17 @@
-/// @description Draw the active words in either a row or a column, 
-/// ensuring left alignment and consistent spacing among words of various lengths.
 draw_self();
-// 1) Basic drawing setup
+
 draw_set_alpha(1);
-draw_set_font(fntPizzaOrder);
+draw_set_font(fntGreekRolls70);
 draw_set_color(c_black);
 
-// Force the text to draw from the top-left corner
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-// 2) Check if we actually have any active words
 if (!is_array(global.activeWords) || array_length_1d(global.activeWords) == 0) {
     scrDrawText(x, y, "No active words to display!", c_black, 1, fntWord);
     return;
 }
 
-// 3) Pre-measure all words to find the largest width and height
 var wordCount = array_length_1d(global.activeWords);
 var maxWidth  = 0;
 var maxHeight = 0;
@@ -30,44 +25,29 @@ for (var i = 0; i < wordCount; i++) {
     if (h > maxHeight)  maxHeight = h;
 }
 
-// 4) Define spacing
-//    These are the gaps added beyond the max size so words don't touch each other.
-var rowSpacing = 20;  // vertical gap between rows
-var colSpacing = 50;  // horizontal gap between columns
+var rowSpacing = 20;
+var colSpacing = 50;
 
-// 5) Start positions for the first word
 var xPos = x;
 var yPos = y;
 
-// 6) Draw them
 if (activeWordsRow) 
 {
-    // All words share the same xPos but different yPos
     for (var i = 0; i < wordCount; i++) {
         var word = global.activeWords[i];
-
-        // Draw left-aligned at xPos, yPos
-        scrDrawText(xPos, yPos, word, c_black, 1, fntPizzaOrder);
-
-        // Move down by maxHeight + rowSpacing for consistent spacing
+        scrDrawText(xPos, yPos, word, c_black, 1, fntGreekRolls70);
         yPos += maxHeight + rowSpacing;
     }
 }
 else if (activeWordsColumn) 
 {
-    // All words share the same yPos but different xPos
     for (var i = 0; i < wordCount; i++) {
         var word = global.activeWords[i];
-
-        // Draw left-aligned at xPos, yPos
-        scrDrawText(xPos, yPos, word, c_black, 1, fntPizzaOrder);
-
-        // Move right by maxWidth + colSpacing
+        scrDrawText(xPos, yPos, word, c_black, 1, fntGreekRolls70);
         xPos += maxWidth + colSpacing;
     }
 }
 else 
 {
-    // Fallback if neither orientation is specified
     scrDrawText(x, y, "Orientation not set (row/column).", c_black, 1, fntWord);
 }

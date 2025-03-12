@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"sReciept",
   "bboxMode":0,
-  "bbox_bottom":149,
+  "bbox_bottom":148,
   "bbox_left":5,
   "bbox_right":446,
   "bbox_top":0,

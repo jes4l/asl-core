@@ -115,8 +115,8 @@
   "maintainGms1Font":false,
   "name":"fntSevenSegmentPlaces",
   "parent":{
-    "name":"LetterFonts",
-    "path":"folders/Fonts/LetterFonts.yy",
+    "name":"Fonts",
+    "path":"folders/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[

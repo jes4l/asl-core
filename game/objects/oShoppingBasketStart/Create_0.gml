@@ -1,6 +1,6 @@
 textX = 580;
 textY = 170;
-fontToUse = fntSevenSegmentMessagePizza;
+fontToUse = fntSevenSegment40;
 textColor = c_white;
 textAlpha = 1;
 basket = instance_find(oBasket, 0);

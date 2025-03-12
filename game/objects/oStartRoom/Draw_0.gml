@@ -1,12 +1,8 @@
 function draw_rounded_rect(x1, y1, x2, y2, radius, filled=true) {
     if (filled) {
-        // Main rectangle
         draw_rectangle(x1 + radius, y1, x2 - radius, y2, false);
-        // Left circle
         draw_circle(x1 + radius, y1 + radius, radius, false);
-        // Right circle
         draw_circle(x2 - radius, y1 + radius, radius, false);
-        // Fill gaps
         draw_rectangle(x1, y1 + radius, x1 + radius, y2 - radius, false);
         draw_rectangle(x2 - radius, y1 + radius, x2, y2 - radius, false);
     } else {

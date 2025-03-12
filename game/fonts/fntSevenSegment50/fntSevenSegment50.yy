@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fntSevenSegmentTax",
+  "%Name":"fntSevenSegment50",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":57,
@@ -113,7 +113,7 @@
   "last":0,
   "lineHeight":69,
   "maintainGms1Font":false,
-  "name":"fntSevenSegmentTax",
+  "name":"fntSevenSegment50",
   "parent":{
     "name":"Fonts",
     "path":"folders/Fonts.yy",

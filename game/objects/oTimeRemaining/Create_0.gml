@@ -1,6 +1,6 @@
 timeRemainingText = "Time Remaining";
 textX = 1590;
 textY = 110;
-fontToUse = fntSevenSegmentMessage;
+fontToUse = fntSevenSegment20;
 textColor = c_white;
 textAlpha = 1;

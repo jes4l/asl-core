@@ -9,8 +9,8 @@
   "name":"oCurrentActiveWordsDisplay",
   "overriddenProperties":[],
   "parent":{
-    "name":"Display",
-    "path":"folders/Objects/Display.yy",
+    "name":"PizzaGame",
+    "path":"folders/Objects/PizzaGame.yy",
   },
   "parentObjectId":null,
   "persistent":false,

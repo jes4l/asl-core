@@ -1,6 +1,6 @@
 timeRemainingText = "Enter the Role:";
 textX = 1412;
 textY = 350;
-fontToUse = fntSevenSegmentRole;
+fontToUse = fntSevenSegment35;
 textColor = c_white;
 textAlpha = 1;

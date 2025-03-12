@@ -1,20 +1,17 @@
 if (room == rmShoppingGame) {
-    draw_set_font(fntSevenSegment);
+    draw_set_font(fntSevenSegment80);
 }
 else if (room == rmPizzaGame) {
-    draw_set_font(fntSevenSegment);
+    draw_set_font(fntSevenSegment80);
 }
 else if (room == rmPlacesGame) {
-    draw_set_font(fntSevenSegment);
-}
-else if (room == rmColourGame) {
-    draw_set_font(fntClock);
+    draw_set_font(fntSevenSegment80);
 }
 else if (room == rmRoleGame) {
-    draw_set_font(fntSevenSegment);
+    draw_set_font(fntSevenSegment80);
 }
 else {
-    draw_set_font(fntClock);
+    draw_set_font(fntSevenSegment80);
 }
 
 draw_set_halign(fa_center);

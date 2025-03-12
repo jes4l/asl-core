@@ -16,7 +16,7 @@ if (global.gameComplete) {
     if (feedbackMessage != "") {
         draw_text(displayX, displayY, feedbackMessage);
     } else {
-        draw_set_font(fntSevenSegmentColour);
+        draw_set_font(fntSevenSegment50);
         draw_text(displayX, displayY, "Select the correct test tube");
     }
 }
