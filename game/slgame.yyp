@@ -305,6 +305,7 @@
     {"id":{"name":"oPlaces","path":"objects/oPlaces/oPlaces.yy",},},
     {"id":{"name":"oPlacesSpawner","path":"objects/oPlacesSpawner/oPlacesSpawner.yy",},},
     {"id":{"name":"oPlacesStartMessage","path":"objects/oPlacesStartMessage/oPlacesStartMessage.yy",},},
+    {"id":{"name":"oPlacesStartMessageLoss","path":"objects/oPlacesStartMessageLoss/oPlacesStartMessageLoss.yy",},},
     {"id":{"name":"oReciept","path":"objects/oReciept/oReciept.yy",},},
     {"id":{"name":"oRoleController","path":"objects/oRoleController/oRoleController.yy",},},
     {"id":{"name":"oRoleDisplay","path":"objects/oRoleDisplay/oRoleDisplay.yy",},},
@@ -361,6 +362,7 @@
     {"id":{"name":"rmPlacesGameCinema","path":"rooms/rmPlacesGameCinema/rmPlacesGameCinema.yy",},},
     {"id":{"name":"rmPlacesGameHospital","path":"rooms/rmPlacesGameHospital/rmPlacesGameHospital.yy",},},
     {"id":{"name":"rmPlacesGameLibrary","path":"rooms/rmPlacesGameLibrary/rmPlacesGameLibrary.yy",},},
+    {"id":{"name":"rmPlacesGameLoss","path":"rooms/rmPlacesGameLoss/rmPlacesGameLoss.yy",},},
     {"id":{"name":"rmPlacesGameMuseum","path":"rooms/rmPlacesGameMuseum/rmPlacesGameMuseum.yy",},},
     {"id":{"name":"rmPlacesGamePark","path":"rooms/rmPlacesGamePark/rmPlacesGamePark.yy",},},
     {"id":{"name":"rmPlacesGameSchool","path":"rooms/rmPlacesGameSchool/rmPlacesGameSchool.yy",},},
@@ -535,6 +537,7 @@
     {"roomId":{"name":"rmPlacesGameSchool","path":"rooms/rmPlacesGameSchool/rmPlacesGameSchool.yy",},},
     {"roomId":{"name":"rmPlacesGameCinema","path":"rooms/rmPlacesGameCinema/rmPlacesGameCinema.yy",},},
     {"roomId":{"name":"rmPlacesGameMuseum","path":"rooms/rmPlacesGameMuseum/rmPlacesGameMuseum.yy",},},
+    {"roomId":{"name":"rmPlacesGameLoss","path":"rooms/rmPlacesGameLoss/rmPlacesGameLoss.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
