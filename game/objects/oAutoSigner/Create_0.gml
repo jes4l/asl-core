@@ -24,7 +24,7 @@ if (is_array(global.activeWords) && array_length_1d(global.activeWords) > 0) {
     index = 0;
     global.currentSignSprite = sprites[0];
     index = 1; 
-    alarm[0] = room_speed * 5;
+    alarm[0] = room_speed * 3;
     
 } else {
     show_debug_message("No active words. Destroying self.");

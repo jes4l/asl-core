@@ -1,8 +1,3 @@
-room_goto(rmMenu);
-global.activeWords = [];
-global.lives = 3;
-global.dashStartX = 0;
-global.dashEndX   = 0;
-global.dashY      = 0;
-global.currentSignSprite = "";
+var targetRoom = asset_get_index("rmPlacesGame" + global.activeWords[0]);
+room_goto(targetRoom);
 instance_destroy(other);
