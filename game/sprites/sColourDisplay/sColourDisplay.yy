@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"sColourDisplay",
   "bboxMode":0,
-  "bbox_bottom":158,
+  "bbox_bottom":159,
   "bbox_left":0,
   "bbox_right":712,
   "bbox_top":0,

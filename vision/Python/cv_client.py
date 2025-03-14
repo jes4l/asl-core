@@ -5,7 +5,6 @@ from queue import Queue
 import json
 import time
 
-
 class GMS2Client:
     client_queue: Queue
     thread: threading.Thread
@@ -42,9 +41,14 @@ class GMS2Client:
     def mainloop(self, conn: socket.socket) -> None:
         conn.settimeout(0.1)
         while True:
-            if not self.client_queue.empty():
-                data: str = self.client_queue.get()
-                print(f"sending: {data}")
-                conn.send(bytes(data, encoding="UTF-8"))
-            time.sleep(1)
+            latest_data = None
+            while not self.client_queue.empty():
+                latest_data = self.client_queue.get()
+            if latest_data is not None:
+                print(f"sending: {latest_data}")
+                try:
+                    conn.send(bytes(latest_data, encoding="UTF-8"))
+                except Exception as e:
+                    print(f"Error sending data: {e}")
+            time.sleep(0.3)
         return None

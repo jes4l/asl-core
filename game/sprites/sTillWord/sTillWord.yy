@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"sTillWord",
   "bboxMode":0,
-  "bbox_bottom":451,
+  "bbox_bottom":511,
   "bbox_left":0,
   "bbox_right":1099,
   "bbox_top":0,

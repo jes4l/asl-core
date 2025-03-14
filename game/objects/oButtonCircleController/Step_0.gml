@@ -68,6 +68,12 @@ if (mouse_check_button_pressed(mb_left)) {
 					global.gameComplete = false;
 					global.finalSegments = [ -1, -1, -1, -1 ];
 					global.finalSegmentCount = 0;
+					global.lastLetter = "";
+					global.letter = "";
+					global.letterReceived = "";
+					global.letterTimeStamp = "";
+					global.yHand = -1;
+					global.xHand = -1;
                     room_goto(btn.room);
                     break;
                 }
@@ -83,6 +89,12 @@ if (mouse_check_button_pressed(mb_left)) {
 					global.gameComplete = false;
 					global.finalSegments = [ -1, -1, -1, -1 ];
 					global.finalSegmentCount = 0;
+					global.lastLetter = "";
+					global.letter = "";
+					global.letterReceived = "";
+					global.letterTimeStamp = "";
+					global.yHand = -1;
+					global.xHand = -1;
                     room_goto(btn.room);
                     break;
                 }

@@ -5,16 +5,90 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0160e8db-9569-427c-8738-c92d339b6eac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/ColourGame/sBlankTestTubeHolder.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/ColourGame/sBlankTestTubeHolder.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/ColourGame/sTestTubeHolder.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/ColourGame/sTestTubeHolder.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/ColourGame/sTestTubeMachine.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/ColourGame/sTestTubeMachine.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/ShoppingGame/sScan.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/ShoppingGame/sScan.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/ShoppingGame/sScanTutorial.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/ShoppingGame/sScanTutorial.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/ShoppingGame/sShoppingDisplay.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/ShoppingGame/sShoppingDisplay.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/ShoppingGame/sTillTimer.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/ShoppingGame/sTillTimer.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../assets/ShoppingGame/sTillWord.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/../assets/ShoppingGame/sTillWord.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/datafiles/run_computer_vision.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../game/datafiles/run_computer_vision.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/datafiles/run_computer_vision.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../game/datafiles/run_computer_vision.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntSevenSegmentPlaces/fntSevenSegment.old.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/fonts/fntSevenSegment65/fntSevenSegment.old.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntSevenSegmentPlaces/fntSevenSegment.old.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/fonts/fntSevenSegment65/fntSevenSegment.old.yy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntSevenSegmentPlaces/fntSevenSegment.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/fonts/fntSevenSegment65/fntSevenSegment.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntSevenSegmentPlaces/fntSevenSegmentPlaces.old.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/fonts/fntSevenSegment65/fntSevenSegmentPlaces.old.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntSevenSegmentPlaces/fntSevenSegmentPlaces.old.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/fonts/fntSevenSegment65/fntSevenSegmentPlaces.old.yy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntSevenSegmentPlaces/fntSevenSegmentPlaces.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/fonts/fntSevenSegment65/fntSevenSegment65.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntSevenSegmentPlaces/fntSevenSegmentPlaces.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/fonts/fntSevenSegment65/fntSevenSegment65.yy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntWord/fntButton.old.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntWord/fntButton.old.yy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntWord/fntButton.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntWord/fntLetter.old.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntWord/fntLetter.old.yy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntWord/fntLetter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntWord/fntWord.old.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntWord/fntWord.old.yy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntWord/fntWord.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntWord/fntWord.yy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntWord/fnt_example.old.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/fonts/fntWord/fnt_example.old.yy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/objects/oButtonCircleController/Step_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oButtonCircleController/Step_0.gml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/objects/oCurrentLetterDisplay/Create_0.gml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/objects/oCurrentLetterDisplay/Draw_0.gml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/objects/oCurrentLetterDisplay/oCurrentLetterDisplay.yy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/objects/oPlacesStartMessage/Create_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oPlacesStartMessage/Create_0.gml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/objects/oPlacesStartMessageLoss/Draw_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oPlacesStartMessageLoss/Draw_0.gml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/objects/oTimeRemaining/Create_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oTimeRemaining/Create_0.gml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/objects/oTimeRemainingPlaces/Create_0.gml" beforeDir="false" afterPath="$PROJECT_DIR$/../game/objects/oTimeRemainingPlaces/Create_0.gml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/rooms/rmPizzaGame/rmPizzaGame.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/rooms/rmPizzaGame/rmPizzaGame.yy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/rooms/rmPlacesGame/rmPlacesGame.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/rooms/rmPlacesGame/rmPlacesGame.yy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/rooms/rmShoppingGame/rmShoppingGame.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/rooms/rmShoppingGame/rmShoppingGame.yy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/slgame.resource_order" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.resource_order" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/slgame.yyp" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.yyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sColourDisplay/1e1076f5-ff95-4c68-b101-c3d534e86b84.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sColourDisplay/1e1076f5-ff95-4c68-b101-c3d534e86b84.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sColourDisplay/layers/1e1076f5-ff95-4c68-b101-c3d534e86b84/e72917ac-84b8-4625-842d-4253f15d5f87.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sColourDisplay/layers/1e1076f5-ff95-4c68-b101-c3d534e86b84/e72917ac-84b8-4625-842d-4253f15d5f87.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sColourDisplay/sColourDisplay.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sColourDisplay/sColourDisplay.yy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sScan/93162872-896b-4a0b-8aa4-2a6b9f69f8bc.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sScan/93162872-896b-4a0b-8aa4-2a6b9f69f8bc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sScan/layers/93162872-896b-4a0b-8aa4-2a6b9f69f8bc/4359eaad-6feb-4679-9982-d1c5b760b099.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sScan/layers/93162872-896b-4a0b-8aa4-2a6b9f69f8bc/4359eaad-6feb-4679-9982-d1c5b760b099.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sScanTutorial/89bca1c0-0e32-4178-99b2-f3d221615dfd.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sScanTutorial/89bca1c0-0e32-4178-99b2-f3d221615dfd.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sScanTutorial/layers/89bca1c0-0e32-4178-99b2-f3d221615dfd/5e0e3294-5ad9-46d3-bb06-1893cbf7230d.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sScanTutorial/layers/89bca1c0-0e32-4178-99b2-f3d221615dfd/5e0e3294-5ad9-46d3-bb06-1893cbf7230d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sShoppingDisplay/7196af5e-e3ee-440f-ad6f-3912e828fa5d.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sShoppingDisplay/7196af5e-e3ee-440f-ad6f-3912e828fa5d.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sShoppingDisplay/layers/7196af5e-e3ee-440f-ad6f-3912e828fa5d/872dbc65-5c23-47d4-87fe-b40ce5a065ef.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sShoppingDisplay/layers/7196af5e-e3ee-440f-ad6f-3912e828fa5d/872dbc65-5c23-47d4-87fe-b40ce5a065ef.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sTestTubeBlankHolder/34a2d72f-341c-42ed-a521-27a4423ef7ce.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sTestTubeBlankHolder/34a2d72f-341c-42ed-a521-27a4423ef7ce.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sTestTubeBlankHolder/layers/34a2d72f-341c-42ed-a521-27a4423ef7ce/cc304d08-e415-47d5-8796-8d3ed10ab5dc.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sTestTubeBlankHolder/layers/34a2d72f-341c-42ed-a521-27a4423ef7ce/cc304d08-e415-47d5-8796-8d3ed10ab5dc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sTestTubeHolder/34a2d72f-341c-42ed-a521-27a4423ef7ce.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sTestTubeHolder/34a2d72f-341c-42ed-a521-27a4423ef7ce.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sTestTubeHolder/layers/34a2d72f-341c-42ed-a521-27a4423ef7ce/cc304d08-e415-47d5-8796-8d3ed10ab5dc.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sTestTubeHolder/layers/34a2d72f-341c-42ed-a521-27a4423ef7ce/cc304d08-e415-47d5-8796-8d3ed10ab5dc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sTestTubeScreen/310bcd3e-0c98-487a-8823-ddf218083d8a.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sTestTubeScreen/310bcd3e-0c98-487a-8823-ddf218083d8a.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sTestTubeScreen/layers/310bcd3e-0c98-487a-8823-ddf218083d8a/dfef1fa1-d154-4100-acc0-0901a9f5b029.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sTestTubeScreen/layers/310bcd3e-0c98-487a-8823-ddf218083d8a/dfef1fa1-d154-4100-acc0-0901a9f5b029.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sTillTimer/93162872-896b-4a0b-8aa4-2a6b9f69f8bc.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sTillTimer/93162872-896b-4a0b-8aa4-2a6b9f69f8bc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sTillTimer/layers/93162872-896b-4a0b-8aa4-2a6b9f69f8bc/4359eaad-6feb-4679-9982-d1c5b760b099.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sTillTimer/layers/93162872-896b-4a0b-8aa4-2a6b9f69f8bc/4359eaad-6feb-4679-9982-d1c5b760b099.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sTillTimer/sTillTimer.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sTillTimer/sTillTimer.yy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sTillWord/93162872-896b-4a0b-8aa4-2a6b9f69f8bc.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sTillWord/93162872-896b-4a0b-8aa4-2a6b9f69f8bc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sTillWord/layers/93162872-896b-4a0b-8aa4-2a6b9f69f8bc/4359eaad-6feb-4679-9982-d1c5b760b099.png" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sTillWord/layers/93162872-896b-4a0b-8aa4-2a6b9f69f8bc/4359eaad-6feb-4679-9982-d1c5b760b099.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/sprites/sTillWord/sTillWord.yy" beforeDir="false" afterPath="$PROJECT_DIR$/../game/sprites/sTillWord/sTillWord.yy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vision.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Model/labels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/archive/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/archive/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/builder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/keras_model.h5" beforeDir="false" afterPath="$PROJECT_DIR$/Python/JesalTempCV/saved_models/keras_model.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Python/JesalTempCV/saved_models/labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/EnsembleMNISTSign.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/MNISTCV.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/NewCV/AnimateHands.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/NewCV/ComputerVision.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/KaggleCV/ComputerVision.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/NewCV/CreateTrainingDataset.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/NewCV/DatasetPreprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/KaggleCV/DatasetPreprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/NewCV/TrainDataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/KaggleCV/TrainDataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/computer_vision_here.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/computer_vision_here.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/cv_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/cv_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/sign_mnist_test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/sign_mnist_train.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/data_collection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/JesalTempCV/data_collection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/JesalTempCV/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/archive/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/JesalTempCV/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,44 +118,72 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.16again.executor": "Run",
+    "Python.AnimateHands.executor": "Run",
+    "Python.ComputerVision.executor": "Run",
+    "Python.DataCollection.executor": "Run",
+    "Python.DatasetPreprocessing.executor": "Run",
     "Python.EnsembleMNISTSign.executor": "Run",
     "Python.HandTrackingModule.executor": "Run",
     "Python.MNISTCV.executor": "Run",
     "Python.Runner.executor": "Run",
+    "Python.TrainDataset.executor": "Run",
+    "Python.TrainDataset16.executor": "Run",
     "Python.builder.executor": "Run",
     "Python.carGameControls.executor": "Run",
+    "Python.computerVision.executor": "Run",
+    "Python.computerVision200by200.executor": "Run",
+    "Python.computerVision300by300.executor": "Run",
     "Python.computer_vision_here.executor": "Run",
+    "Python.controller.executor": "Run",
+    "Python.cv_client.executor": "Run",
     "Python.data_collection.executor": "Run",
+    "Python.datacheck.executor": "Run",
     "Python.hand_segmentation.executor": "Run",
+    "Python.numOfCharacter.executor": "Run",
+    "Python.oldCV.executor": "Run",
     "Python.packet_getter.executor": "Run",
+    "Python.preprocessing.executor": "Run",
+    "Python.reqs.executor": "Run",
     "Python.test.executor": "Run",
+    "Python.text.executor": "Run",
+    "Python.train.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/LLR User/Desktop/Project/diss/vision/Python",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/jesal/Desktop/Project/diss/vision/Python/NewCV",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jesal\Desktop\Project\diss\vision\Python\NewCV" />
+      <recent name="C:\Users\LLR User\Desktop\Project\diss\vision\Python\NewNewDataset" />
       <recent name="C:\Users\LLR User\Desktop\Project\diss\vision\Python" />
       <recent name="C:\Users\LLR User\Desktop\Project\diss\vision\.venv\Lib\site-packages\google\protobuf\internal" />
       <recent name="C:\Users\jesal\Desktop\Project\diss\vision\Model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jesal\Desktop\Project\diss\vision\Python\EastWestCV\saved_models" />
+      <recent name="C:\Users\jesal\Desktop\Project\diss\vision\Python\KaggleCV\saved_models" />
+      <recent name="C:\Users\LLR User\Desktop\Project\diss\vision\Python\NewNewDataset" />
+      <recent name="C:\Users\LLR User\Desktop\Project\diss\vision\Python" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
-        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-PY-243.25659.43" />
+        <option value="bundled-python-sdk-181015f7ab06-4df51de95216-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.25659.43" />
       </set>
     </attachedChunks>
   </component>
@@ -130,6 +232,24 @@
       <workItem from="1739715872552" duration="20318000" />
       <workItem from="1739798466751" duration="1321000" />
       <workItem from="1739805025703" duration="16715000" />
+      <workItem from="1740151001400" duration="2864000" />
+      <workItem from="1740226298466" duration="54000" />
+      <workItem from="1740676905008" duration="721000" />
+      <workItem from="1740677822275" duration="6177000" />
+      <workItem from="1740746886196" duration="2182000" />
+      <workItem from="1740765994474" duration="5451000" />
+      <workItem from="1740922007141" duration="1736000" />
+      <workItem from="1740930181980" duration="514000" />
+      <workItem from="1740946797470" duration="153000" />
+      <workItem from="1740946975352" duration="8139000" />
+      <workItem from="1741032394420" duration="204000" />
+      <workItem from="1741099592136" duration="9132000" />
+      <workItem from="1741465261502" duration="632000" />
+      <workItem from="1741528255353" duration="11718000" />
+      <workItem from="1741630332367" duration="4489000" />
+      <workItem from="1741635438556" duration="5216000" />
+      <workItem from="1741905550942" duration="4822000" />
+      <workItem from="1741968386906" duration="12111000" />
     </task>
     <servers />
   </component>
@@ -148,16 +268,35 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/vision$computer_vision_here.coverage" NAME="computer_vision_here Coverage Results" MODIFIED="1739660527094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
-    <SUITE FILE_PATH="coverage/vision$builder.coverage" NAME="builder Coverage Results" MODIFIED="1739889109516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/vision$data_collection.coverage" NAME="data_collection Coverage Results" MODIFIED="1739887647671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/archive" />
-    <SUITE FILE_PATH="coverage/vision$Runner.coverage" NAME="Runner Coverage Results" MODIFIED="1737489087544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/vision$EnsembleMNISTSign.coverage" NAME="EnsembleMNISTSign Coverage Results" MODIFIED="1739888255213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
-    <SUITE FILE_PATH="coverage/vision$packet_getter.coverage" NAME="packet_getter Coverage Results" MODIFIED="1737466980874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/mediapipe/python" />
-    <SUITE FILE_PATH="coverage/vision$carGameControls.coverage" NAME="carGameControls Coverage Results" MODIFIED="1739885208240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
-    <SUITE FILE_PATH="coverage/vision$MNISTCV.coverage" NAME="MNISTCV Coverage Results" MODIFIED="1739890849626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/vision$AnimateHands.coverage" NAME="AnimateHands Coverage Results" MODIFIED="1741113938724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewCV" />
+    <SUITE FILE_PATH="coverage/vision$train.coverage" NAME="train Coverage Results" MODIFIED="1741539010280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewNewDataset" />
+    <SUITE FILE_PATH="coverage/vision$builder.coverage" NAME="builder Coverage Results" MODIFIED="1741906789540" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/google/protobuf" />
     <SUITE FILE_PATH="coverage/vision$HandTrackingModule.coverage" NAME="HandTrackingModule Coverage Results" MODIFIED="1737466064284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/cvzone" />
-    <SUITE FILE_PATH="coverage/vision$test.coverage" NAME="test Coverage Results" MODIFIED="1739890099310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/archive" />
+    <SUITE FILE_PATH="coverage/vision$EnsembleMNISTSign.coverage" NAME="EnsembleMNISTSign Coverage Results" MODIFIED="1739888255213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/vision$TrainDataset16.coverage" NAME="TrainDataset16 Coverage Results" MODIFIED="1741008341512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewCV" />
+    <SUITE FILE_PATH="coverage/vision$ComputerVision.coverage" NAME="ComputerVision Coverage Results" MODIFIED="1741980490919" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/EastWestCV" />
+    <SUITE FILE_PATH="coverage/vision$computer_vision_here.coverage" NAME="computer_vision_here Coverage Results" MODIFIED="1741972459680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/vision$DataCollection.coverage" NAME="DataCollection Coverage Results" MODIFIED="1740848382102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewCV" />
+    <SUITE FILE_PATH="coverage/vision$Runner.coverage" NAME="Runner Coverage Results" MODIFIED="1737489087544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/vision$carGameControls.coverage" NAME="carGameControls Coverage Results" MODIFIED="1739885208240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/vision$controller.coverage" NAME="controller Coverage Results" MODIFIED="1741971226677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
     <SUITE FILE_PATH="coverage/vision$hand_segmentation.coverage" NAME="hand_segmentation Coverage Results" MODIFIED="1739807603709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/damn" />
+    <SUITE FILE_PATH="coverage/vision$computerVision.coverage" NAME="computerVision Coverage Results" MODIFIED="1741630783547" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewNewDataset" />
+    <SUITE FILE_PATH="coverage/vision$reqs.coverage" NAME="reqs Coverage Results" MODIFIED="1741533402510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewNewDataset" />
+    <SUITE FILE_PATH="coverage/vision$DatasetPreprocessing.coverage" NAME="DatasetPreprocessing Coverage Results" MODIFIED="1741974862391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/KaggleCV" />
+    <SUITE FILE_PATH="coverage/vision$computerVision200by200.coverage" NAME="computerVision200by200 Coverage Results" MODIFIED="1741970866848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewNewDataset" />
+    <SUITE FILE_PATH="coverage/vision$numOfCharacter.coverage" NAME="numOfCharacter Coverage Results" MODIFIED="1741636043413" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewNewDataset" />
+    <SUITE FILE_PATH="coverage/vision$data_collection.coverage" NAME="data_collection Coverage Results" MODIFIED="1739887647671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/archive" />
+    <SUITE FILE_PATH="coverage/vision$computerVision300by300.coverage" NAME="computerVision300by300 Coverage Results" MODIFIED="1741635642163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewNewDataset" />
+    <SUITE FILE_PATH="coverage/vision$packet_getter.coverage" NAME="packet_getter Coverage Results" MODIFIED="1737466980874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/mediapipe/python" />
+    <SUITE FILE_PATH="coverage/vision$MNISTCV.coverage" NAME="MNISTCV Coverage Results" MODIFIED="1739890849626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/vision$test.coverage" NAME="test Coverage Results" MODIFIED="1739890099310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/archive" />
+    <SUITE FILE_PATH="coverage/vision$16again.coverage" NAME="16again Coverage Results" MODIFIED="1741127815222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewCV" />
+    <SUITE FILE_PATH="coverage/vision$TrainDataset.coverage" NAME="TrainDataset Coverage Results" MODIFIED="1741531912262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewCV" />
+    <SUITE FILE_PATH="coverage/vision$oldCV.coverage" NAME="oldCV Coverage Results" MODIFIED="1741635513456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewNewDataset" />
+    <SUITE FILE_PATH="coverage/vision$datacheck.coverage" NAME="datacheck Coverage Results" MODIFIED="1741531589884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewNewDataset" />
+    <SUITE FILE_PATH="coverage/vision$cv_client.coverage" NAME="cv_client Coverage Results" MODIFIED="1741971228998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
+    <SUITE FILE_PATH="coverage/vision$preprocessing.coverage" NAME="preprocessing Coverage Results" MODIFIED="1741640015980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewNewDataset" />
+    <SUITE FILE_PATH="coverage/vision$text.coverage" NAME="text Coverage Results" MODIFIED="1740152712076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -2,13 +2,10 @@ from Python.cv_client import GMS2Client
 from Python.computer_vision_here import CVHandler
 from queue import Queue
 
-
 class MessageController:
     client: GMS2Client
     client_queue: Queue
-    gesture_queue: (
-        Queue
-    )
+    gesture_queue: Queue
 
     def __init__(self) -> None:
         self.create_client()
@@ -29,7 +26,6 @@ class MessageController:
         while True:
             self.update_client()
 
-
     def update_client(self) -> None:
         try:
             self.try_transmit_to_client()
@@ -43,4 +39,3 @@ class MessageController:
             return True
         else:
             return False
-
