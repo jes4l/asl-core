@@ -39,13 +39,11 @@ if (hoveredIndex != prevHoveredIndex) {
 } else if (hoveredIndex != -1) {
     animFrame += animation_speed;
 }
-
 if (hoveredIndex != -1) {
     rotationSpeed = 0;
 } else {
     rotationSpeed = degtorad(0.5);
 }
-
 if (mouse_check_button_pressed(mb_left)) {
     var dx = mouse_x - centerX;
     var dy = mouse_y - centerY;
@@ -60,20 +58,20 @@ if (mouse_check_button_pressed(mb_left)) {
                 if (clickAngle >= btn.sectorStart && clickAngle <= btn.sectorEnd) {
                     scrUpdateWordList(btn.text, btn.numOfActiveWords);
                     global.dashStartX = btn.dashStartX;
-                    global.dashEndX   = btn.dashEndX;
-                    global.dashY      = btn.dashY;
-					global.chosenSprite = -1;
-					global.scoreGained = 0;
-					global.oRoleGameSprites = undefined;
-					global.gameComplete = false;
-					global.finalSegments = [ -1, -1, -1, -1 ];
-					global.finalSegmentCount = 0;
-					global.lastLetter = "";
-					global.letter = "";
-					global.letterReceived = "";
-					global.letterTimeStamp = "";
-					global.yHand = -1;
-					global.xHand = -1;
+                    global.dashEndX = btn.dashEndX;
+                    global.dashY = btn.dashY;
+                    global.chosenSprite = -1;
+                    global.scoreGained = 0;
+                    global.oRoleGameSprites = undefined;
+                    global.gameComplete = false;
+                    global.finalSegments = [ -1, -1, -1, -1 ];
+                    global.finalSegmentCount = 0;
+                    global.lastLetter = "";
+                    global.letter = "";
+                    global.letterReceived = "";
+                    global.letterTimeStamp = "";
+                    global.yHand = -1;
+                    global.xHand = -1;
                     room_goto(btn.room);
                     break;
                 }
@@ -81,20 +79,20 @@ if (mouse_check_button_pressed(mb_left)) {
                 if (clickAngle >= btn.sectorStart || clickAngle <= btn.sectorEnd) {
                     scrUpdateWordList(btn.text, btn.numOfActiveWords);
                     global.dashStartX = btn.dashStartX;
-                    global.dashEndX   = btn.dashEndX;
-                    global.dashY      = btn.dashY;
-					global.chosenSprite = -1;
-					global.scoreGained = 0;
-					global.oRoleGameSprites = undefined;
-					global.gameComplete = false;
-					global.finalSegments = [ -1, -1, -1, -1 ];
-					global.finalSegmentCount = 0;
-					global.lastLetter = "";
-					global.letter = "";
-					global.letterReceived = "";
-					global.letterTimeStamp = "";
-					global.yHand = -1;
-					global.xHand = -1;
+                    global.dashEndX = btn.dashEndX;
+                    global.dashY = btn.dashY;
+                    global.chosenSprite = -1;
+                    global.scoreGained = 0;
+                    global.oRoleGameSprites = undefined;
+                    global.gameComplete = false;
+                    global.finalSegments = [ -1, -1, -1, -1 ];
+                    global.finalSegmentCount = 0;
+                    global.lastLetter = "";
+                    global.letter = "";
+                    global.letterReceived = "";
+                    global.letterTimeStamp = "";
+                    global.yHand = -1;
+                    global.xHand = -1;
                     room_goto(btn.room);
                     break;
                 }

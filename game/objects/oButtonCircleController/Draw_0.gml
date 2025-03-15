@@ -3,7 +3,7 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
     var btn = buttonData[i];
     var isHovered = (i == hoveredIndex);
     var rotSectorStart = (btn.sectorStart + menuRotation + 2*pi) mod (2*pi);
-    var rotSectorEnd   = (btn.sectorEnd   + menuRotation + 2*pi) mod (2*pi);
+    var rotSectorEnd = (btn.sectorEnd + menuRotation + 2*pi) mod (2*pi);
     var sectorColor = isHovered ? c_white : c_gray;
     var textColor = isHovered ? make_color_rgb(80,80,80) : c_white;
     draw_set_alpha(isHovered ? 0.8 : 0.4);
@@ -20,17 +20,17 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
         var oy2 = centerY + outerRadius * sin(a2);
         var ix1 = centerX + innerRadius * cos(a1);
         var iy1 = centerY + innerRadius * sin(a1);
+        draw_primitive_begin(pr_trianglelist);
+        draw_vertex(ox1, oy1);
+        draw_vertex(ox2, oy2);
+        draw_vertex(ix1, iy1);
+        draw_primitive_end();
         var ix2 = centerX + innerRadius * cos(a2);
         var iy2 = centerY + innerRadius * sin(a2);
         draw_primitive_begin(pr_trianglelist);
-            draw_vertex(ox1, oy1);
-            draw_vertex(ox2, oy2);
-            draw_vertex(ix1, iy1);
-        draw_primitive_end();
-        draw_primitive_begin(pr_trianglelist);
-            draw_vertex(ix1, iy1);
-            draw_vertex(ox2, oy2);
-            draw_vertex(ix2, iy2);
+        draw_vertex(ix1, iy1);
+        draw_vertex(ox2, oy2);
+        draw_vertex(ix2, iy2);
         draw_primitive_end();
     }
     draw_set_alpha(1);
@@ -86,6 +86,12 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
         draw_text_transformed(tx, ty, string_char_at(buttonText, k + 1), 1, 1, rotateDegrees);
         startAngle += letterAngularWidth;
     }
+    var midAngle = (rotSectorStart <= rotSectorEnd) ? (rotSectorStart + rotSectorEnd) / 2 : (((rotSectorStart + (rotSectorEnd + 2*pi)) / 2) mod (2*pi));
+    var circleOffset = 50;
+    var circleX = centerX + (textRadius - circleOffset) * cos(midAngle);
+    var circleY = centerY + (textRadius - circleOffset) * sin(midAngle);
+    draw_set_color(btn.circleColor);
+    draw_circle(circleX, circleY, 15, false);
 }
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);

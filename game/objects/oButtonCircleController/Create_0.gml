@@ -8,11 +8,11 @@ var totalGap = numSectors * gapAngle;
 var sectorAngle = (2 * pi - totalGap) / numSectors;
 var offsetAngle = -pi/2;
 buttonList = [
-    { text: "Pizza Game",    room: rmPizzaGameStart,    dashStartX: 100, dashEndX: 1510, dashY: 380, numOfActiveWords: 3, sprite: sPizzaGameMenuSprite },
-    { text: "Places Game",   room: rmPlacesGameStart,   dashStartX: 264, dashEndX: 1700, dashY: 500, numOfActiveWords: 1, sprite: sPlacesGameMenuSprite },
-    { text: "Role Game",     room: rmRoleGameStart,     dashStartX: 1030, dashEndX: 1790, dashY: 607, numOfActiveWords: 3, sprite: sRoleGameMenuSprite },
-    { text: "Shopping Game", room: rmShoppingGameStart, dashStartX: 111, dashEndX: 1360, dashY: 251, numOfActiveWords: 3, sprite: sShoppingGameMenuSprite },
-    { text: "Colours Game",  room: rmColourGameStart,   dashStartX: 264, dashEndX: 1700, dashY: 800, numOfActiveWords: 3, sprite: sColoursGameMenuSprite }
+    { text: "Places Game", room: rmPlacesGameStart, dashStartX: 264, dashEndX: 1700, dashY: 500, numOfActiveWords: 1, sprite: sPlacesGameMenuSprite, circleColor: c_green },
+    { text: "Colours Game", room: rmColourGameStart, dashStartX: 264, dashEndX: 1700, dashY: 800, numOfActiveWords: 3, sprite: sColoursGameMenuSprite, circleColor: c_green },
+    { text: "Pizza Game", room: rmPizzaGameStart, dashStartX: 100, dashEndX: 1510, dashY: 380, numOfActiveWords: 3, sprite: sPizzaGameMenuSprite, circleColor: make_color_rgb(255,165,0) },
+    { text: "Role Game", room: rmRoleGameStart, dashStartX: 1030, dashEndX: 1790, dashY: 607, numOfActiveWords: 3, sprite: sRoleGameMenuSprite, circleColor: make_color_rgb(255,165,0) },
+    { text: "Shopping Game", room: rmShoppingGameStart, dashStartX: 111, dashEndX: 1360, dashY: 251, numOfActiveWords: 3, sprite: sShoppingGameMenuSprite, circleColor: c_red }
 ];
 buttonData = [];
 draw_set_font(fntBritanicBold30);
@@ -21,9 +21,9 @@ for (var i = 0; i < array_length_1d(buttonList); i++) {
     var secStart = offsetAngle + i * (sectorAngle + gapAngle);
     var secEnd = secStart + sectorAngle;
     secStart = (secStart < 0) ? secStart + 2*pi : secStart;
-    secEnd   = (secEnd   < 0) ? secEnd   + 2*pi : secEnd;
+    secEnd = (secEnd < 0) ? secEnd + 2*pi : secEnd;
     var angDiff = (secEnd >= secStart) ? (secEnd - secStart) : ((2*pi - secStart) + secEnd);
-    var textAngle = secStart + angDiff/2;
+    var textAngle = secStart + angDiff / 2;
     if (textAngle >= 2*pi) textAngle -= 2*pi;
     array_push(buttonData, {
         text: btnInfo.text,
@@ -35,7 +35,8 @@ for (var i = 0; i < array_length_1d(buttonList); i++) {
         sectorStart: secStart,
         sectorEnd: secEnd,
         textAngle: textAngle,
-        sprite: btnInfo.sprite
+        sprite: btnInfo.sprite,
+        circleColor: btnInfo.circleColor
     });
 }
 menuRotation = 0;
