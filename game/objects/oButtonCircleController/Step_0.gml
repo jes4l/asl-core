@@ -72,6 +72,7 @@ if (mouse_check_button_pressed(mb_left)) {
                     global.letterTimeStamp = "";
                     global.yHand = -1;
                     global.xHand = -1;
+					ds_list_clear(global.incorrectWords);
                     room_goto(btn.room);
                     break;
                 }
@@ -93,6 +94,7 @@ if (mouse_check_button_pressed(mb_left)) {
                     global.letterTimeStamp = "";
                     global.yHand = -1;
                     global.xHand = -1;
+					ds_list_clear(global.incorrectWords);
                     room_goto(btn.room);
                     break;
                 }

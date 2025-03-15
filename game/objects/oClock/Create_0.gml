@@ -1,9 +1,9 @@
 function ResetClock() {
     if (instance_exists(oLetterOnDashes)) {
-        timeLeft = oLetterOnDashes.letterCount * 3; 
+        timeLeft = oLetterOnDashes.letterCount * 0.5; 
     } else {
 
-        timeLeft = string_length(global.activeWords[0]) * 3;
+        timeLeft = string_length(global.activeWords[0]) * 0.5;
     }
 }
 

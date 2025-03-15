@@ -1,4 +1,4 @@
-timeRemainingText = "Thank You For Creating My Pizza With:";
+timeRemainingText = "";
 textX = 590;
 textY = 220;
 fontToUse = fntSevenSegment40;

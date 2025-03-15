@@ -1,4 +1,4 @@
-/// scrGetWordPoolSpriteHybrid(_word, _setSprite)
+/// scrGetWordPoolSprite(_word, _setSprite)
 /// @description Retrieves/returns the sprite index for the given word. 
 /// If _setSprite is true, also sets the calling instance’s sprite_index.
 ///
@@ -8,38 +8,31 @@
 /// @return The sprite index, or sBoard if not found.
 
 function scrGetWordPoolSprite(_word, _setSprite) {
-    // Default _setSprite to true if not provided
     if (_setSprite == undefined) {
         _setSprite = true;
     }
     
-    // Validate input
     if (!is_string(_word) || string_length(_word) < 1) {
-        //show_debug_message("scrGetWordPoolSpriteHybrid: Invalid or empty word. Using sBoard.");
+        //show_debug_message("scrGetWordPoolSprite: Invalid or empty word. Using sBoard.");
         if (_setSprite) {
             sprite_index = sBoard;
         }
         return sBoard;
     }
 
-    // Capitalize the first letter
     var capitalizedWord = string_upper(string_char_at(_word, 1)) + string_delete(_word, 1, 1);
-
-    // Construct sprite name
     var spriteName = "s" + capitalizedWord;
     var spIndex    = asset_get_index(spriteName);
 
     if (spIndex == -1) {
-        //show_debug_message("scrGetWordPoolSpriteHybrid: Sprite '" + spriteName + "' not found for word '" + _word + "'. Using sBoard.");
+        //show_debug_message("scrGetWordPoolSprite: Sprite '" + spriteName + "' not found for word '" + _word + "'. Using sBoard.");
         spIndex = sBoard;
     } else {
-        //show_debug_message("scrGetWordPoolSpriteHybrid: Sprite updated to '" + spriteName + "'.");
+        //show_debug_message("scrGetWordPoolSprite: Sprite updated to '" + spriteName + "'.");
     }
 
-    // If desired, set the calling instance's sprite_index
     if (_setSprite) {
         sprite_index = spIndex;
     }
-    // Always return the sprite index for further usage
     return spIndex;
 }

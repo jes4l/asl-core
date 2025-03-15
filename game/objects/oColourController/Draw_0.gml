@@ -12,7 +12,7 @@ draw_set_valign(fa_middle);
 if (global.gameComplete) {
     draw_text(displayX, displayY, "Mixing");
 } else {
-    draw_set_font(fntSevenSegment);
+    draw_set_font(fntSevenSegment80);
     if (feedbackMessage != "") {
         draw_text(displayX, displayY, feedbackMessage);
     } else {

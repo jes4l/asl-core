@@ -1,4 +1,4 @@
-timeRemainingText = "Score: " + string(global.score);
+timeRemainingText = "Tips: " + string(global.score);
 textX = 50;
 textY = 50;
 fontToUse = fntBritanicBold30;
