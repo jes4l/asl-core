@@ -5,9 +5,8 @@ if (instance_exists(letterOnDashesInstance)) {
     var yPositions = letterOnDashesInstance.yPositions;
     var letterAlpha = letterOnDashesInstance.letterAlpha;
     var letterColor = letterOnDashesInstance.letterColor;
-    
-    var yOffsetPizzaGame = -125;
-    var yOffsetDefault    = -50;
+    var yOffsetPizzaGame = -115;
+    var yOffsetDefault = -50;
     var yOffset = (room == rmPizzaGame) ? yOffsetPizzaGame : yOffsetDefault;
     
     for (var i = 0; i < letterCount; i++) {
@@ -19,12 +18,12 @@ if (instance_exists(letterOnDashesInstance)) {
             var x_pos = xPositions[i];
             var y_pos = yPositions[i] + yOffset;
             draw_set_alpha(alphaValue);
-            draw_sprite(aslSprite, 0, x_pos, y_pos);
+            draw_sprite_ext(aslSprite, 0, x_pos, y_pos, 0.5, 0.5, 0, c_white, alphaValue);
         } else {
             show_debug_message("ASL sprite for letter '" + string(currentLetter) + "' not found.");
         }
     }
-
+    
     var wrongLetter = letterOnDashesInstance.wrongLetter;
     var wrongLetterAlpha = letterOnDashesInstance.wrongLetterAlpha;
     var wrongLetterX = letterOnDashesInstance.wrongLetterX;
@@ -36,7 +35,7 @@ if (instance_exists(letterOnDashesInstance)) {
         if (aslWrongSprite != -1) {
             var adjustedWrongY = wrongLetterY + yOffset;
             draw_set_alpha(wrongLetterAlpha);
-            draw_sprite(aslWrongSprite, 0, wrongLetterX, adjustedWrongY);
+            draw_sprite_ext(aslWrongSprite, 0, wrongLetterX, adjustedWrongY, 0.5, 0.5, 0, c_white, wrongLetterAlpha);
         } else {
             show_debug_message("ASL sprite for wrong letter '" + string(wrongLetter) + "' not found.");
         }

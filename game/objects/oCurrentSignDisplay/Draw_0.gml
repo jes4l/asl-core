@@ -1,7 +1,7 @@
 draw_self();
 
 if (currentSignSprite != -1) {
-    draw_sprite(currentSignSprite, 0, x, y);
+draw_sprite_ext(currentSignSprite, 0, x, y, 0.75, 0.75, 0, c_white, 1);
 } else {
 	show_debug_message("Sprite not Found");
 }

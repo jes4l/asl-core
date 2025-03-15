@@ -9,8 +9,8 @@
   "name":"oShowScores",
   "overriddenProperties":[],
   "parent":{
-    "name":"GameLogic",
-    "path":"folders/Objects/GameLogic.yy",
+    "name":"Menu",
+    "path":"folders/Objects/Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,
