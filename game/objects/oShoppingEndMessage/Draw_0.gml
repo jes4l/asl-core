@@ -1,13 +1,12 @@
 var endInst = instance_find(oShoppingEnd, 0);
-if (endInst != noone && endInst.allBagsStopped) {
+if ((endInst != noone && endInst.allBagsStopped) || (variable_global_exists("correctWords") && array_length_1d(global.correctWords) == 0 && noBags <= 0)) {
     if (!scoreShown) {
         alarm[0] = room_speed * 5;
         scoreShown = true;
     }
-    timeRemainingText = "You Got A Score Of " + string(global.scoreGained) + "\nThis Is Your Overall Score " + string(global.score);
-    scrDrawText(textX, textY, timeRemainingText, textColor, textAlpha, fontToUse);
-    scrDrawText(textX, 390, "I Love Shopping", textColor, textAlpha, fontToUse);
+    scrDrawText(textX, textY, msg2_1, textColor, textAlpha, fontToUse);
+    scrDrawText(textX, 390, msg2_2, textColor, textAlpha, fontToUse);
 } else {
-    scrDrawText(textX, textY, timeRemainingText, textColor, textAlpha, fontToUse);
-    scrDrawText(textX, 390, activeWordsText, textColor, textAlpha, fontToUse);
+    scrDrawText(textX, textY, msg1_1, textColor, textAlpha, fontToUse);
+    scrDrawText(textX, 390, msg1_2, textColor, textAlpha, fontToUse);
 }

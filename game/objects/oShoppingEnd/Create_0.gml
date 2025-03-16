@@ -8,8 +8,13 @@ bagSpeed = 0.0025;
 allBagsStopped = false;
 bagList = ds_list_create();
 bag2List = ds_list_create();
+var correctWords = [];
 if (variable_global_exists("activeWords") && global.activeWords != undefined) {
-    numBagsToSpawn = array_length_1d(global.activeWords);
-} else {
-    numBagsToSpawn = 0;
+    for (var i = 0; i < array_length_1d(global.activeWords); i++) {
+        if (!variable_global_exists("incorrectWords") || ds_list_find_index(global.incorrectWords, global.activeWords[i]) == -1) {
+            array_push(correctWords, global.activeWords[i]);
+        }
+    }
 }
+numBagsToSpawn = array_length_1d(correctWords);
+global.correctWords = correctWords;

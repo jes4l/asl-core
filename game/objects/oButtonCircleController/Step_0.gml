@@ -73,7 +73,6 @@ if (mouse_check_button_pressed(mb_left)) {
                     global.yHand = -1;
                     global.xHand = -1;
 					ds_list_clear(global.incorrectWords);
-					ds_list_clear(global.allIncorrectCounts);
                     room_goto(btn.room);
                     break;
                 }
@@ -96,7 +95,6 @@ if (mouse_check_button_pressed(mb_left)) {
                     global.yHand = -1;
                     global.xHand = -1;
 					ds_list_clear(global.incorrectWords);
-					ds_list_clear(global.allIncorrectCounts);
                     room_goto(btn.room);
                     break;
                 }

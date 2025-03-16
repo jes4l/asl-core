@@ -5,7 +5,6 @@ for (var i = 0; i < bagCount; i++) {
     if (bag != noone) {
         var spr1 = bag.sprite_index;
         draw_sprite(spr1, 0, bag.x, bag.y);
-        
         var bagW = sprite_get_width(spr1);
         var bagH = sprite_get_height(spr1);
         var centerX = bag.x + bagW * 0.5;
