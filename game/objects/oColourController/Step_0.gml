@@ -7,14 +7,14 @@ if (feedbackTimer > 0) {
             if (instance_exists(oSpriteSpawnColour)) {
                 var spawn = instance_find(oSpriteSpawnColour, 0);
                 if (spawn.incorrectCount == 0) {
-					global.score += 2;
-                    global.scoreGained += 2;
+					global.score += 20;
+                    global.scoreGained += 20;
                     for (var i = 1; i <= string_length(upperWord); i++) {
                         ds_list_add(global.correctLetters, string_copy(upperWord, i, 1));
                     }
                 } else if (spawn.incorrectCount == 1) {
-					global.score += 1;
-                    global.scoreGained += 1;
+					global.score += 10;
+                    global.scoreGained += 10;
                     for (var i = 1; i <= string_length(upperWord); i++) {
                         ds_list_add(global.wrongLetters, string_copy(upperWord, i, 1));
                     }
