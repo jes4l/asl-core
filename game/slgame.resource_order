@@ -160,6 +160,7 @@
     {"name":"rmShoppingGameEnd","order":2,"path":"rooms/rmShoppingGameEnd/rmShoppingGameEnd.yy",},
     {"name":"rmShoppingGameStart","order":1,"path":"rooms/rmShoppingGameStart/rmShoppingGameStart.yy",},
     {"name":"rmStart","order":8,"path":"rooms/rmStart/rmStart.yy",},
+    {"name":"macros","order":6,"path":"scripts/macros/macros.yy",},
     {"name":"scrDrawText","order":2,"path":"scripts/scrDrawText/scrDrawText.yy",},
     {"name":"scrGetASLSprite","order":3,"path":"scripts/scrGetASLSprite/scrGetASLSprite.yy",},
     {"name":"scrGetWordPoolSprite","order":4,"path":"scripts/scrGetWordPoolSprite/scrGetWordPoolSprite.yy",},
