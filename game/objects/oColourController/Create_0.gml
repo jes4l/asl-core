@@ -13,9 +13,7 @@ global.gameComplete = false;
 mixingTimer = 0;
 global.finalSegments = [ -1, -1, -1, -1 ];
 global.finalSegmentCount = 0;
-
-function RefreshPositions()
-{
+function RefreshPositions() {
     if (wordIndex >= array_length_1d(global.activeWords)) {
         slots = [
             { sprite: -1, x: positions[0].x, y: positions[0].y, correct: false },
@@ -30,12 +28,7 @@ function RefreshPositions()
     var activeWordPosIndex = irandom_range(0, 3);
     slots = [];
     for (var i = 0; i < 4; i++) {
-        slots[i] = {
-            sprite: -1,
-            x: positions[i].x,
-            y: positions[i].y,
-            correct: false
-        };
+        slots[i] = { sprite: -1, x: positions[i].x, y: positions[i].y, correct: false };
     }
     slots[activeWordPosIndex].sprite = activeSprite;
     slots[activeWordPosIndex].correct = true;
@@ -65,5 +58,4 @@ function RefreshPositions()
     ds_list_destroy(usedSprites);
     show_debug_message("oColourController: Word='" + currentWord + "' => correct sprite at slot " + string(activeWordPosIndex));
 }
-
 RefreshPositions();

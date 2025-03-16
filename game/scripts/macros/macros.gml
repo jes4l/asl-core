@@ -46,4 +46,7 @@ function AddPartialSegment(_colorSprite)
 global.finalSegments = [ -1, -1, -1, -1 ];
 global.finalSegmentCount = 0;
 
+// colour game
+global.allIncorrectCounts = ds_list_create();
+
 global.incorrectWords = ds_list_create();
