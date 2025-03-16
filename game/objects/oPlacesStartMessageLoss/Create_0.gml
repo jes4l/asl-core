@@ -1,5 +1,5 @@
 timeRemainingText = "You Have Collided!";
-message2Text = "You Got A Score Of " + string(global.scoreGained) + " . This Is Your Overall Score " + string(global.score);
+message2Text = "You Got A Tip Of " + string(global.scoreGained) + " . This Is Your Overall Tip " + string(global.score);
 
 textX = room_width / 2;
 textY = 96;
