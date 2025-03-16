@@ -36,7 +36,7 @@ if (instance_exists(oClock) && oClock.timeLeft <= 0) {
         for (var z = currentIndex; z < letterCount; z++) {
             letterColor[z] = c_red;
             letterAlpha[z] = 1.0;
-            ds_list_add(global.wrongLetters, letters[z]);
+            ds_list_add(global.wasWrongLetters, letters[z]);
         }
         if (wordIndex < wordsTotal) {
             var finishedWord = ds_list_find_value(wordsDS, wordIndex);
@@ -86,6 +86,7 @@ if (currentIndex >= letterCount) {
 if (global.letter != "") {
     var neededChar = (letterCount > 0) ? letters[currentIndex] : "";
     if (string_lower(global.letter) == string_lower(neededChar)) {
+        ds_list_add(global.correctLetters, neededChar);
         if (letterWasWrong[currentIndex]) {
             letterColor[currentIndex] = c_orange;
             global.score += 1;
@@ -98,12 +99,12 @@ if (global.letter != "") {
         letterAlpha[currentIndex] = 1.0;
         currentIndex++;
         if (letterWasWrong[currentIndex - 1]) {
-            var correctedLetter = string_lower(global.letter);
+            var correctedLetter = string_upper(global.letter);
             ds_list_add(global.wasWrongLetters, correctedLetter);
             letterWasWrong[currentIndex - 1] = false;
         }
     } else {
-        var wrongChar = string_lower(global.letter);
+        var wrongChar = string_upper(global.letter);
         ds_list_add(global.wrongLetters, wrongChar);
         wrongLetter = wrongChar;
         wrongLetterAlpha = 0.8;
@@ -126,20 +127,4 @@ if (statusTimer > 0) {
     if (statusTimer <= 0) {
         statusMessage = "";
     }
-}
-var wrongLettersDebug = "Wrong Letters: ";
-if (ds_exists(global.wrongLetters, ds_type_list)) {
-    for (var i = 0; i < ds_list_size(global.wrongLetters); i++) {
-        wrongLettersDebug += ds_list_find_value(global.wrongLetters, i) + " ";
-    }
-} else {
-    wrongLettersDebug += "None";
-}
-var wasWrongLettersDebug = "Was Wrong Letters: ";
-if (ds_exists(global.wasWrongLetters, ds_type_list)) {
-    for (var i = 0; i < ds_list_size(global.wasWrongLetters); i++) {
-        wasWrongLettersDebug += ds_list_find_value(global.wasWrongLetters, i) + " ";
-    }
-} else {
-    wasWrongLettersDebug += "None";
 }
