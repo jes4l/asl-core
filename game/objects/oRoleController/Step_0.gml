@@ -21,14 +21,26 @@ if (global.gameComplete) {
                     }
                 }
                 if (removeSprite) {
+                    ds_list_add(incorrectSprites, sprMap);
                     ds_list_delete(loadedSprites, i);
                 }
             }
             global.oRoleGameSprites = loadedSprites;
+            global.oRoleGameIncorrectSprites = incorrectSprites;
             room_goto(rmRoleGameEnd);
         }
     }
     return;
+}
+
+if (!newSpriteLoaded) {
+    if (oClock.timeLeft < 5) {
+        image_index = 1;
+    } else {
+        image_index = 0;
+    }
+} else {
+    newSpriteLoaded = false;
 }
 
 if (letterController != noone) {
@@ -68,8 +80,11 @@ if (letterController != noone) {
             if (spIndex == -1) {
                 spIndex = sBoard;
             }
+            
             sprite_index = spIndex;
             image_index = 0;
+            newSpriteLoaded = true;
+            
             previousWord = currentWord;
             
             var alreadyAdded = false;

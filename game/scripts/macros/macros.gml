@@ -31,6 +31,7 @@ global.chosenSprite = -1;
 global.gameComplete = false;
 
 global.oRoleGameSprites = undefined;
+global.oRoleGameIncorrectSprites = undefined;
 
 function AddPartialSegment(_colorSprite)
 {
