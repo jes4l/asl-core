@@ -4,4 +4,4 @@ originalString = "";
 global.connectionStatus = "Disconnected";
 global.lastMessageTime = current_time;
 global.lastReceivedMessage = "";
-window_set_fullscreen(!window_get_fullscreen());
+//window_set_fullscreen(!window_get_fullscreen());

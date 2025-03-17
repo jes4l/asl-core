@@ -1,7 +1,7 @@
 if (global.chosenSprite != -1) {
     if (room == rmColourGameEnd) {
         if (global.scoreGained == 6) {
-            image_index = 0;
+            image_index = 3;
         } else if (global.scoreGained == 4 || global.scoreGained == 5 ||global.scoreGained == 3) {
             image_index = 1;
         } else {
@@ -9,7 +9,7 @@ if (global.chosenSprite != -1) {
         }
     } else {
         if (incorrectCount == 0) {
-            image_index = 0;
+            image_index = 3;
         } else if (incorrectCount == 1) {
             image_index = 1;
         } else {
