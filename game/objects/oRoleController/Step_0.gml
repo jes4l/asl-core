@@ -73,9 +73,25 @@ if (letterController != noone) {
             
             sprite_index = spIndex;
             x = baseX;
+            if (spIndex == sChefM) {
+                x -= 0;
+            } else if (spIndex == sFirefighterM) {
+                x += 0;
+            } else if (spIndex == sFirefighterF) {
+                x += 0;
+            } else if (spIndex == sScientistF) {
+                x += 0;
+            } else if (spIndex == sCowboyM) {
+                x += 0;
+            } else if (spIndex == sCowgirlF) {
+                x += 0;
+            } else if (spIndex == sPoliceF) {
+                x += 0;
+            } else if (spIndex == sChefF) {
+                x -= 40;
+            }
             image_index = 3;
             previousWord = currentWord;
-            
             var alreadyAdded = false;
             for (var i = 0; i < ds_list_size(loadedSprites); i++) {
                 var tempMap = loadedSprites[| i];
