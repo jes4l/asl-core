@@ -32,5 +32,5 @@
     "path":"sprites/sCircle/sCircle.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

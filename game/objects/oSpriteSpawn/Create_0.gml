@@ -1,3 +1,5 @@
-chosenSprite = choose(sScientistF, sScientistM);
-//choose(sChefF, sChefM, sCowboyM, sCowgirlF, sFemale, sMale, sFirefighterM, sFirefighterF, sPoliceF, sPoliceM, sScientistM, sScientistF);
-image_index = 0;
+image_index = 3;
+if (global.chosenSprite == -1) {
+	image_index = 3;
+    global.chosenSprite = choose(sScientistM, sScientistF);
+}

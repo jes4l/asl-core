@@ -5,5 +5,4 @@ if (letterController != noone) {
 loadedSprites = ds_list_create();
 incorrectSprites = ds_list_create();
 processingTimer = -1;
-newSpriteLoaded = false;
 baseX = x;

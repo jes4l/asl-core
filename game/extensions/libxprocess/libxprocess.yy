@@ -167,8 +167,8 @@
   "optionsFile":"options.json",
   "packageId":"",
   "parent":{
-    "name":"Extensions",
-    "path":"folders/Extensions.yy",
+    "name":"XProcesslib",
+    "path":"folders/Extensions/XProcesslib.yy",
   },
   "productId":"",
   "resourceType":"GMExtension",
