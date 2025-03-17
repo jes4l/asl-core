@@ -1,11 +1,10 @@
-menuRotation += rotationSpeed;
-menuRotation = (menuRotation + 2*pi) mod (2*pi);
 var m_dx = mouse_x - centerX;
 var m_dy = mouse_y - centerY;
 var m_dist = sqrt(sqr(m_dx) + sqr(m_dy));
 var m_angle = arctan2(m_dy, m_dx);
 if (m_angle < 0) m_angle += 2*pi;
 var rot_m_angle = (m_angle - menuRotation + 2*pi) mod (2*pi);
+
 var prevHoveredIndex = hoveredIndex;
 hoveredIndex = -1;
 if (m_dist >= innerRadius && m_dist <= outerRadius) {
@@ -24,6 +23,7 @@ if (m_dist >= innerRadius && m_dist <= outerRadius) {
         }
     }
 }
+
 if (hoveredIndex != prevHoveredIndex) {
     animFrame = 0;
     if (hoveredIndex != -1) {
@@ -39,11 +39,7 @@ if (hoveredIndex != prevHoveredIndex) {
 } else if (hoveredIndex != -1) {
     animFrame += animation_speed;
 }
-if (hoveredIndex != -1) {
-    rotationSpeed = 0;
-} else {
-    rotationSpeed = degtorad(0.5);
-}
+
 if (mouse_check_button_pressed(mb_left)) {
     var dx = mouse_x - centerX;
     var dy = mouse_y - centerY;
@@ -72,7 +68,9 @@ if (mouse_check_button_pressed(mb_left)) {
                     global.letterTimeStamp = "";
                     global.yHand = -1;
                     global.xHand = -1;
-					ds_list_clear(global.incorrectWords);
+                    ds_list_clear(global.incorrectWords);
+                    global.oRoleGameSprites = undefined;
+                    global.oRoleGameIncorrectSprites = undefined;
                     room_goto(btn.room);
                     break;
                 }
@@ -94,7 +92,9 @@ if (mouse_check_button_pressed(mb_left)) {
                     global.letterTimeStamp = "";
                     global.yHand = -1;
                     global.xHand = -1;
-					ds_list_clear(global.incorrectWords);
+                    ds_list_clear(global.incorrectWords);
+                    global.oRoleGameSprites = undefined;
+                    global.oRoleGameIncorrectSprites = undefined;
                     room_goto(btn.room);
                     break;
                 }

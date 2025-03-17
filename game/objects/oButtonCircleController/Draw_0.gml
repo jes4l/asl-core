@@ -1,11 +1,65 @@
-var textRadius = (innerRadius + outerRadius) / 2;
+var wrap_text = function(text, max_width) {
+    var lines = [];
+    var segments = string_split(text, "\n");
+    for (var seg = 0; seg < array_length(segments); seg++) {
+        var segment = segments[seg];
+        var words = [];
+        var start = 1;
+        for (var i = 1; i <= string_length(segment); i++) {
+            if (string_char_at(segment, i) == " ") {
+                var word = string_copy(segment, start, i - start);
+                if (word != "") {
+                    array_push(words, word);
+                }
+                start = i + 1;
+            }
+        }
+        var last_word = string_copy(segment, start, string_length(segment) - start + 1);
+        if (last_word != "") {
+            array_push(words, last_word);
+        }
+        var current_line_words = [];
+        var current_line_width = 0;
+        for (var i = 0; i < array_length(words); i++) {
+            var word = words[i];
+            var word_width = string_width(word);
+            if (current_line_width + word_width > max_width) {
+                if (array_length(current_line_words) > 0) {
+                    var line_text = "";
+                    for (var j = 0; j < array_length(current_line_words); j++) {
+                        line_text += current_line_words[j] + " ";
+                    }
+                    line_text = string_copy(line_text, 1, string_length(line_text) - 1);
+                    array_push(lines, line_text);
+                }
+                current_line_words = [word];
+                current_line_width = word_width + string_width(" ");
+            } else {
+                array_push(current_line_words, word);
+                current_line_width += word_width + string_width(" ");
+            }
+        }
+        if (array_length(current_line_words) > 0) {
+            var line_text = "";
+            for (var j = 0; j < array_length(current_line_words); j++) {
+                line_text += current_line_words[j] + " ";
+            }
+            line_text = string_copy(line_text, 1, string_length(line_text) - 1);
+            array_push(lines, line_text);
+        }
+        if (seg < array_length(segments) - 1) {
+            array_push(lines, "");
+        }
+    }
+    return lines;
+};
+
 for (var i = 0; i < array_length_1d(buttonData); i++) {
     var btn = buttonData[i];
     var isHovered = (i == hoveredIndex);
-    var rotSectorStart = (btn.sectorStart + menuRotation + 2*pi) mod (2*pi);
-    var rotSectorEnd = (btn.sectorEnd + menuRotation + 2*pi) mod (2*pi);
+    var rotSectorStart = btn.sectorStart;
+    var rotSectorEnd = btn.sectorEnd;
     var sectorColor = isHovered ? c_white : c_gray;
-    var textColor = isHovered ? make_color_rgb(80,80,80) : c_white;
     draw_set_alpha(isHovered ? 0.8 : 0.4);
     draw_set_color(sectorColor);
     var steps = 20;
@@ -59,48 +113,44 @@ for (var i = 0; i < array_length_1d(buttonData); i++) {
     var rx4 = centerX + innerRadius * cos(rotSectorEnd);
     var ry4 = centerY + innerRadius * sin(rotSectorEnd);
     draw_line(rx3, ry3, rx4, ry4);
-    var buttonText = btn.text;
-    var len = string_length(buttonText);
-    var totalTextWidth = 0;
-    var letterWidths = [];
-    var padding = 2;
-    for (var k = 1; k <= len; k++) {
-        var letter = string_char_at(buttonText, k);
-        var lw = string_width(letter) + padding;
-        array_push(letterWidths, lw);
-        totalTextWidth += lw;
-    }
-    var textAngularSpan = totalTextWidth / textRadius;
-    var sectorMid = (rotSectorStart <= rotSectorEnd) ? (rotSectorStart + rotSectorEnd) / 2 : (((rotSectorStart + (rotSectorEnd + 2*pi)) / 2) mod (2*pi));
-    var startAngle = sectorMid - textAngularSpan / 2;
-    for (var k = 0; k < len; k++) {
-        var letterAngularWidth = letterWidths[k] / textRadius;
-        var letterCenterAngle = startAngle + letterAngularWidth / 2;
-        var tx = centerX + textRadius * cos(letterCenterAngle);
-        var ty = centerY + textRadius * sin(letterCenterAngle);
-        var rotateDegrees = -radtodeg(letterCenterAngle) - 90;
-        draw_set_alpha(1);
-        draw_set_color(textColor);
-        draw_set_halign(fa_center);
-        draw_set_valign(fa_middle);
-        draw_text_transformed(tx, ty, string_char_at(buttonText, k + 1), 1, 1, rotateDegrees);
-        startAngle += letterAngularWidth;
-    }
     var midAngle = (rotSectorStart <= rotSectorEnd) ? (rotSectorStart + rotSectorEnd) / 2 : (((rotSectorStart + (rotSectorEnd + 2*pi)) / 2) mod (2*pi));
-    var circleOffset = 50;
-    var circleX = centerX + (textRadius - circleOffset) * cos(midAngle);
-    var circleY = centerY + (textRadius - circleOffset) * sin(midAngle);
-    draw_set_color(btn.circleColor);
-    draw_circle(circleX, circleY, 15, false);
+    var spriteRadius = (innerRadius + outerRadius) / 2;
+    var spriteX = centerX + spriteRadius * cos(midAngle);
+    var spriteY = centerY + spriteRadius * sin(midAngle);
+    var numFrames = sprite_get_number(btn.sprite);
+    var subimg_to_draw = isHovered ? floor(animFrame) % numFrames : 0;
+    var scale = isHovered ? 1.2 : 1;
+    var color = isHovered ? c_gray : c_white;
+    draw_sprite_ext(btn.sprite, subimg_to_draw, spriteX, spriteY, scale, scale, 0, color, 1);
 }
-draw_set_halign(fa_left);
-draw_set_valign(fa_top);
-draw_set_alpha(1);
+
 if (hoveredIndex != -1) {
-    var spr = buttonData[hoveredIndex].sprite;
-    var numFrames = sprite_get_number(spr);
-    var subimg = floor(animFrame) % numFrames;
-    draw_sprite(spr, subimg, centerX, centerY);
+    var padding = innerRadius * 0.1;
+    var availableWidth = 2 * (innerRadius - padding);
+    draw_set_halign(fa_center);
+    draw_set_valign(fa_top);
+    draw_set_color(c_white);
+    draw_set_font(fntBritanicBold30);
+    var gameLineHeight = string_height("A");
+    var gameNameLines = wrap_text(buttonData[hoveredIndex].text, availableWidth);
+    var totalGameNameHeight = (array_length(gameNameLines) - 1) * gameLineHeight * 1.2 + gameLineHeight;
+    var gameNameY = centerY - innerRadius * 0.7;
+    for (var i = 0; i < array_length(gameNameLines); i++) {
+        var gameLineY = gameNameY + i * gameLineHeight * 1.2;
+        draw_text(centerX, gameLineY, gameNameLines[i]);
+    }
+    draw_set_font(fntBritanicBold20);
+    var descLineHeight = string_height("A");
+    var descriptionStartY = gameNameY + totalGameNameHeight + descLineHeight * 0.3;
+    var descLines = wrap_text(buttonData[hoveredIndex].description, availableWidth);
+    for (var i = 0; i < array_length(descLines); i++) {
+        var descLineY = descriptionStartY + i * descLineHeight * 1.2;
+        draw_text(centerX, descLineY, descLines[i]);
+    }
 } else {
     draw_sprite(sASLCoreLogoMenu, 0, centerX, centerY);
 }
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_alpha(1);

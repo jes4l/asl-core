@@ -64,6 +64,7 @@
     {"name":"oAutoSigner","order":1,"path":"objects/oAutoSigner/oAutoSigner.yy",},
     {"name":"oBasket","order":13,"path":"objects/oBasket/oBasket.yy",},
     {"name":"oBlankTube","order":2,"path":"objects/oBlankTube/oBlankTube.yy",},
+    {"name":"oButtonCircleController","order":3,"path":"objects/oButtonCircleController/oButtonCircleController.yy",},
     {"name":"oCarFrontSeat","order":12,"path":"objects/oCarFrontSeat/oCarFrontSeat.yy",},
     {"name":"oCarGameBanner","order":14,"path":"objects/oCarGameBanner/oCarGameBanner.yy",},
     {"name":"oCarStartMessage","order":10,"path":"objects/oCarStartMessage/oCarStartMessage.yy",},
