@@ -82,11 +82,27 @@ if (letterController != noone) {
             }
             
             sprite_index = spIndex;
+            x = baseX;
+            if (spIndex == sChefM) {
+                x -= 90;
+            } else if (spIndex == sFirefighterM) {
+                x += 60;
+            } else if (spIndex == sFirefighterF) {
+                x += 60;
+            } else if (spIndex == sScientistF) {
+                x += 60;
+            } else if (spIndex == sCowboyM) {
+                x += 25;
+            } else if (spIndex == sCowgirlF) {
+                x += 25;
+            } else if (spIndex == sPoliceF) {
+                x += 40;
+            } else if (spIndex == sChefF) {
+                x -= 90;
+            }
             image_index = 0;
             newSpriteLoaded = true;
-            
             previousWord = currentWord;
-            
             var alreadyAdded = false;
             for (var i = 0; i < ds_list_size(loadedSprites); i++) {
                 var tempMap = loadedSprites[| i];

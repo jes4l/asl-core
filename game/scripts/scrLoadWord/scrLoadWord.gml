@@ -2,7 +2,6 @@ function scrLoadWord(_index)
 {
     var theWord = ds_list_find_value(wordsDS, _index);
 
-    // Extract letters, ignoring spaces
     letters = [];
     var rawLen = string_length(theWord);
     for (var i = 1; i <= rawLen; i++)
@@ -14,7 +13,6 @@ function scrLoadWord(_index)
     }
     letterCount = array_length_1d(letters);
 
-    // Initialize letter colors and alphas
     letterColor   = [];
     letterAlpha   = [];
     letterWasWrong= [];

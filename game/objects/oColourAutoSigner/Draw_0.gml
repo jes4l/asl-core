@@ -1,5 +1,3 @@
-// oAutoSigner - Draw Event
-
-if (global.currentSignSprite != -1) {
-    draw_sprite(global.currentSignSprite, 0, 506, 611);
+if (global.currentSignSprite != -1 && instance_exists(oCircle)) {
+    draw_sprite(global.currentSignSprite, 0, oCircle.x, oCircle.y);
 }
