@@ -88,6 +88,7 @@
     {"name":"oDrawDashes","order":1,"path":"objects/oDrawDashes/oDrawDashes.yy",},
     {"name":"oFoodOrder","order":6,"path":"objects/oFoodOrder/oFoodOrder.yy",},
     {"name":"oGameWordList","order":2,"path":"objects/oGameWordList/oGameWordList.yy",},
+    {"name":"oLetterDisplay","order":3,"path":"objects/oLetterDisplay/oLetterDisplay.yy",},
     {"name":"oLetterOnDashes","order":3,"path":"objects/oLetterOnDashes/oLetterOnDashes.yy",},
     {"name":"oLine","order":6,"path":"objects/oLine/oLine.yy",},
     {"name":"oLineSpawner","order":7,"path":"objects/oLineSpawner/oLineSpawner.yy",},

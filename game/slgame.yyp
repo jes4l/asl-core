@@ -287,6 +287,7 @@
     {"id":{"name":"oDrawDashes","path":"objects/oDrawDashes/oDrawDashes.yy",},},
     {"id":{"name":"oFoodOrder","path":"objects/oFoodOrder/oFoodOrder.yy",},},
     {"id":{"name":"oGameWordList","path":"objects/oGameWordList/oGameWordList.yy",},},
+    {"id":{"name":"oLetterDisplay","path":"objects/oLetterDisplay/oLetterDisplay.yy",},},
     {"id":{"name":"oLetterOnDashes","path":"objects/oLetterOnDashes/oLetterOnDashes.yy",},},
     {"id":{"name":"oLine","path":"objects/oLine/oLine.yy",},},
     {"id":{"name":"oLineSpawner","path":"objects/oLineSpawner/oLineSpawner.yy",},},
