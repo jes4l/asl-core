@@ -19,7 +19,7 @@ if (current_time - global.lastMessageTime >= 20000) {
 }
 for (var i = ord("A"); i <= ord("Z"); i++) {
     if (keyboard_check_pressed(i)) {
-        global.letter = chr(i);
+        global.letter = string_upper(chr(i));
         break;
     }
 }

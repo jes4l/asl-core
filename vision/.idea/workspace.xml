@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0160e8db-9569-427c-8738-c92d339b6eac" name="Changes" comment="" />
+    <list default="true" id="0160e8db-9569-427c-8738-c92d339b6eac" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../game/slgame.resource_order" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.resource_order" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game/slgame.yyp" beforeDir="false" afterPath="$PROJECT_DIR$/../game/slgame.yyp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/KaggleCV/DatasetPreprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/KaggleCV/DatasetPreprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Python/KaggleCV/TrainDataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/Python/KaggleCV/TrainDataset.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,54 +37,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.16again.executor&quot;: &quot;Run&quot;,
-    &quot;Python.AnimateHands.executor&quot;: &quot;Run&quot;,
-    &quot;Python.ComputerVision.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DataCollection.executor&quot;: &quot;Run&quot;,
-    &quot;Python.DatasetPreprocessing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.EnsembleMNISTSign.executor&quot;: &quot;Run&quot;,
-    &quot;Python.HandTrackingModule.executor&quot;: &quot;Run&quot;,
-    &quot;Python.MNISTCV.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Runner.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TrainDataset.executor&quot;: &quot;Run&quot;,
-    &quot;Python.TrainDataset16.executor&quot;: &quot;Run&quot;,
-    &quot;Python.builder.executor&quot;: &quot;Run&quot;,
-    &quot;Python.carGameControls.executor&quot;: &quot;Run&quot;,
-    &quot;Python.computerVision.executor&quot;: &quot;Run&quot;,
-    &quot;Python.computerVision200by200.executor&quot;: &quot;Run&quot;,
-    &quot;Python.computerVision300by300.executor&quot;: &quot;Run&quot;,
-    &quot;Python.computer_vision_here.executor&quot;: &quot;Run&quot;,
-    &quot;Python.controller.executor&quot;: &quot;Run&quot;,
-    &quot;Python.cv_client.executor&quot;: &quot;Run&quot;,
-    &quot;Python.data_collection.executor&quot;: &quot;Run&quot;,
-    &quot;Python.datacheck.executor&quot;: &quot;Run&quot;,
-    &quot;Python.hand_segmentation.executor&quot;: &quot;Run&quot;,
-    &quot;Python.numOfCharacter.executor&quot;: &quot;Run&quot;,
-    &quot;Python.oldCV.executor&quot;: &quot;Run&quot;,
-    &quot;Python.packet_getter.executor&quot;: &quot;Run&quot;,
-    &quot;Python.preprocessing.executor&quot;: &quot;Run&quot;,
-    &quot;Python.reqs.executor&quot;: &quot;Run&quot;,
-    &quot;Python.test.executor&quot;: &quot;Run&quot;,
-    &quot;Python.text.executor&quot;: &quot;Run&quot;,
-    &quot;Python.train.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jesal/Desktop/Project/diss/vision/Python/NewCV&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.16again.executor": "Run",
+    "Python.AnimateHands.executor": "Run",
+    "Python.ComputerVision.executor": "Run",
+    "Python.DataCollection.executor": "Run",
+    "Python.DataPreprocessing2.executor": "Run",
+    "Python.DatasetPreprocessing.executor": "Run",
+    "Python.EnsembleMNISTSign.executor": "Run",
+    "Python.HandTrackingModule.executor": "Run",
+    "Python.MNISTCV.executor": "Run",
+    "Python.Runner.executor": "Run",
+    "Python.TrainDataset.executor": "Run",
+    "Python.TrainDataset16.executor": "Run",
+    "Python.builder.executor": "Run",
+    "Python.carGameControls.executor": "Run",
+    "Python.computerVision.executor": "Run",
+    "Python.computerVision200by200.executor": "Run",
+    "Python.computerVision300by300.executor": "Run",
+    "Python.computer_vision_here.executor": "Run",
+    "Python.controller.executor": "Run",
+    "Python.cv_client.executor": "Run",
+    "Python.data_collection.executor": "Run",
+    "Python.datacheck.executor": "Run",
+    "Python.hand_segmentation.executor": "Run",
+    "Python.numOfCharacter.executor": "Run",
+    "Python.oldCV.executor": "Run",
+    "Python.packet_getter.executor": "Run",
+    "Python.preprocessing.executor": "Run",
+    "Python.reqs.executor": "Run",
+    "Python.test.executor": "Run",
+    "Python.text.executor": "Run",
+    "Python.train.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/jesal/Desktop/Project/diss/vision/Python/NewCV",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jesal\Desktop\Project\diss\vision\Python\NewCV" />
@@ -167,7 +174,7 @@
       <workItem from="1741968386906" duration="15270000" />
       <workItem from="1742057498584" duration="437000" />
       <workItem from="1742143526886" duration="892000" />
-      <workItem from="1742233688286" duration="3828000" />
+      <workItem from="1742233688286" duration="15310000" />
     </task>
     <servers />
   </component>
@@ -192,7 +199,7 @@
     <SUITE FILE_PATH="coverage/vision$HandTrackingModule.coverage" NAME="HandTrackingModule Coverage Results" MODIFIED="1737466064284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/cvzone" />
     <SUITE FILE_PATH="coverage/vision$EnsembleMNISTSign.coverage" NAME="EnsembleMNISTSign Coverage Results" MODIFIED="1739888255213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
     <SUITE FILE_PATH="coverage/vision$TrainDataset16.coverage" NAME="TrainDataset16 Coverage Results" MODIFIED="1741008341512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewCV" />
-    <SUITE FILE_PATH="coverage/vision$ComputerVision.coverage" NAME="ComputerVision Coverage Results" MODIFIED="1742235053990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/KaggleCV" />
+    <SUITE FILE_PATH="coverage/vision$ComputerVision.coverage" NAME="ComputerVision Coverage Results" MODIFIED="1742299298990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/KaggleCV" />
     <SUITE FILE_PATH="coverage/vision$computer_vision_here.coverage" NAME="computer_vision_here Coverage Results" MODIFIED="1741972459680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
     <SUITE FILE_PATH="coverage/vision$DataCollection.coverage" NAME="DataCollection Coverage Results" MODIFIED="1740848382102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewCV" />
     <SUITE FILE_PATH="coverage/vision$Runner.coverage" NAME="Runner Coverage Results" MODIFIED="1737489087544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -210,11 +217,12 @@
     <SUITE FILE_PATH="coverage/vision$MNISTCV.coverage" NAME="MNISTCV Coverage Results" MODIFIED="1739890849626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
     <SUITE FILE_PATH="coverage/vision$test.coverage" NAME="test Coverage Results" MODIFIED="1739890099310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/archive" />
     <SUITE FILE_PATH="coverage/vision$16again.coverage" NAME="16again Coverage Results" MODIFIED="1741127815222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewCV" />
-    <SUITE FILE_PATH="coverage/vision$TrainDataset.coverage" NAME="TrainDataset Coverage Results" MODIFIED="1741531912262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewCV" />
     <SUITE FILE_PATH="coverage/vision$oldCV.coverage" NAME="oldCV Coverage Results" MODIFIED="1741635513456" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewNewDataset" />
+    <SUITE FILE_PATH="coverage/vision$TrainDataset.coverage" NAME="TrainDataset Coverage Results" MODIFIED="1742304673951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/KaggleCV" />
+    <SUITE FILE_PATH="coverage/vision$DataPreprocessing2.coverage" NAME="DataPreprocessing2 Coverage Results" MODIFIED="1742305231277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/KaggleCV" />
     <SUITE FILE_PATH="coverage/vision$datacheck.coverage" NAME="datacheck Coverage Results" MODIFIED="1741531589884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/NewNewDataset" />
     <SUITE FILE_PATH="coverage/vision$cv_client.coverage" NAME="cv_client Coverage Results" MODIFIED="1741971228998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python" />
-    <SUITE FILE_PATH="coverage/vision$preprocessing.coverage" NAME="preprocessing Coverage Results" MODIFIED="1741984307280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/EastWestCV" />
+    <SUITE FILE_PATH="coverage/vision$preprocessing.coverage" NAME="preprocessing Coverage Results" MODIFIED="1742303641793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Python/EastWestCV" />
     <SUITE FILE_PATH="coverage/vision$text.coverage" NAME="text Coverage Results" MODIFIED="1740152712076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -7,7 +7,7 @@ function scrUpdateWordList(_gameName, _numOfActiveWords) {
     
     var wordPool;
     switch (_gameName) {
-        case "Pizza Game":
+        case "Ingredients Game":
             wordPool = pizzaPool; 
             break;
         case "Places Game":

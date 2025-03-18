@@ -5,9 +5,9 @@ if (index < letterCount) {
     index++;
     
     if (index < letterCount) {
-        alarm[0] = room_speed * 3;
+        alarm[0] = room_speed * 4;
     } else {
-        alarm[0] = room_speed * 3;
+        alarm[0] = room_speed * 4;
     }
 } else {
 

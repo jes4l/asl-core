@@ -86,7 +86,7 @@ if (currentIndex >= letterCount) {
 if (global.letter != "") {
     var neededChar = (letterCount > 0) ? letters[currentIndex] : "";
     if (string_lower(global.letter) == string_lower(neededChar)) {
-        ds_list_add(global.correctLetters, neededChar);
+        ds_list_add(global.correctLetters, string_upper(neededChar));
         if (letterWasWrong[currentIndex]) {
             letterColor[currentIndex] = c_orange;
             global.score += 1;

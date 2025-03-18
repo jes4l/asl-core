@@ -18,7 +18,7 @@ if not os.path.isdir(DATASET_DIR):
 
 train_ds = tf.keras.utils.image_dataset_from_directory(
     DATASET_DIR,
-    validation_split=0.5,
+    validation_split=0.2,
     subset="training",
     seed=123,
     image_size=(IMG_HEIGHT, IMG_WIDTH),
@@ -27,7 +27,7 @@ train_ds = tf.keras.utils.image_dataset_from_directory(
 
 val_ds = tf.keras.utils.image_dataset_from_directory(
     DATASET_DIR,
-    validation_split=0.5,
+    validation_split=0.2,
     subset="validation",
     seed=123,
     image_size=(IMG_HEIGHT, IMG_WIDTH),
