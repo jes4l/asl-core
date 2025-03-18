@@ -5,4 +5,3 @@ if (global.scoreGained == 60) {
 } else {
     timeRemainingText = "Most test tubes were incorrect\n You Got A Tip Of " + string(global.scoreGained) + "\n This Is Your Overall Tip " + string(global.score);
 }
-alarm[1] = room_speed * 5;

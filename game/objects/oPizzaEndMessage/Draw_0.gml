@@ -41,7 +41,6 @@ if (pb != noone) {
     }
     else {
         if (!scoreShown) {
-            alarm[0] = room_speed * 5;
             scoreShown = true;
         }
         var msg2_1 = "You got a Tip of " + string(global.scoreGained) + "\nThis is your overall Tip " + string(global.score);

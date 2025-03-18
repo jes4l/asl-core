@@ -4,5 +4,15 @@ if (x < 1476) {
 } else if (!spawned) {
     instance_create_layer(680,550,"Instances", oSpriteSpawn);
     spawned = true;
-	alarm[0] = room_speed *10;
+}
+
+if (keyboard_check_pressed(vk_space)) {
+    global.activeWords = [];
+	global.lives = 3;
+	global.dashStartX = 0;
+	global.dashEndX = 0;
+	global.dashY = 0;
+	global.currentSignSprite = "";
+	global.scoreGained = 0;
+    room_goto(rmMenu);
 }

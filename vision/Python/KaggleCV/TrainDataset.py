@@ -5,7 +5,7 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropou
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping
 
-DATASET_DIR = r'C:\Users\jesal\Downloads\archive\mediapipeSkeleton'
+DATASET_DIR = r'C:\Users\jesal\Downloads\archive\WithTransRot\data'
 IMG_HEIGHT = 200
 IMG_WIDTH = 200
 BATCH_SIZE = 16

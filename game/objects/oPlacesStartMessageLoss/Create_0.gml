@@ -6,4 +6,3 @@ textY = 96;
 message2y = 1010;
 textColor = c_white;
 textAlpha = 1;
-alarm[0] = room_speed * 7;
