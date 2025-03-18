@@ -72,6 +72,7 @@ if (mouse_check_button_pressed(mb_left)) {
                     global.oRoleGameSprites = undefined;
                     global.oRoleGameIncorrectSprites = undefined;
 					global.confidence = 0;
+					global.obstacleSequence = 0;
                     room_goto(btn.room);
                     break;
                 }
@@ -97,6 +98,7 @@ if (mouse_check_button_pressed(mb_left)) {
                     global.oRoleGameSprites = undefined;
                     global.oRoleGameIncorrectSprites = undefined;
 					global.confidence = 0;
+					global.obstacleSequence = 0;
                     room_goto(btn.room);
                     break;
                 }

@@ -7,9 +7,9 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_3BD1B000_1","path":"rooms/rmCarGame/rmCarGame.yy",},
+    {"name":"inst_6E02F1DF","path":"rooms/rmCarGame/rmCarGame.yy",},
     {"name":"inst_170ADC4E","path":"rooms/rmCarGame/rmCarGame.yy",},
     {"name":"inst_36F3141C","path":"rooms/rmCarGame/rmCarGame.yy",},
-    {"name":"inst_6E02F1DF","path":"rooms/rmCarGame/rmCarGame.yy",},
   ],
   "isDnd":false,
   "layers":[

@@ -14,5 +14,6 @@ if (keyboard_check_pressed(vk_space)) {
 	global.dashY = 0;
 	global.currentSignSprite = "";
 	global.scoreGained = 0;
+	global.obstacleSequence = 0;
     room_goto(rmMenu);
 }

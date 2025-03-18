@@ -48,6 +48,7 @@ function AddPartialSegment(_colorSprite)
 global.finalSegments = [ -1, -1, -1, -1 ];
 global.finalSegmentCount = 0;
 
+global.obstacleSequence = 0;
 
 global.incorrectWords = ds_list_create();
 
