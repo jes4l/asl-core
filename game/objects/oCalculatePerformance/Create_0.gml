@@ -1,6 +1,11 @@
-var perf = scrCalculatePerformance();
-
+perf = scrCalculatePerformance();
 showWorst = false;
+fadeTimer = 0;
+currentLetter = 0;
+fadeSpeed = 0.02;
+lettersToDisplay = perf.best;
+alphaArray = array_create(array_length(lettersToDisplay), 0);
+
 
 show_debug_message("Best Letters:");
 for (var i = 0; i < array_length_1d(perf.best); i++) {

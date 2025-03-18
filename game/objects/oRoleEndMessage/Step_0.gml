@@ -29,11 +29,12 @@ if (displayStage == 0) {
 } else if (displayStage == 3) {
     timer += 1;
     if (timer >= room_speed * 3) {
-		if (keyboard_check_pressed(vk_space)) {
-		    global.oRoleGameSprites = undefined;
-		    global.oRoleGameIncorrectSprites = undefined;
-		    global.scoreGained = 0;
-            room_goto(rmFeedback);
-		}
     }
+}
+
+if (keyboard_check_pressed(vk_space)) {
+	global.oRoleGameSprites = undefined;
+	global.oRoleGameIncorrectSprites = undefined;
+	global.scoreGained = 0;
+	room_goto(rmFeedback);
 }
