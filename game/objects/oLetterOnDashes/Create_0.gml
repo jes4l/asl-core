@@ -1,7 +1,4 @@
 depth = -10;
-if (!variable_global_exists("incorrectWords")) {
-    global.incorrectWords = ds_list_create();
-}
 var listObj = instance_find(oGameWordList, 0);
 if (!instance_exists(listObj)) {
     show_debug_message("No game word list found. Destroying oLetterOnDashes.");

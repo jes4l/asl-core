@@ -97,6 +97,9 @@ if (global.letter != "") {
             global.scoreGained += 2;
         }
         letterAlpha[currentIndex] = 1.0;
+        var pair = [string_upper(neededChar), global.confidence];
+        ds_list_add(global.confidenceLetters, pair);
+        show_debug_message("Stored letter-confidence pair: " + pair[0] + " : " + string(pair[1]));
         currentIndex++;
         if (letterWasWrong[currentIndex - 1]) {
             var correctedLetter = string_upper(global.letter);

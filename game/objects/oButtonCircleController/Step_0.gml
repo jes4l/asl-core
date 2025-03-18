@@ -71,6 +71,7 @@ if (mouse_check_button_pressed(mb_left)) {
                     ds_list_clear(global.incorrectWords);
                     global.oRoleGameSprites = undefined;
                     global.oRoleGameIncorrectSprites = undefined;
+					global.confidence = 0;
                     room_goto(btn.room);
                     break;
                 }
@@ -95,6 +96,7 @@ if (mouse_check_button_pressed(mb_left)) {
                     ds_list_clear(global.incorrectWords);
                     global.oRoleGameSprites = undefined;
                     global.oRoleGameIncorrectSprites = undefined;
+					global.confidence = 0;
                     room_goto(btn.room);
                     break;
                 }

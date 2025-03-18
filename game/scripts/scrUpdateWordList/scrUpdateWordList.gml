@@ -1,3 +1,19 @@
+function getAverageConfidence(letter) {
+    var sum = 0;
+    var count = 0;
+    if (ds_exists(global.confidenceLetters, ds_type_list)) {
+        for (var i = 0; i < ds_list_size(global.confidenceLetters); i++) {
+            var pair = ds_list_find_value(global.confidenceLetters, i);
+            if (string_upper(pair[0]) == letter) {
+                sum += pair[1];
+                count++;
+            }
+        }
+    }
+    if (count == 0) return 0;
+    return sum / count;
+}
+
 function scrUpdateWordList(_gameName, _numOfActiveWords) {
     var pizzaPool    = [ "Tomato", "Pineapple", "Mushroom", "Sweetcorn", "Pepperoni", "Bacon" ];
     var placesPool   = [ "Library", "Cinema", "Hospital", "Park", "Museum", "School" ];
@@ -34,30 +50,33 @@ function scrUpdateWordList(_gameName, _numOfActiveWords) {
         return;
     }
     
-    var baseline       = 1;
-    var wrongWeight    = 2;
-    var wasWrongWeight = 3;
+    var baseline       = 0.5; 
+    var wrongWeight    = 0.75; 
+    var wasWrongWeight = 1;
     
     var weightedWords = [];
     for (var i = 0; i < array_length_1d(wordPool); i++) {
         var word = wordPool[i];
-        var wordScore = 0;
+        var totalLetterWeight = 0;
         var len = string_length(word);
         for (var j = 1; j <= len; j++) {
             var letter = string_upper(string_copy(word, j, 1));
-            var letterWeight = baseline;
+            var baseLetterWeight = baseline;
             if (ds_exists(global.wrongLetters, ds_type_list) && ds_list_find_index(global.wrongLetters, letter) != -1) {
-                letterWeight = wrongWeight;
+                baseLetterWeight = wrongWeight;
             } else if (ds_exists(global.wasWrongLetters, ds_type_list) && ds_list_find_index(global.wasWrongLetters, letter) != -1) {
-                letterWeight = wasWrongWeight;
+                baseLetterWeight = wasWrongWeight;
             }
             if (ds_exists(global.correctLetters, ds_type_list) && ds_list_find_index(global.correctLetters, letter) != -1) {
-                letterWeight = letterWeight - 0.5;
-                if (letterWeight < 1) letterWeight = 1;
+                baseLetterWeight = baseLetterWeight - 0.25;
+                if (baseLetterWeight < 0.5) baseLetterWeight = 0.5;
             }
-            wordScore += letterWeight;
+            var avgConfidence = getAverageConfidence(letter);
+            var letterFinalWeight = baseLetterWeight * (1 - avgConfidence);
+            totalLetterWeight += letterFinalWeight;
         }
-        weightedWords[i] = { word: word, weight: wordScore };
+        var wordScoreNormalized = totalLetterWeight / len;
+        weightedWords[i] = { word: word, weight: wordScoreNormalized };
     }
     
     var selectedWords = [];
@@ -118,17 +137,17 @@ function scrUpdateWordList(_gameName, _numOfActiveWords) {
     var letterWeightsDebug = "Letter Weights: ";
     for (var i = 1; i <= string_length(alphabet); i++) {
         var letter = string_upper(string_copy(alphabet, i, 1));
-        var letterWeight = baseline;
+        var baseLetterWeight = baseline;
         if (ds_exists(global.wrongLetters, ds_type_list) && ds_list_find_index(global.wrongLetters, letter) != -1) {
-            letterWeight = wrongWeight;
+            baseLetterWeight = wrongWeight;
         } else if (ds_exists(global.wasWrongLetters, ds_type_list) && ds_list_find_index(global.wasWrongLetters, letter) != -1) {
-            letterWeight = wasWrongWeight;
+            baseLetterWeight = wasWrongWeight;
         }
         if (ds_exists(global.correctLetters, ds_type_list) && ds_list_find_index(global.correctLetters, letter) != -1) {
-            letterWeight = letterWeight - 0.5;
-            if (letterWeight < 1) letterWeight = 1;
+            baseLetterWeight = baseLetterWeight - 0.25;
+            if (baseLetterWeight < 0.5) baseLetterWeight = 0.5;
         }
-        letterWeightsDebug += letter + ": " + string(letterWeight) + " ";
+        letterWeightsDebug += letter + ": " + string(baseLetterWeight) + " ";
     }
     show_debug_message(letterWeightsDebug);
 }

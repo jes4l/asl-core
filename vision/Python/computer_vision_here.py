@@ -13,7 +13,6 @@ class_names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 
                'W', 'X', 'Y']
 FINAL_W, FINAL_H = 200, 200
 
-
 class CVHandler:
     def __init__(self):
         self.cap = cv2.VideoCapture(0)
@@ -53,11 +52,12 @@ class CVHandler:
         ret, frame = self.cap.read()
         if not ret:
             print("Failed to read from camera.")
-            return None, -1, -1
+            return None, None, -1, -1
         h, w, _ = frame.shape
         frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         results = self.hands.process(frame_rgb)
         predicted_label = None
+        confidence = None
         center_x, center_y = -1, -1
         annotated_frame = frame.copy()
 
@@ -105,6 +105,7 @@ class CVHandler:
             predictions = self.model.predict(input_img)
             predicted_index = np.argmax(predictions)
             predicted_label = self.class_names[predicted_index]
+            confidence = predictions[0][predicted_index]
 
             center_x = int(np.mean(pts[:, 0]))
             center_y = int(np.mean(pts[:, 1]))
@@ -128,11 +129,11 @@ class CVHandler:
             cv2.waitKey(1)
             self.last_display_time = current_time
 
-        return predicted_label, center_x, center_y
+        return predicted_label, confidence, center_x, center_y
 
     def send_messages(self, queue: Queue) -> None:
         while True:
-            sign, x, y = self.get_sign()
+            sign, confidence, x, y = self.get_sign()
             if x == -1 and y == -1:
                 time.sleep(0.3)
                 continue
@@ -148,6 +149,7 @@ class CVHandler:
 
                 if self.stable_count >= self.stable_threshold:
                     message["data"] = sign
+                    message["confidence"] = float(confidence)
                     self.stable_count = 0
 
             message_json = json.dumps(message)

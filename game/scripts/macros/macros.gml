@@ -22,6 +22,7 @@ global.dashY      = 0;
 global.wrongLetters       = ds_list_create();
 global.wasWrongLetters    = ds_list_create();
 global.correctLetters = ds_list_create();
+global.confidenceLetters = ds_list_create();
 
 //Car Game
 global.lives = 3;
@@ -49,3 +50,5 @@ global.finalSegmentCount = 0;
 
 
 global.incorrectWords = ds_list_create();
+
+global.confidence = 0;

@@ -30,6 +30,10 @@ if (n_id == server_socket) {
                     global.letterTimeStamp = currentTime;
                 }
                 global.letterReceived = currentLetter;
+                if (variable_struct_exists(jsonData, "confidence")) {
+                    global.confidence = jsonData.confidence;
+					show_debug_message("Letter: " + string(global.letter) + " Confidence: " + string(global.confidence));
+                }
             }
             if (variable_struct_exists(jsonData, "pos")) {
                 if (is_array(jsonData.pos) && array_length(jsonData.pos) >= 2) {

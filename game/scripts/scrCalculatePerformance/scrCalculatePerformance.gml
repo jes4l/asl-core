@@ -1,7 +1,3 @@
-/// @function scrCalculatePerformance()
-/// @description Calculates and returns the top 3 best and worst performing letters,
-///              only for letters found in the active word list.
-/// @returns {struct} { best: array of letter objects, worst: array of letter objects }
 function scrCalculatePerformance() {
     var activeLetterList = ds_list_create();
     for (var i = 0; i < array_length_1d(global.activeWords); i++) {
@@ -14,25 +10,25 @@ function scrCalculatePerformance() {
         }
     }
     
-    var baseline       = 1;
-    var wrongWeight    = 2;
-    var wasWrongWeight = 3;
+    var baseline = 0.5;
+    var wrongWeight = 0.75;
+    var wasWrongWeight = 1;
     var letterPerformances = [];
     
     for (var i = 0; i < ds_list_size(activeLetterList); i++) {
         var letter = ds_list_find_value(activeLetterList, i);
         var letterWeight = baseline;
-        
         if (ds_exists(global.wrongLetters, ds_type_list) && ds_list_find_index(global.wrongLetters, letter) != -1) {
             letterWeight = wrongWeight;
         } else if (ds_exists(global.wasWrongLetters, ds_type_list) && ds_list_find_index(global.wasWrongLetters, letter) != -1) {
             letterWeight = wasWrongWeight;
         }
         if (ds_exists(global.correctLetters, ds_type_list) && ds_list_find_index(global.correctLetters, letter) != -1) {
-            letterWeight -= 0.5;
+            letterWeight = letterWeight - 0.25;
             if (letterWeight < baseline) letterWeight = baseline;
         }
-        
+        var avgConfidence = getAverageConfidence(letter);
+        letterWeight = letterWeight * (1 - avgConfidence);
         letterPerformances[i] = { letter: letter, weight: letterWeight };
     }
     
@@ -41,7 +37,7 @@ function scrCalculatePerformance() {
     var sortedAscending = [];
     var sortedDescending = [];
     for (var i = 0; i < array_length_1d(letterPerformances); i++) {
-        sortedAscending[i]  = letterPerformances[i];
+        sortedAscending[i] = letterPerformances[i];
         sortedDescending[i] = letterPerformances[i];
     }
     
