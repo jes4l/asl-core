@@ -88,7 +88,7 @@ if (global.letter != "") {
     if (string_lower(global.letter) == string_lower(neededChar)) {
         ds_list_add(global.correctLetters, string_upper(neededChar));
         if (letterWasWrong[currentIndex]) {
-            letterColor[currentIndex] = c_orange;
+            letterColor[currentIndex] = c_green;
             global.score += 1;
             global.scoreGained += 1;
         } else {
@@ -100,6 +100,7 @@ if (global.letter != "") {
         var pair = [string_upper(neededChar), global.confidence];
         ds_list_add(global.confidenceLetters, pair);
         show_debug_message("Stored letter-confidence pair: " + pair[0] + " : " + string(pair[1]));
+        global.currentWordConfidence[currentIndex] = global.confidence;
         currentIndex++;
         if (letterWasWrong[currentIndex - 1]) {
             var correctedLetter = string_upper(global.letter);
