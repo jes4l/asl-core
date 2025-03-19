@@ -53,3 +53,5 @@ global.obstacleSequence = 0;
 global.incorrectWords = ds_list_create();
 
 global.confidence = 0;
+
+global.showWorst = false;

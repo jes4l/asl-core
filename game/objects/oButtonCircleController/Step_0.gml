@@ -73,6 +73,7 @@ if (mouse_check_button_pressed(mb_left)) {
                     global.oRoleGameIncorrectSprites = undefined;
 					global.confidence = 0;
 					global.obstacleSequence = 0;
+					global.showWorst = false;
                     room_goto(btn.room);
                     break;
                 }
@@ -99,6 +100,7 @@ if (mouse_check_button_pressed(mb_left)) {
                     global.oRoleGameIncorrectSprites = undefined;
 					global.confidence = 0;
 					global.obstacleSequence = 0;
+					global.showWorst = false;
                     room_goto(btn.room);
                     break;
                 }

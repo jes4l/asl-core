@@ -1,12 +1,7 @@
-// oDrawDashes - Draw Event
-
-// Reset alpha to 1 to prevent residual transparency
 draw_set_alpha(1);
 
-// Set the color for dashes
 draw_set_color(c_white);
 
-// Check if there is a current word
 if (global.currentWordLetters != undefined && array_length_1d(global.currentWordLetters) > 0) {
     var letterCount = global.currentWordCount;
     var dashStartX = global.dashStartX;
@@ -32,14 +27,12 @@ if (global.currentWordLetters != undefined && array_length_1d(global.currentWord
         currentX += rectWidth + dashGap;
     }
 } else {
-    // Optionally, draw a default message or clear dashes
-    // Use the helper function to draw the default message
     scrDrawText(
-        room_width / 2,             // x-coordinate (center of the room)
-        room_height / 2,            // y-coordinate (center of the room)
-        "No Word Loaded",           // text to draw
-        c_white,                    // color
-        1,                          // alpha value (fully opaque)
-        fntLetter                   // font to use
+        room_width / 2,
+        room_height / 2,
+        "No Word Loaded",
+        c_white,
+        1,
+        fntSevenSegment80
     );
 }
