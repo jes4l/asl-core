@@ -6,7 +6,7 @@ var offset = -100;
 draw_set_color(c_white);
 draw_set_font(fntOpenSans40);
 draw_set_halign(fa_left);
-draw_text(251, 340, global.showWorst ? "Target Letters:" : "Best Performed Letters:");
+draw_text(251, 340, global.showWorst ? "Target Letters: Click On An ASL Letter To Practice" : "Best Performed Letters:");
 
 draw_set_font(fntOpenSans80);
 draw_set_valign(fa_middle);

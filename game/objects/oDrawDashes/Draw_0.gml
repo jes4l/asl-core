@@ -1,5 +1,4 @@
 draw_set_alpha(1);
-
 draw_set_color(c_white);
 
 if (global.currentWordLetters != undefined && array_length_1d(global.currentWordLetters) > 0) {
@@ -17,13 +16,19 @@ if (global.currentWordLetters != undefined && array_length_1d(global.currentWord
     var rectWidth      = (letterCount > 0) ? (effectiveWidth / letterCount) : 0;
     var rectHeight     = 40;
     var currentX = dashStart;
+    var outlineWidth = 2;
     
     for (var i = 0; i < letterCount; i++) {
         var left   = currentX;
         var top    = dashY - (rectHeight * 0.5);
         var right  = currentX + rectWidth;
         var bottom = dashY + (rectHeight * 0.5);
-        draw_rectangle(left, top, right, bottom, true);
+        
+        draw_line_width(left, top, right, top, outlineWidth);
+        draw_line_width(left, bottom, right, bottom, outlineWidth);
+        draw_line_width(left, top, left, bottom, outlineWidth);
+        draw_line_width(right, top, right, bottom, outlineWidth);
+        
         currentX += rectWidth + dashGap;
     }
 } else {
