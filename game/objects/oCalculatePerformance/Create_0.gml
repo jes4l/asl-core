@@ -1,5 +1,5 @@
 perf = scrCalculatePerformance();
-global.showWorst = false;
+
 fadeTimer = 0;
 currentLetter = 0;
 fadeSpeed = 0.02;

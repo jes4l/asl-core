@@ -28,6 +28,10 @@ if (wordIndex >= wordsTotal) {
     drawOLetterOnDashes = false;
     letters = [];
     letterCount = 0;
+	global.currentWordConfidence = [];
+    for (var i = 0; i < letterCount; i++) {
+        global.currentWordConfidence[i] = -1;
+    }
     global.gameComplete = true;
     return;
 }
