@@ -25,14 +25,14 @@ topMessages = [
     "Let Me Teach You How To Add The\n Ingredients",
     "Sign The Current Letter For The\n Ingredients Shown On The Ticket",
     "Do Not Worry The ASL Display Will\n Help You Learn",
-    "2 Points for First Try 1 For Later\n 0 If late Dont Let the Timer Run Out"
+    "Your Sign Accuracy Determines Your\n Tips. Do not Let the Timer Run Out"
 ];
 bottomMessages = [
     "",
     "You Got To Use Sign Language",
     "",
     "It Always Shows The Current\n Letter You Need To Sign",
-    "Good Luck!"
+    "Green is accurate\n Orange is moderate"
 ];
 receiptInstance = noone;
 orderTicketInstance = noone;

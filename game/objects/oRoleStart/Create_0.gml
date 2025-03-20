@@ -13,12 +13,12 @@ topMessages = [
     "These People Will Sign You Letters\n About The Job They Do",
     "This Is So You Can Fill The Form On\n What They Do On The Computer",
     "Do Not Make These People Wait Or\n They Will Walk Away",
-    "I Hope You Do Your Job Well"
+    "Your Sign Accuracy Determines\n Your Tips"
 ];
 bottomMessages = [
     "This Is Because They\n Need A Tax Form",
     "You Will Have to Sign Those\n Letters Back",
     "This Is The Computer",
     "Look Out For The Timer",
-    "Good Luck"
+    "Green is accurate\n Orange is moderate"
 ];

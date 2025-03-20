@@ -23,14 +23,14 @@ if (basket != noone) {
 }
 isMoving = false;
 topMessages = [
-    "Hi There, I Need You to Scan My Shopping\n Dont Worry I Will Walk You Through It",
+	"Sign My Shopping Items to Aquire Tips\n Your Accuracy Determines Your Tips",
     "The Items In My Basket Will Be Put On\n The Conveyor Belt",
     "You Will Have To Sign The Item\n Before They Reach The Scanner",
     "You Will Not Be Given A ASL Letter\n To Guide You",
     "The Letters You Sign Will Be On\n A Display Like This One",
 ];
 bottomMessages = [
-    "You Will Have Fun",
+    "Green is accurate\n Orange is moderate",
     "Just Like The One Below",
     "The Itmes Will Travel Via\n Conveyor Belt",
     "The Time The Item Takes To\n Reach The Scanner Is Shown",

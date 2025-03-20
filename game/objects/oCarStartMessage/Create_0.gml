@@ -1,5 +1,5 @@
 currentMessage = 0;
-timeRemainingText = "Now To Practice Driving!";
+timeRemainingText = "Now To Practice Driving!\n Drive To The Correct Location To Aquire Tips";
 textX = room_width / 2;
 textY = 96;
 fontToUse = fntSevenSegmentTax;

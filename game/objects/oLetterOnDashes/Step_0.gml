@@ -93,12 +93,12 @@ if (global.letter != "") {
         ds_list_add(global.correctLetters, string_upper(neededChar));
         if (letterWasWrong[currentIndex]) {
             letterColor[currentIndex] = c_green;
-            global.score += 1;
-            global.scoreGained += 1;
+		    global.score += global.confidence;
+		    global.scoreGained += global.confidence;
         } else {
             letterColor[currentIndex] = c_green;
-            global.score += 2;
-            global.scoreGained += 2;
+		    global.score += global.confidence;
+		    global.scoreGained += global.confidence;
         }
         letterAlpha[currentIndex] = 1.0;
         var pair = [string_upper(neededChar), global.confidence];
