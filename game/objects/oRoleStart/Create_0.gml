@@ -13,7 +13,7 @@ topMessages = [
     "These People Will Sign You Letters\n About The Job They Do",
     "This Is So You Can Fill The Form On\n What They Do On The Computer",
     "Do Not Make These People Wait Or\n They Will Walk Away",
-    "Your Sign Accuracy Determines\n Your Tips"
+    "Your Sign Accuracy Determines\n Your Tips, S to Skip Letter"
 ];
 bottomMessages = [
     "This Is Because They\n Need A Tax Form",

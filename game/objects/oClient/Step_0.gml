@@ -17,9 +17,12 @@ global.running = true;
 if (current_time - global.lastMessageTime >= 20000) {
     global.connectionStatus = "Disconnected";
 }
+
+/*
 for (var i = ord("A"); i <= ord("Z"); i++) {
     if (keyboard_check_pressed(i)) {
         global.letter = string_upper(chr(i));
         break;
     }
 }
+*/

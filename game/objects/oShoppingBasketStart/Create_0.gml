@@ -30,7 +30,7 @@ topMessages = [
     "The Letters You Sign Will Be On\n A Display Like This One",
 ];
 bottomMessages = [
-    "Green is accurate\n Orange is moderate",
+    "S to Skip Letter, Green is\n accurate, Orange is moderate",
     "Just Like The One Below",
     "The Itmes Will Travel Via\n Conveyor Belt",
     "The Time The Item Takes To\n Reach The Scanner Is Shown",
