@@ -1,15 +1,16 @@
 if (global.chosenSprite != -1) {
+	sprite_index = 0;
     if (room == rmColourGameEnd) {
-        if (global.scoreGained == 6) {
-            image_index = 3;
-        } else if (global.scoreGained == 4 || global.scoreGained == 5 ||global.scoreGained == 3) {
+        if (global.scoreGained == 60) {
+            image_index = 0;
+        } else if (global.scoreGained == 40 || global.scoreGained == 50 ||global.scoreGained == 30) {
             image_index = 1;
         } else {
             image_index = 2;
         }
     } else {
         if (incorrectCount == 0) {
-            image_index = 3;
+            image_index = 0;
         } else if (incorrectCount == 1) {
             image_index = 1;
         } else {
