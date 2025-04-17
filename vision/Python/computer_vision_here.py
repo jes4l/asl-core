@@ -8,7 +8,7 @@ import time
 import threading
 from queue import Queue
 
-MODEL_SAVE_PATH = r'C:\Users\jesal\Desktop\Project\diss\vision\Python\KaggleCV\saved_models\model.h5'
+MODEL_SAVE_PATH = r'C:\Users\jesal\Desktop\Project\diss\vision\Python\EastWestCV\saved_models\model.h5'
 class_names = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
                'W', 'X', 'Y']
 FINAL_W, FINAL_H = 200, 200

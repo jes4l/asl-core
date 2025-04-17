@@ -12,6 +12,7 @@ if (t < 14) {
 } else {
     room_goto(rmMenu);
 }
-if (global.connectionStatus == "Connected") {
+if (global.connectionStatus = "Connected") {
     room_goto(rmMenu);
 }
+

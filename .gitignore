@@ -167,4 +167,5 @@ cython_debug/
 #.idea/
 vision/Python/KaggleCV/saved_models/
 vision/Python/MNISTCV/saved_models/
-vision/Python/EastWestCV/
+vision/Python/EastWestCV/saved_models/
+vision/Python/DissImg

@@ -19,11 +19,11 @@ if (overlayLetter != "") {
     if (overlayLetter == expectedLetter) {
         draw_set_color(c_green);
         draw_set_alpha(1);
-        draw_text(overlayX, overlayY, expectedLetter);
+        draw_text(overlayX - 30, overlayY, expectedLetter);
     } else {
         draw_set_color(c_red);
         draw_set_alpha(fadeAlpha);
-        draw_text(overlayX, overlayY, overlayLetter);
+        draw_text(overlayX - 30, overlayY, overlayLetter);
         draw_set_alpha(1);
     }
 }

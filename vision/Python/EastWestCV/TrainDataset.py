@@ -5,13 +5,13 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropou
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping
 
-DATASET_DIR = r'C:\Users\jesal\Downloads\archive\asl_alphabet_train\asl_alphabet_train'
+DATASET_DIR = r'C:\Users\jesal\Downloads\Images of American Sign Language (ASL) Alphabet Gestures\Images of American Sign Language (ASL) Alphabet Gestures\Root'
 IMG_HEIGHT = 200
 IMG_WIDTH = 200
-BATCH_SIZE = 16
+BATCH_SIZE = 32
 EPOCHS = 50
 LEARNING_RATE = 0.001
-MODEL_SAVE_PATH = r'C:\Users\jesal\Desktop\Project\diss\vision\Python\KaggleCV\model.h5'
+MODEL_SAVE_PATH = r'C:\Users\jesal\Desktop\Project\diss\vision\Python\EastWestCV\model.h5'
 
 if not os.path.isdir(DATASET_DIR):
     raise FileNotFoundError(f"Dataset directory '{DATASET_DIR}' not found.")

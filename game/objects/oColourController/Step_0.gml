@@ -80,7 +80,7 @@ if (mouse_check_button_pressed(mb_left)) {
                 show_debug_message("oColourController: Correct clicked => partial segment added!");
             } else {
                 feedbackMessage = "Incorrect!";
-                feedbackTimer = room_speed * 1;
+                feedbackTimer = room_speed * 2;
                 if (instance_exists(oSpriteSpawnColour)) {
                     with (oSpriteSpawnColour) {
                         if (incorrectCount < 2) {
